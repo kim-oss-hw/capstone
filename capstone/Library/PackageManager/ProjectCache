@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637858350638457608
-    m_Hash: 4122303470
+      ticks: 637870813669746672
+    m_Hash: 3075122225
   m_LockFileStatus:
     m_FilePath: C:/Users/name/Documents/GitHub/capstone/capstone/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637858350638555318
-    m_Hash: 3132417849
+      ticks: 637870813669756676
+    m_Hash: 2454266768
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -3199,6 +3199,7 @@ m_PackageAssets:
         - 1.1.0-pre.69
         - 1.2.0
         - 1.3.1
+        - 1.3.2
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3210,6 +3211,7 @@ m_PackageAssets:
         - 1.1.0-pre.69
         - 1.2.0
         - 1.3.1
+        - 1.3.2
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
