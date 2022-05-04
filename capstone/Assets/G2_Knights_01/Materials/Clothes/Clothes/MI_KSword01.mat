@@ -21,12 +21,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MI_KSword01
-  m_Shader: {fileID: 4800000, guid: 0e091e27a16dc6448ac0e55c16ce5c15, type: 3}
+  m_Shader: {fileID: 4800000, guid: fd03752842142d5429d0b7e8f72b1075, type: 3}
   m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -78,8 +78,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: ed94a4c5771b0ba469d4c274eae6f616, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmissiveMask1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissivePannerMap:
         m_Texture: {fileID: 2800000, guid: 0456e4dc37307044f855452d96b0e663, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissivePannerMap1:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
@@ -177,6 +185,7 @@ Material:
     m_Floats:
     - _AORemapMax: 1
     - _AORemapMin: 0
+    - _ASEOutlineWidth: 0
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
@@ -222,11 +231,13 @@ Material:
     - _EmissiveBoots1: 0
     - _EmissiveBoots2: 0
     - _EmissiveBoots3: 0
+    - _EmissiveBoots4: 0
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1
     - _EmissiveIntensityUnit: 0
     - _EmissivePannerTilling: 1
+    - _EmissivePannerTilling1: 1
     - _Emissivepowerboost: 100
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
@@ -312,8 +323,10 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - __dirty: 1
     - _useBackSideColor: 0
     m_Colors:
+    - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _BackSideColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
@@ -329,10 +342,14 @@ Material:
     - _EmissiveColor01: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveColor02: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveColor03: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveColor3: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveColor4: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _PannerProperty: {r: 0, g: 0, b: 0, a: 0}
+    - _PannerProperty1: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}

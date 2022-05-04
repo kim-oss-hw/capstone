@@ -23,12 +23,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MI_MHead
-  m_Shader: {fileID: 4800000, guid: 5a84d0554b20c754687512c99ebb990b, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8f7060a8e59533345b874e7dcfed8f2e, type: 3}
   m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -172,6 +172,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -187,6 +191,7 @@ Material:
     m_Floats:
     - _AORemapMax: 1
     - _AORemapMin: 0
+    - _ASEOutlineWidth: 0
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
@@ -323,8 +328,10 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - __dirty: 1
     - _isCyborg: 0
     m_Colors:
+    - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMul: {r: 0.69803923, g: 0.57647055, b: 0.6024918, a: 0}
@@ -348,6 +355,7 @@ Material:
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _LipNailColor: {r: 1, g: 1, b: 1, a: 0}
     - _PannerProperty: {r: 0, g: 0, b: 0, a: 0}
+    - _SSSColor: {r: 1, g: 0.7457517, b: 0.6839622, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _TattooColor: {r: 0.14226586, g: 0.18896288, b: 0.21698102, a: 0}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}

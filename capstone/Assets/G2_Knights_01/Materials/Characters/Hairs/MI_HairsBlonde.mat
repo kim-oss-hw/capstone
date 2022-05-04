@@ -8,15 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MI_HairsBlonde
-  m_Shader: {fileID: 4800000, guid: d82afb6c0cb084843a2594a65bce41e4, type: 3}
+  m_Shader: {fileID: 4800000, guid: 42c69e93dd059d843bc60033091ee162, type: 3}
   m_ShaderKeywords: _ADD_PRECOMPUTED_VELOCITY _ALPHATEST_ON _DOUBLESIDED_ON _ISNORMALID_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
-    RenderType: TransparentCutout
   disabledShaderPasses:
   - TransparentBackface
   m_SavedProperties:
