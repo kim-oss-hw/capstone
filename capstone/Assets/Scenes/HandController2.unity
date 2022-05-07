@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6011417948164419396, guid: e282619e321ead54fbfc9d9056279e8a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 033b2bcfa685ba5459d4d8690594ac4a, type: 2}
     - target: {fileID: 6117684601126258861, guid: e282619e321ead54fbfc9d9056279e8a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -390,6 +394,11 @@ PrefabInstance:
       objectReference: {fileID: 2131754475}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 3}
+--- !u!1 &804832762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4697017240656324050, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
+  m_PrefabInstance: {fileID: 1019341933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &809418162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,9 +632,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5615497917579445399, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2c0cdb9a2cb085346ab8fbe6941b72b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0331b169005eb1d469455efaa6b9024a, type: 3}
 --- !u!1001 &1142203990
@@ -1459,6 +1468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   HPbar: {fileID: 1219791843}
+  AnimationObject: {fileID: 804832762}
 --- !u!65 &2126384380
 BoxCollider:
   m_ObjectHideFlags: 0
