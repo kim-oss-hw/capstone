@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainTitle.unity
-    guid: 0f342d7bf0e926b49a818d05cc094869
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: c7044fa2dfba1004da6044f70b5b2806
   - enabled: 1
@@ -20,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Training.unity
     guid: a30107932548c7c4cb7dd38746e46c27
+  - enabled: 1
+    path: Assets/Scenes/HandController2.unity
+    guid: 54b63e981fc865245aa17f962b321577
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 397fd27cb99016a4f89ab1d3d8e9aa2d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6e0fe2f57be95024b895ffd724863278, type: 2}

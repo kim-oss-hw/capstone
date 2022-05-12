@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 //메인메뉴 컨트롤러
 public class cshMainMenu : MonoBehaviour
 {
-
     //Quit 버튼 누르면 게임 끝내기
     public void ExitButton()
     {
@@ -17,7 +16,8 @@ public class cshMainMenu : MonoBehaviour
     //Online 버튼 -> createRoom or enterRoom 버튼 -> strat 누르면 Online 씬 불러옴  
     public void StartGame()
     {
-        SceneManager.LoadScene("Online");
+        //SceneManager.LoadScene("Online");
+        SceneManager.LoadScene("HandController2");
     }
 
     //single Player 버튼 누르면 Single 씬 로드
@@ -32,4 +32,5 @@ public class cshMainMenu : MonoBehaviour
         SceneManager.LoadScene("Training");
 
     }
+
 }
