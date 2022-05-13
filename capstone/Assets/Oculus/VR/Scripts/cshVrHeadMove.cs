@@ -9,7 +9,7 @@ public class cshVrHeadMove : MonoBehaviour
 
     private Transform tr;
     private float dirX = 0;
-    private float dirY = 0;
+    private float dirZ = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,9 @@ public class cshVrHeadMove : MonoBehaviour
 
     void MovePlayer()
     {
-        dirX = 0;
-        dirY = 0;
+        Vector2 coord = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+        Vector3 moveDir = new Vector3(coord.x * speedSide, 0, coord.y * speedForward);
+
+        transform.Translate(moveDir * Time.deltaTime);
     }
 }
