@@ -1,191 +1,224 @@
 Using pre-set license
 Built from '2020.3/release' branch; Version is '2020.3.31f1 (6b54b7616050) revision 7034039'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ko' Physical Memory: 16226 MB
+OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'ko' Physical Memory: 16333 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-D:\Programs\Unity\2020.3.31f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.31f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/cpastone/capstone/capstone
+C:/Users/82105/Documents/capstone/capstone
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60045
-Successfully changed project path to: D:/cpastone/capstone/capstone
-D:/cpastone/capstone/capstone
+62423
+Successfully changed project path to: C:/Users/82105/Documents/capstone/capstone
+C:/Users/82105/Documents/capstone/capstone
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 62.58 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.60 ms.
+Refreshing native plugins compatible for Editor in 83.03 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.66 ms.
 Initialize engine version: 2020.3.31f1 (6b54b7616050)
-[Subsystems] Discovering subsystems at path D:/Programs/Unity/2020.3.31f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/cpastone/capstone/capstone/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.31f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/82105/Documents/capstone/capstone/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2489)
+    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2182)
     Vendor:   
-    VRAM:     8050 MB
-    Driver:   30.0.15.1259
+    VRAM:     5991 MB
+    Driver:   27.21.14.5671
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Initialize mono
-Mono path[0] = 'D:/Programs/Unity/2020.3.31f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Programs/Unity/2020.3.31f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/Programs/Unity/2020.3.31f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.31f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.31f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.31f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56220
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Programs/Unity/2020.3.31f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001142 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.31f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001588 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 56.79 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
+Refreshing native plugins compatible for Editor in 78.28 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.421 seconds
+- Completed reload, in  0.540 seconds
 Domain Reload Profiling:
-	ReloadAssembly (421ms)
-		BeginReloadAssembly (45ms)
+	ReloadAssembly (540ms)
+		BeginReloadAssembly (54ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (330ms)
-			LoadAssemblies (44ms)
+		EndReloadAssembly (422ms)
+			LoadAssemblies (52ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (100ms)
+			SetupTypeCache (123ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (18ms)
-			SetupLoadedEditorAssemblies (142ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (187ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (57ms)
-				BeforeProcessingInitializeOnLoad (12ms)
-				ProcessInitializeOnLoadAttributes (52ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
+				RefreshPlugins (78ms)
+				BeforeProcessingInitializeOnLoad (9ms)
+				ProcessInitializeOnLoadAttributes (68ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002941 seconds.
+Registered in 0.004736 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file data-000001D776901740 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.VR.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A99BAD0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AC7AD70 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Platform.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D7767CF1B0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\AssistantCoreSDKEditor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77693D4E0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AC7AD70 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77693D4E0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A99BAD0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.AudioManager.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D74B62D670 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.VR.Scripts.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AFEC0A0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Spatializer.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77B4B3A20 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77693D4E0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D7769441A0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77BB88250 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Platform.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77B4C6430 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A7F8020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AA142C0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\AssistantCoreSDKRuntime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A827630 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D775FA01D0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.AudioManager.Utils.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776760190 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77693D4E0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AE50020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77ABBCE30 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AE61C30 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77BFCA070 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776314E20 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Facebook.WitAI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776914D60 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\VoiceSDK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D7767F8DB0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AA05030 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77ACA6BA0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77ABBCE30 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Facebook.Wit.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A3126F0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AE9C020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.VR.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77B4CBCC0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.AudioManager.Audio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AE9C020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77B9CCCF0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Spatializer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776524AB0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.LipSync.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A83C040 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D7767F8DB0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Management.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A325670 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77631CE30 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.LipSync.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77650E790 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Oculus.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776914D60 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\VoiceSDK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A0BBCA0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776A8B270 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Oculus.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77B899010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.Samples.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
+Refreshing native plugins compatible for Editor in 1.09 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 [XR] OculusXRPlugin: registering subsystems
 [XR] Unable to register display lifecyle provider: [1]
 [XR] Oculus Input lifecycle provider registered.
 [XR] Unable to register input lifecyle provider: [1]
 [XR] OVRP version 1.70.0
 Mono: successfully reloaded assembly
-- Completed reload, in  0.811 seconds
+- Completed reload, in  0.979 seconds
 Domain Reload Profiling:
-	ReloadAssembly (812ms)
-		BeginReloadAssembly (96ms)
+	ReloadAssembly (980ms)
+		BeginReloadAssembly (134ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (12ms)
-		EndReloadAssembly (677ms)
-			LoadAssemblies (149ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (787ms)
+			LoadAssemblies (98ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (205ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (223ms)
+			SetupTypeCache (285ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (270ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (58ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (181ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.03 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 Unloading 2810 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 162.3 MB.
 System memory in use after: 159.0 MB.
 
 Unloading 55 unused Assets to reduce memory usage. Loaded Objects now: 3243.
-Total: 2.739000 ms (FindLiveObjects: 0.132400 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.830700 ms  DeleteObjects: 0.724400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002882 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.638 seconds
-Domain Reload Profiling:
-	ReloadAssembly (638ms)
-		BeginReloadAssembly (79ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (2ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (524ms)
-			LoadAssemblies (71ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (189ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (194ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (50ms)
-				ProcessInitializeOnLoadAttributes (129ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 151.6 MB.
-System memory in use after: 148.4 MB.
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3247.
-Total: 2.743500 ms (FindLiveObjects: 0.121300 ms CreateObjectMapping: 0.049000 ms MarkObjects: 1.853800 ms  DeleteObjects: 0.718800 ms)
+Total: 4.408800 ms (FindLiveObjects: 0.287400 ms CreateObjectMapping: 0.093200 ms MarkObjects: 3.031500 ms  DeleteObjects: 0.995900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -199,57 +232,155 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/cshMainMenu.cs
-  artifactKey: Guid(5364d92fafedab240b0a6fe3c2ce8899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/cshMainMenu.cs using Guid(5364d92fafedab240b0a6fe3c2ce8899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e39efd5a0ae3e631a07a9dcef30d4b') in 0.014955 seconds 
+  path: Assets/New Material 1.mat
+  artifactKey: Guid(237421d08f46a9a4393b919ddbcba6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material 1.mat using Guid(237421d08f46a9a4393b919ddbcba6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c14f0ad0e5bdf24ed1fb7833d0e56c9') in 0.089632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 71.918887 seconds.
+  path: Assets/Scripts/NetworkManager.cs
+  artifactKey: Guid(0f4bdb3718fabce4c90d43b51510d28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NetworkManager.cs using Guid(0f4bdb3718fabce4c90d43b51510d28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d61815198457d1ef0fa2be681dbbf57') in 0.008139 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003031 seconds.
+Registered in 0.005554 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file data-000001D77AD00020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.VR.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77651E3C0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77D829020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Platform.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A948400 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\AssistantCoreSDKEditor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E3664010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A9F3020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E3664010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776774DA0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.AudioManager.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D74B653EC0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.VR.Scripts.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776CDF020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Spatializer.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D7764FB030 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A1CC010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A640010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776A8A630 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Platform.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A65F420 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AC7AD00 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AFE53B0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\AssistantCoreSDKRuntime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77DAFE010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E2F13090 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.AudioManager.Utils.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E0952F20 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E2F90B80 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AAEF020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776ADCE00 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A8D5520 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E31C2580 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E3664010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Facebook.WitAI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77E1F1020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\VoiceSDK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A306A30 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AA06550 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.InterfaceSupport.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A1CC010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77BE2A230 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Facebook.Wit.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77BD61CB0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A750020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.VR.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776677670 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.AudioManager.Audio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77AF59020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776BF5A40 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Spatializer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77E3153B0 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.LipSync.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77E1F1020 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A306A30 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Management.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A517640 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77A4D4C20 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.LipSync.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E366A820 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Oculus.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77668A830 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\VoiceSDK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D5E87A6B20 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D776BF5A40 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Unity.XR.Oculus.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001D77B7A9010 doesn't match image C:\Users\82105\Documents\capstone\capstone\Library\ScriptAssemblies\Oculus.Interaction.Samples.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
+Refreshing native plugins compatible for Editor in 1.18 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.634 seconds
+- Completed reload, in  1.034 seconds
 Domain Reload Profiling:
-	ReloadAssembly (635ms)
-		BeginReloadAssembly (78ms)
+	ReloadAssembly (1035ms)
+		BeginReloadAssembly (127ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (520ms)
-			LoadAssemblies (71ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (832ms)
+			LoadAssemblies (111ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (183ms)
+			SetupTypeCache (319ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (194ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (286ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (50ms)
-				ProcessInitializeOnLoadAttributes (129ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (197ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 151.7 MB.
-System memory in use after: 148.4 MB.
+Refreshing native plugins compatible for Editor in 1.33 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 2695 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 154.9 MB.
+System memory in use after: 151.6 MB.
 
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3251.
-Total: 2.863900 ms (FindLiveObjects: 0.154100 ms CreateObjectMapping: 0.058900 ms MarkObjects: 1.877100 ms  DeleteObjects: 0.772900 ms)
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 3.996100 ms (FindLiveObjects: 0.270700 ms CreateObjectMapping: 0.073000 ms MarkObjects: 2.695700 ms  DeleteObjects: 0.955700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -263,188 +394,58 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1303.308726 seconds.
-  path: Assets/banner-151700.png
-  artifactKey: Guid(bcc7b8c9d85be0049b2dae5756045c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/banner-151700.png using Guid(bcc7b8c9d85be0049b2dae5756045c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d34037dc879d7f4130e10c5f8d09c6') in 0.067355 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 15.845528 seconds.
-  path: Assets/banner-151700.png
-  artifactKey: Guid(bcc7b8c9d85be0049b2dae5756045c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/banner-151700.png using Guid(bcc7b8c9d85be0049b2dae5756045c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bb7241b36bf3b9efcb2ca9eb2ec563b') in 0.043010 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.538512 seconds.
-  path: Assets/banner-151700.png
-  artifactKey: Guid(bcc7b8c9d85be0049b2dae5756045c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/banner-151700.png using Guid(bcc7b8c9d85be0049b2dae5756045c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c5e73f252c630952c66b9aacbb102f9') in 0.015065 seconds 
+  Time since last request: 28.956066 seconds.
+  path: Assets/Scripts/NetworkManager.cs
+  artifactKey: Guid(0f4bdb3718fabce4c90d43b51510d28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NetworkManager.cs using Guid(0f4bdb3718fabce4c90d43b51510d28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc532c4177a340b0fbff47476c99bf69') in 0.005384 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003285 seconds.
+Registered in 0.005988 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
+Refreshing native plugins compatible for Editor in 1.11 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.669 seconds
+- Completed reload, in  0.863 seconds
 Domain Reload Profiling:
-	ReloadAssembly (669ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (864ms)
+		BeginReloadAssembly (96ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (542ms)
-			LoadAssemblies (78ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (714ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (188ms)
+			SetupTypeCache (261ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (205ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (249ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (58ms)
-				ProcessInitializeOnLoadAttributes (131ms)
-				ProcessInitializeOnLoadMethodAttributes (10ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (53ms)
+				ProcessInitializeOnLoadAttributes (172ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.4 MB.
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3262.
-Total: 2.824400 ms (FindLiveObjects: 0.154100 ms CreateObjectMapping: 0.051300 ms MarkObjects: 1.840900 ms  DeleteObjects: 0.777400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003377 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.631 seconds
-Domain Reload Profiling:
-	ReloadAssembly (631ms)
-		BeginReloadAssembly (78ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (517ms)
-			LoadAssemblies (72ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (181ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (194ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (50ms)
-				ProcessInitializeOnLoadAttributes (130ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.4 MB.
+Refreshing native plugins compatible for Editor in 1.32 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.8 MB.
+System memory in use after: 158.5 MB.
 
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3266.
-Total: 2.869100 ms (FindLiveObjects: 0.134300 ms CreateObjectMapping: 0.051700 ms MarkObjects: 1.857800 ms  DeleteObjects: 0.824200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003103 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.628 seconds
-Domain Reload Profiling:
-	ReloadAssembly (629ms)
-		BeginReloadAssembly (76ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (517ms)
-			LoadAssemblies (69ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (181ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (194ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (51ms)
-				ProcessInitializeOnLoadAttributes (129ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.5 MB.
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3270.
-Total: 2.832100 ms (FindLiveObjects: 0.135900 ms CreateObjectMapping: 0.050300 ms MarkObjects: 1.856500 ms  DeleteObjects: 0.788600 ms)
+Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 3509.
+Total: 3.803900 ms (FindLiveObjects: 0.235900 ms CreateObjectMapping: 0.078100 ms MarkObjects: 2.518300 ms  DeleteObjects: 0.970800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -458,354 +459,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1933.608974 seconds.
-  path: Assets/Oculus/SampleFramework/Core/DebugUI/Textures/noise_01.png
-  artifactKey: Guid(fff70cc323e7244f0a6fed5ecb11a9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Oculus/SampleFramework/Core/DebugUI/Textures/noise_01.png using Guid(fff70cc323e7244f0a6fed5ecb11a9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fd0f341edb037f6fcb6b43020c5310d') in 0.077154 seconds 
+  Time since last request: 218.731784 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
+  artifactKey: Guid(54f6d8f7e341bf74a89a8c1af9acb0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset using Guid(54f6d8f7e341bf74a89a8c1af9acb0a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6225df2e7952bab281c03a328fc31b27') in 0.040745 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000162 seconds.
-  path: Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_PSD.psd
-  artifactKey: Guid(e18f01d9439b38045b70e908d6f06d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_PSD.psd using Guid(e18f01d9439b38045b70e908d6f06d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de90432140d2ceb861ce5f14a75702de') in 0.009655 seconds 
+  Time since last request: 340.808419 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs
+  artifactKey: Guid(aa584fbee541324448dd18d8409c7a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs using Guid(aa584fbee541324448dd18d8409c7a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b7a4bae29ffdf34bcc63c05b8facb4f') in 0.005854 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003187 seconds.
+Registered in 0.007117 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
+Refreshing native plugins compatible for Editor in 1.34 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.638 seconds
+- Completed reload, in  0.869 seconds
 Domain Reload Profiling:
-	ReloadAssembly (639ms)
-		BeginReloadAssembly (80ms)
+	ReloadAssembly (869ms)
+		BeginReloadAssembly (98ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (522ms)
-			LoadAssemblies (73ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (716ms)
+			LoadAssemblies (86ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (182ms)
+			SetupTypeCache (265ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (196ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (250ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (52ms)
-				ProcessInitializeOnLoadAttributes (130ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (54ms)
+				ProcessInitializeOnLoadAttributes (172ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.5 MB.
+Refreshing native plugins compatible for Editor in 1.12 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 2917 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.8 MB.
+System memory in use after: 158.6 MB.
 
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3274.
-Total: 2.924200 ms (FindLiveObjects: 0.137500 ms CreateObjectMapping: 0.055100 ms MarkObjects: 1.891100 ms  DeleteObjects: 0.839700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 195.451070 seconds.
-  path: Assets/Scenes/Single.unity
-  artifactKey: Guid(5028d469b97e53f429f446d8825bdecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Single.unity using Guid(5028d469b97e53f429f446d8825bdecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf8f9552c784ccd3b7bbd00d7d1fc87') in 0.004594 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 323.165545 seconds.
-  path: Assets/Scenes/MainTitle.unity
-  artifactKey: Guid(0f342d7bf0e926b49a818d05cc094869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainTitle.unity using Guid(0f342d7bf0e926b49a818d05cc094869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18afd13915054e6d9dd442174d57b112') in 0.002417 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 59.575957 seconds.
-  path: Assets/Scenes/Training.unity
-  artifactKey: Guid(a30107932548c7c4cb7dd38746e46c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Training.unity using Guid(a30107932548c7c4cb7dd38746e46c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '206c201947cd9df4d7aef3d33c9b6aac') in 0.002074 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.549152 seconds.
-  path: Assets/Scenes/Single.unity
-  artifactKey: Guid(5028d469b97e53f429f446d8825bdecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Single.unity using Guid(5028d469b97e53f429f446d8825bdecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '644ad79b0360a6b41062f9c75600853a') in 0.001894 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.718743 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(c7044fa2dfba1004da6044f70b5b2806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(c7044fa2dfba1004da6044f70b5b2806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '811df888b9b35315f6803a3ee0f045e4') in 0.002059 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003556 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.636 seconds
-Domain Reload Profiling:
-	ReloadAssembly (636ms)
-		BeginReloadAssembly (79ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (520ms)
-			LoadAssemblies (73ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (183ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (193ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (51ms)
-				ProcessInitializeOnLoadAttributes (128ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.5 MB.
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3278.
-Total: 2.873200 ms (FindLiveObjects: 0.134600 ms CreateObjectMapping: 0.049300 ms MarkObjects: 1.867900 ms  DeleteObjects: 0.820900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003709 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.622 seconds
-Domain Reload Profiling:
-	ReloadAssembly (623ms)
-		BeginReloadAssembly (75ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (512ms)
-			LoadAssemblies (67ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (177ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (194ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (51ms)
-				ProcessInitializeOnLoadAttributes (128ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.5 MB.
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3282.
-Total: 2.861900 ms (FindLiveObjects: 0.147600 ms CreateObjectMapping: 0.052900 ms MarkObjects: 1.821600 ms  DeleteObjects: 0.838900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 226.860413 seconds.
-  path: Assets/Scenes/Online.unity
-  artifactKey: Guid(aa3b424f0df42f340a5245d255f3933d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Online.unity using Guid(aa3b424f0df42f340a5245d255f3933d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e10ea4e83b687b3325575d75147e15') in 0.005535 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 55.751590 seconds.
-  path: Assets/G2_Knights_01/Materials/Clothes/Clothes/Examples
-  artifactKey: Guid(0ef7de9a82ef43c4ab899ae684a3a2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/G2_Knights_01/Materials/Clothes/Clothes/Examples using Guid(0ef7de9a82ef43c4ab899ae684a3a2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c9ed0b304353ff29322f684d86cadf') in 0.002188 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 107.823705 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(c7044fa2dfba1004da6044f70b5b2806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(c7044fa2dfba1004da6044f70b5b2806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc5dd08d4e8636dc371050b2d18b4f6') in 0.002314 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003045 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.639 seconds
-Domain Reload Profiling:
-	ReloadAssembly (639ms)
-		BeginReloadAssembly (75ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (528ms)
-			LoadAssemblies (73ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (183ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (195ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (52ms)
-				ProcessInitializeOnLoadAttributes (130ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.5 MB.
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3286.
-Total: 3.015700 ms (FindLiveObjects: 0.137400 ms CreateObjectMapping: 0.049900 ms MarkObjects: 1.962500 ms  DeleteObjects: 0.864900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 63.848316 seconds.
-  path: Assets/Scripts/cshMainMenu.cs
-  artifactKey: Guid(5364d92fafedab240b0a6fe3c2ce8899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/cshMainMenu.cs using Guid(5364d92fafedab240b0a6fe3c2ce8899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0662ccaf0952b7bcdb33886e0cc7d4a') in 0.004034 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003060 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.623 seconds
-Domain Reload Profiling:
-	ReloadAssembly (623ms)
-		BeginReloadAssembly (76ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (512ms)
-			LoadAssemblies (67ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (180ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (192ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (50ms)
-				ProcessInitializeOnLoadAttributes (128ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
-Platform modules already initialized, skipping
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Shader 'DawnShaderHDRP_V2/HairHDRP': fallback shader 'Hidden/Shader Graph/FallbackError' not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 154.7 MB.
-System memory in use after: 151.5 MB.
-
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 3290.
-Total: 2.897600 ms (FindLiveObjects: 0.136300 ms CreateObjectMapping: 0.052500 ms MarkObjects: 1.858500 ms  DeleteObjects: 0.849500 ms)
+Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 3514.
+Total: 3.911900 ms (FindLiveObjects: 0.247300 ms CreateObjectMapping: 0.077500 ms MarkObjects: 2.579600 ms  DeleteObjects: 1.006700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
