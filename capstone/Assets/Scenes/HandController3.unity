@@ -1070,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2645888097233967235, guid: d24d3f58af8652e4688e9521fb9f96df, type: 3}
       propertyPath: near clip plane
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2645888097233967235, guid: d24d3f58af8652e4688e9521fb9f96df, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -1120,6 +1120,30 @@ PrefabInstance:
     - target: {fileID: 823284464869177077, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134218515317373507, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134218515317373507, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134218515317373507, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614963220232809975, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614963220232809975, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614963220232809975, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1975776086299856055, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_Layer
@@ -1201,6 +1225,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6490257729856027973, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490257729856027973, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490257729856027973, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6528546229485998460, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
@@ -1209,9 +1245,37 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6872634848668840344, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872634848668840344, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872634848668840344, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8650054693146938217, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797278711470889375, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797278711470889375, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797278711470889375, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797278711470889375, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
