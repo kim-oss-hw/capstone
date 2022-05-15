@@ -28,7 +28,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public InputField ChatInput;
 
     [Header("ETC")]
-    public Text StatusText;
+    //public Text StatusText;
     public PhotonView PV;
 
     List<RoomInfo> myList = new List<RoomInfo>();
@@ -86,7 +86,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        StatusText.text = PhotonNetwork.NetworkClientState.ToString();
+        //StatusText.text = PhotonNetwork.NetworkClientState.ToString();
         LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
     }
 
