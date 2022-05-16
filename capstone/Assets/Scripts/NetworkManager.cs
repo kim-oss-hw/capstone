@@ -4,6 +4,8 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class NetworkManager : MonoBehaviourPunCallbacks
@@ -28,11 +30,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public InputField ChatInput;
 
     [Header("ETC")]
-    //public Text StatusText;
+    public Text StatusText;
     public PhotonView PV;
 
     List<RoomInfo> myList = new List<RoomInfo>();
     int currentPage = 1, maxPage, multiple;
+
 
 
     #region 방리스트 갱신
@@ -82,11 +85,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
 
     #region 서버연결
-    void Awake() => Screen.SetResolution(960, 540, false);
-
+    void Awake()
+    {
+        Screen.SetResolution(960, 540, false);
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
     void Update()
     {
-        //StatusText.text = PhotonNetwork.NetworkClientState.ToString();
+        StatusText.text = PhotonNetwork.NetworkClientState.ToString();
         LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
     }
 
@@ -112,9 +118,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-
+   
     #region 방
-    public void CreateRoom() => PhotonNetwork.CreateRoom(RoomInput.text == "" ? "Room" + Random.Range(0, 100) : RoomInput.text, new RoomOptions { MaxPlayers = 4 });
+    public void CreateRoom() => PhotonNetwork.CreateRoom(RoomInput.text == "" ? "Room" + Random.Range(0, 100) : RoomInput.text, new RoomOptions { MaxPlayers = 2 });
 
     public void JoinRandomRoom() => PhotonNetwork.JoinRandomRoom();
 
@@ -179,4 +185,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
     #endregion
+    public void NextSceneWithString()
+    {
+        SceneManager.LoadScene("HandController3");
+    }
 }

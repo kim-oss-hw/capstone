@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class GameMainSystem : MonoBehaviour
+public class GameMainSystem : MonoBehaviourPunCallbacks
 {
 
     public GameObject Player_1;
