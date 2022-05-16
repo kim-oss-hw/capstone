@@ -1,3 +1,4 @@
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,7 +31,7 @@ public class cshVrHeadMove : MonoBehaviour
         MovePlayer();
         if (OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger))
         {
-            Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 5);
+            Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 3);
 
             if (grabbing)
             {
@@ -100,3 +101,4 @@ public class cshVrHeadMove : MonoBehaviour
         transform.Translate(moveDir * Time.deltaTime);
     }
 }
+//*/
