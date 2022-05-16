@@ -6729,7 +6729,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 5209759777251946655}
   m_AABB:
     m_Center: {x: -0.14410411, y: 0.00018058717, z: 0.53840584}
-    m_Extent: {x: 0.1852421, y: 0.15297504, z: 0.18014412}
+    m_Extent: {x: 1, y: 1, z: 1}
   m_DirtyAABB: 0
 --- !u!1 &4312090994346094686
 GameObject:
@@ -7129,7 +7129,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 5209759777251946655}
   m_AABB:
     m_Center: {x: -0.1432419, y: -0.0024329945, z: -0.5384058}
-    m_Extent: {x: 0.18437983, y: 0.15036154, z: 0.18014401}
+    m_Extent: {x: 1, y: 1, z: 1}
   m_DirtyAABB: 0
 --- !u!1 &4858499066087800210
 GameObject:
