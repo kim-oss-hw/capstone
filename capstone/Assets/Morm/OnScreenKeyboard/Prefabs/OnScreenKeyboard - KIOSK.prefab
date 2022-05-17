@@ -2464,8 +2464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 400}
+  m_AnchoredPosition: {x: -8.700012, y: -140}
+  m_SizeDelta: {x: 1641, y: 338.2}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8365934471847561483
 CanvasRenderer:
@@ -28879,6 +28879,7 @@ GameObject:
   - component: {fileID: 5217269220926036304}
   - component: {fileID: 5217269220926036309}
   - component: {fileID: 1119301315924982039}
+  - component: {fileID: 3350404683927904534}
   m_Layer: 5
   m_Name: OnScreenKeyboard - KIOSK
   m_TagString: Untagged
@@ -28939,6 +28940,18 @@ MonoBehaviour:
   korBtn: {fileID: 3598753382885945504}
   engBtn: {fileID: 5217269220738031471}
   capsBtn: {fileID: 5217269220546532014}
+--- !u!114 &3350404683927904534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5217269220926036305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd064978eca42246a22d0237a8974eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5217269220984568123
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2099532651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2099532652}
+  - component: {fileID: 2099532654}
+  - component: {fileID: 2099532653}
+  m_Layer: 5
+  m_Name: UserNickNameText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2099532652
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099532651}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.83333325, y: 0.83333325, z: 0.83333325}
+  m_Children: []
+  m_Father: {fileID: 5895738132267715526}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.008331299, y: 2.1916504}
+  m_SizeDelta: {x: 2, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2099532654
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099532651}
+  m_CullTransparentMesh: 1
+--- !u!114 &2099532653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099532651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 1234
 --- !u!1 &26295330201891395
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1137614076293210652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KGloves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2523,7 +2602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 50980194171167898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MHands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2856,7 +2935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414204718047369409}
   - component: {fileID: 6490257729856027973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShirtSleeves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2980,7 +3059,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 5209759777251946655}
   m_AABB:
     m_Center: {x: -0.2402927, y: 0.05140373, z: -0.0018682182}
-    m_Extent: {x: 0.18242308, y: 0.15061198, z: 0.6447122}
+    m_Extent: {x: 1, y: 1, z: 1}
   m_DirtyAABB: 0
 --- !u!1 &2625967760798424855
 GameObject:
@@ -3559,7 +3638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4495797493317461628}
   - component: {fileID: 6757471425116678624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperBodySkin_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6629,7 +6708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8812528961269251476}
   - component: {fileID: 1134218515317373507}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KGlover_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6741,7 +6820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1653031790601716722}
   - component: {fileID: 5250755483125476919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HandSkin_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7028,7 +7107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100714356749909749}
   - component: {fileID: 6872634848668840344}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KGlover_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7517,7 +7596,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 5209759777251946655}
   m_AABB:
     m_Center: {x: -0.24032041, y: 0.05137515, z: -0.0019196272}
-    m_Extent: {x: 0.18239537, y: 0.15064058, z: 0.64469063}
+    m_Extent: {x: 1, y: 1, z: 1}
   m_DirtyAABB: 0
 --- !u!1 &5375913993575156990
 GameObject:
@@ -8468,6 +8547,8 @@ GameObject:
   - component: {fileID: 3616824745760927918}
   - component: {fileID: 6528546229485998461}
   - component: {fileID: 6528546229485998462}
+  - component: {fileID: 3616824746413294727}
+  - component: {fileID: 3616824746413294728}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -8508,6 +8589,7 @@ Transform:
   - {fileID: 346647846056074421}
   - {fileID: 7766973070148386898}
   - {fileID: 3616824747038028668}
+  - {fileID: 2099532652}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8542,7 +8624,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'index_03_l'\n\tTransform 'pinky_03_l'\n\tTransform
+    'ring_02_l'\n\tTransform 'middle_01_l'\n\tTransform 'index_01_l'\n\tTransform
+    'ring_01_l'\n\tTransform 'ring_03_l'\n\tTransform 'pinky_02_l'\n\tTransform 'thumb_03_l'\n\tTransform
+    'thumb_02_l'\n\tand more ...\n\tFrom animation clip 'leftHandGrip'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -8656,7 +8743,15 @@ MonoBehaviour:
   m_RigLayers:
   - m_Rig: {fileID: 3616824747038028659}
     m_Active: 1
-  m_Effectors: []
+  m_Effectors:
+  - m_Transform: {fileID: 5895738132267715526}
+    m_Style:
+      shape: {fileID: 4300000, guid: c6793350c150f456688e39a81f97364a, type: 2}
+      color: {r: 1, g: 0, b: 0, a: 0.5}
+      size: 0.1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+    m_Visible: 1
 --- !u!114 &3616824745760927918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8718,6 +8813,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedTrashold: 0.1
   smoothing: 1
+--- !u!114 &3616824746413294727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528546229485998460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &3616824746413294728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528546229485998460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 3616824746413294727}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6544706792706222517
 GameObject:
   m_ObjectHideFlags: 0
@@ -8954,7 +9088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8286294933948757893}
   - component: {fileID: 8731588238659328157}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HandSkin_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10295,7 +10429,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 5209759777251946655}
   m_AABB:
     m_Center: {x: -0.59839153, y: 0.054873094, z: -0.0017901883}
-    m_Extent: {x: 0.13848926, y: 0.19525625, z: 0.209539}
+    m_Extent: {x: 1, y: 1, z: 1}
   m_DirtyAABB: 0
 --- !u!1 &8439665881558758886
 GameObject:
@@ -10518,7 +10652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2968841406806890069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MUpperBody_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}

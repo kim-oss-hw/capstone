@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    public static string UserNickName;
+    public static int PlayerID;
     [Header("DisconnectPanel")]
     public InputField NickNameInput;
 
@@ -32,6 +34,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [Header("ETC")]
     public Text StatusText;
     public PhotonView PV;
+    public Text StartFailedText;
 
     List<RoomInfo> myList = new List<RoomInfo>();
     int currentPage = 1, maxPage, multiple;
@@ -105,6 +108,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         LobbyPanel.SetActive(true);
         RoomPanel.SetActive(false);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
+        UserNickName = NickNameInput.text;
         WelcomeText.text = PhotonNetwork.LocalPlayer.NickName + "님 환영합니다";
         myList.Clear();
     }
@@ -154,12 +158,24 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         ListText.text = "";
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        {
             ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : ", ");
+            if (PhotonNetwork.PlayerList[i].NickName == NickNameInput.text)
+            {
+                PlayerID = i;
+            }
+        }
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "명 / " + PhotonNetwork.CurrentRoom.MaxPlayers + "최대";
+        
     }
     #endregion
 
-
+    public void ShowStart(Button StartButton)
+    {
+        if (NickNameInput.text == PhotonNetwork.PlayerList[0].NickName) {
+            GameObject.Find("ChangeSceneBtn").SetActive(true);
+        } 
+    }
     #region 채팅
     public void Send()
     {
@@ -187,6 +203,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #endregion
     public void NextSceneWithString()
     {
-        SceneManager.LoadScene("HandController3");
+        if (PhotonNetwork.PlayerList.Length < 2)
+        {
+            StartFailedText.text = "인원이 \n부족합니다!!!";
+            Destroy(StartFailedText, 0.3f);
+        }
+        else
+        {
+            SceneManager.LoadScene("map1");
+        }
     }
 }
