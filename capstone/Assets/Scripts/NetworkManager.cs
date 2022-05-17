@@ -35,6 +35,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Text StatusText;
     public PhotonView PV;
     public Text StartFailedText;
+    public Button ChangeBtn;
 
     List<RoomInfo> myList = new List<RoomInfo>();
     int currentPage = 1, maxPage, multiple;
@@ -156,26 +157,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void RoomRenewal()
     {
+        PlayerID = PV.ViewID;
+        if (PV.ViewID == 1)
+        {
+            ChangeBtn.gameObject.SetActive(true);
+        }
         ListText.text = "";
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
             ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : ", ");
-            if (PhotonNetwork.PlayerList[i].NickName == NickNameInput.text)
-            {
-                PlayerID = i;
-            }
         }
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "명 / " + PhotonNetwork.CurrentRoom.MaxPlayers + "최대";
         
     }
     #endregion
 
-    public void ShowStart(Button StartButton)
-    {
-        if (NickNameInput.text == PhotonNetwork.PlayerList[0].NickName) {
-            GameObject.Find("ChangeSceneBtn").SetActive(true);
-        } 
-    }
     #region 채팅
     public void Send()
     {
