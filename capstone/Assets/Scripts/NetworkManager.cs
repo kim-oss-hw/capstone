@@ -109,7 +109,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         LobbyPanel.SetActive(true);
         RoomPanel.SetActive(false);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
-        UserNickName = NickNameInput.text;
+        if(NickNameInput.text.Length == 0)
+        {
+            UserNickName = "None";
+        }else UserNickName = NickNameInput.text;
+
         WelcomeText.text = PhotonNetwork.LocalPlayer.NickName + "님 환영합니다";
         myList.Clear();
     }
@@ -129,7 +133,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void JoinRandomRoom() => PhotonNetwork.JoinRandomRoom();
 
-    public void LeaveRoom() => PhotonNetwork.LeaveRoom();
+    public void LeaveRoom() {
+        ChangeBtn.gameObject.SetActive(false);
+        PhotonNetwork.LeaveRoom();
+    }
 
     public override void OnJoinedRoom()
     {
@@ -205,11 +212,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             StartFailedText.text = "인원이 \n부족합니다!!!";
             StartFailedText.gameObject.SetActive(true);
-            Destroy(StartFailedText, 0.3f);
+            Destroy(StartFailedText, 3.0f);
         }
         else
         {
-            SceneManager.LoadScene("map1");
+            SceneManager.LoadScene("Map1Online");
         }
     }
 }
