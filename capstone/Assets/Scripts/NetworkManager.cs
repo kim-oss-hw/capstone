@@ -157,7 +157,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void RoomRenewal()
     {
-        PlayerID = PV.ViewID;
+        if (PhotonNetwork.PlayerList.Length == 2) {
+            PV.ViewID++;
+        }
         if (PV.ViewID == 1)
         {
             ChangeBtn.gameObject.SetActive(true);
@@ -202,6 +204,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.PlayerList.Length < 2)
         {
             StartFailedText.text = "인원이 \n부족합니다!!!";
+            StartFailedText.gameObject.SetActive(true);
             Destroy(StartFailedText, 0.3f);
         }
         else
