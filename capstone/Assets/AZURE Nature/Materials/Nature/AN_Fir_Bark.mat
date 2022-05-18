@@ -127,11 +127,11 @@ Material:
     - _BottomCoverage: 1
     - _BumpScale: 1
     - _COVERAGE: 1
-    - _CoverageContrast: 0.08
+    - _CoverageContrast: 0.03
     - _CoverageFade: 1
     - _CoverageLevel: 15
     - _CoverageOverlayType: 1
-    - _CoverageSmoothness: 0.15
+    - _CoverageSmoothness: 0.1
     - _CoverageThickness: 1
     - _CoverageThicknessLevel: 0.4
     - _Cutoff: 0.5
@@ -167,7 +167,7 @@ Material:
     m_Colors:
     - _BarkColor: {r: 0.44705883, g: 0.357349, b: 0.2932706, a: 0}
     - _Color: {r: 0.5019608, g: 0.41566747, b: 0.36141178, a: 1}
-    - _CoverageColor: {r: 1, g: 1, b: 1, a: 0}
+    - _CoverageColor: {r: 0.9529412, g: 1, b: 0.8156863, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _SurfaceColor: {r: 0.44, g: 0.37448633, b: 0.33176, a: 0}
