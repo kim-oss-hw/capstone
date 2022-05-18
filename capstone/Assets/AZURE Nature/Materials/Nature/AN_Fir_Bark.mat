@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: c61194769c49566439e564fcdf2deff8, type: 3}
   m_ShaderKeywords: _BLENDNORMALS1_ON _BLENDNORMALS_ON _BOTTOMCOVERAGE_ON _COVERAGEOVERLAYTYPE_VERTEX_POSITION
     _COVERAGETHICKNESS_ON _COVERAGE_ON _GROUNDTEXTURE_ON _INVERTCOVERAGE_ON _METALLICGLOSSMAP
-    _NORMALFROMCOVERAGE_ON _NORMALMAP
+    _NORMALFROMCOVERAGE_ON _NORMALMAP _SNOW_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -39,7 +39,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _CoverageAlbedo:
         m_Texture: {fileID: 2800000, guid: a42cd62f3c2eebb47b0132c8c661b27e, type: 3}
-        m_Scale: {x: 12, y: 12}
+        m_Scale: {x: 24, y: 12}
         m_Offset: {x: 0, y: 0}
     - _CoverageMask:
         m_Texture: {fileID: 2800000, guid: 6256982f10c8bb141ac4d83ddbea3bf2, type: 3}
@@ -47,7 +47,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _CoverageNormal:
         m_Texture: {fileID: 2800000, guid: 57ef960ad9ca8b94bad434e31c0b2c7e, type: 3}
-        m_Scale: {x: 12, y: 12}
+        m_Scale: {x: 24, y: 12}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
@@ -150,12 +150,12 @@ Material:
     - _NormalFromCoverage: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SNOW: 0
+    - _SNOW: 1
     - _Smoothness: 0.35
     - _SmoothnessTextureChannel: 0
     - _Snow: 0
-    - _SnowAmount: 0.7
-    - _SnowFade: 0.3
+    - _SnowAmount: 0.015
+    - _SnowFade: 0.1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SurfaceSmoothness: 0.25
@@ -167,7 +167,7 @@ Material:
     m_Colors:
     - _BarkColor: {r: 0.44705883, g: 0.357349, b: 0.2932706, a: 0}
     - _Color: {r: 0.5019608, g: 0.41566747, b: 0.36141178, a: 1}
-    - _CoverageColor: {r: 0.9529412, g: 1, b: 0.8156863, a: 0}
+    - _CoverageColor: {r: 0.9292453, g: 0.98485523, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _SurfaceColor: {r: 0.44, g: 0.37448633, b: 0.33176, a: 0}
