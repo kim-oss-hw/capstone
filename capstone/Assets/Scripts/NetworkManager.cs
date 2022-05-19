@@ -164,10 +164,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void RoomRenewal()
     {
-        if (PhotonNetwork.PlayerList.Length == 2) {
-            PV.ViewID++;
-        }
-        if (PV.ViewID == 1)
+        PlayerID = PhotonNetwork.LocalPlayer.ActorNumber;
+        if (PlayerID == 1)
         {
             ChangeBtn.gameObject.SetActive(true);
         }
