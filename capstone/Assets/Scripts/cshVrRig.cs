@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [System.Serializable]
 public class VRMap
@@ -25,17 +26,33 @@ public class cshVrRig : MonoBehaviour
     public VRMap leftHand;
     public VRMap rightHand;
 
+    public PhotonView PV;
+    public GameObject vrPlayer;
     public float turnSmoothness = 5;
     public Transform headConstraint;
     public Vector3 headBodyOffset;
-    public PhotonView PV;
-    public GameObject vrPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
         headBodyOffset = transform.position - headConstraint.position;
 
+        head.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
+        leftHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
+        rightHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
+
+        if (NetworkManager.PlayerID % 2 == 1)
+        {
+            head.vrTarget = GameObject.Find("Player1").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
+            leftHand.vrTarget = GameObject.Find("Player1").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
+            rightHand.vrTarget = GameObject.Find("Player1").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
+        }
+        else if (NetworkManager.PlayerID % 2 == 0)
+        {
+            head.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
+            leftHand.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
+            rightHand.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
+        }
     }
 
     // Update is called once per frame
