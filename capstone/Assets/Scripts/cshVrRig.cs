@@ -37,11 +37,11 @@ public class cshVrRig : MonoBehaviour
     {
         if (PV.IsMine)
         {
-            headBodyOffset = transform.position - headConstraint.position;
+            //headBodyOffset = transform.position - headConstraint.position;
 
-            head.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/CenterEyeAnchor");
-            leftHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/LeftHandAnchor");
-            rightHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/RightHandAnchor");
+            head.vrTarget = GameObject.Find("OVRPlayerController").transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor");
+            leftHand.vrTarget = GameObject.Find("OVRPlayerController").transform.Find("OVRCameraRig/TrackingSpace/LeftHandAnchor");
+            rightHand.vrTarget = GameObject.Find("OVRPlayerController").transform.Find("OVRCameraRig/TrackingSpace/RightHandAnchor");
         }
     }
 
@@ -52,9 +52,8 @@ public class cshVrRig : MonoBehaviour
         {
             //vrPlayer.SetActive(false);
 
-            transform.position = headConstraint.position + headBodyOffset;
-            transform.forward = Vector3.Lerp(transform.forward, Vector3.ProjectOnPlane(-1 * headConstraint.up, Vector3.up).normalized,
-           Time.deltaTime * turnSmoothness);
+            //transform.position = headConstraint.position + headBodyOffset;
+            //transform.forward = Vector3.Lerp(transform.forward, Vector3.ProjectOnPlane(-1 * headConstraint.up, Vector3.up).normalized,Time.deltaTime * turnSmoothness);
 
             head.Map();
             rightHand.Map();

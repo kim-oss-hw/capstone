@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Online.unity
     guid: aa3b424f0df42f340a5245d255f3933d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Single.unity
     guid: 5028d469b97e53f429f446d8825bdecd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Training.unity
     guid: a30107932548c7c4cb7dd38746e46c27
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map1Online.unity
     guid: dc412d8132b64d34a9806603d5c8ee71
+  - enabled: 1
+    path: Assets/Scenes/Map1.unity
+    guid: f1719bda986070049bcb09715b4d49a1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 397fd27cb99016a4f89ab1d3d8e9aa2d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6e0fe2f57be95024b895ffd724863278, type: 2}

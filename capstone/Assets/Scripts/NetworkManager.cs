@@ -214,7 +214,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            SceneManager.LoadScene("Map1Online");
+            SceneManager.LoadScene("Map1");
         }
     }
 }
