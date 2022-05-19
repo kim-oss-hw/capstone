@@ -206,7 +206,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #endregion
     public void NextSceneWithString()
     {
-        if (PhotonNetwork.PlayerList.Length < 2)
+        if (PhotonNetwork.PlayerList.Length < 0)
         {
             StartFailedText.text = "인원이 \n부족합니다!!!";
             StartFailedText.gameObject.SetActive(true);

@@ -17,9 +17,12 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
     private void Awake()
     {
         PhotonNetwork.ConnectUsingSettings();
-
         base.OnJoinedRoom();
+        StartCoroutine(this.CreatePlayer());
 
+    }
+    IEnumerator CreatePlayer ()
+    {
         if (NetworkManager.PlayerID % 2 == 1)
         {
             VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint1.transform.position, SpawnPoint1.transform.rotation);
@@ -31,6 +34,13 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             VRplayerPrefab.name = "Player2";
         }
 
+        else
+        {
+            VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint1.transform.position, SpawnPoint1.transform.rotation);
+            VRplayerPrefab.name = "Player1";    
+        }
+
+        yield return null;
     }
 
     public override void OnLeftRoom()
