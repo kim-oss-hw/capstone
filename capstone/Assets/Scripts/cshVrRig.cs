@@ -36,9 +36,6 @@ public class cshVrRig : MonoBehaviour
     {
         headBodyOffset = transform.position - headConstraint.position;
 
-        head.vrTarget = transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
-        leftHand.vrTarget = transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
-        rightHand.vrTarget = transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
     }
 
     // Update is called once per frame
