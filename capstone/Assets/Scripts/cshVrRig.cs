@@ -35,25 +35,14 @@ public class cshVrRig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        headBodyOffset = transform.position - headConstraint.position;
-        //XRRig rig = FindObjectOfType<XRRig>();
-        
-        /*head.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
-        leftHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
-        rightHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
+        if (PV.IsMine)
+        {
+            headBodyOffset = transform.position - headConstraint.position;
 
-        if (NetworkManager.PlayerID % 2 == 1)
-        {
-            head.vrTarget = GameObject.Find("Player1").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
-            leftHand.vrTarget = GameObject.Find("Player1").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
-            rightHand.vrTarget = GameObject.Find("Player1").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
+            head.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/CenterEyeAnchor");
+            leftHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/LeftHandAnchor");
+            rightHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/RightHandAnchor");
         }
-        else if (NetworkManager.PlayerID % 2 == 0)
-        {
-            head.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
-            leftHand.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
-            rightHand.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
-        }*/
     }
 
     // Update is called once per frame
