@@ -36,8 +36,8 @@ public class cshVrRig : MonoBehaviour
     void Start()
     {
         headBodyOffset = transform.position - headConstraint.position;
-
-        head.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
+        XRRig rig = FindObjectOfType<XRRig>();
+        /*head.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
         leftHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
         rightHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
 
@@ -52,7 +52,7 @@ public class cshVrRig : MonoBehaviour
             head.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
             leftHand.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
             rightHand.vrTarget = GameObject.Find("Player2").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
-        }
+        }*/
     }
 
     // Update is called once per frame
