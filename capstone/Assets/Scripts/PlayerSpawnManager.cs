@@ -30,7 +30,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             PhotonNetwork.Instantiate("Player", _Spawn2.position, _Spawn2.rotation);
         }
         else
-            PhotonNetwork.Instantiate("Player1", _Spawn1.position, _Spawn1.rotation);
+            PhotonNetwork.Instantiate("Player", _Spawn1.position, _Spawn1.rotation);
         yield return null;
 
     }
