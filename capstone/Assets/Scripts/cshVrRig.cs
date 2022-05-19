@@ -36,7 +36,8 @@ public class cshVrRig : MonoBehaviour
     void Start()
     {
         headBodyOffset = transform.position - headConstraint.position;
-        XRRig rig = FindObjectOfType<XRRig>();
+        //XRRig rig = FindObjectOfType<XRRig>();
+        
         /*head.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/CenterEyeAnchor");
         leftHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/LeftHandAnchor");
         rightHand.vrTarget = GameObject.Find("Player").transform.Find("OVRPlayerCamera/TrackingSpace/RightHandAnchor");
