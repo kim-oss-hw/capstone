@@ -23,11 +23,11 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
     {
         if (NetworkManager.PlayerID%2 == 1)
         {
-            PhotonNetwork.Instantiate("Player1", _Spawn1.position, _Spawn1.rotation);
+            PhotonNetwork.Instantiate("Player", _Spawn1.position, _Spawn1.rotation);
         }
         else if (NetworkManager.PlayerID%2 == 0)
         {
-            PhotonNetwork.Instantiate("Player2", _Spawn2.position, _Spawn2.rotation);
+            PhotonNetwork.Instantiate("Player", _Spawn2.position, _Spawn2.rotation);
         }
         else
             PhotonNetwork.Instantiate("Player1", _Spawn1.position, _Spawn1.rotation);
