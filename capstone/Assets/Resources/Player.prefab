@@ -2197,17 +2197,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head:
-    vrTarget: {fileID: 0}
+    vrTarget: {fileID: 5311290786449448321}
     rigTarget: {fileID: 3877275699789121334}
     trackingPositionOffset: {x: 0, y: -0.1, z: -0.2}
     trackingRotationOffset: {x: 0, y: 90, z: -90}
   leftHand:
-    vrTarget: {fileID: 0}
+    vrTarget: {fileID: 2091727093162077666}
     rigTarget: {fileID: 6591530981258172433}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 90, y: 90, z: 0}
   rightHand:
-    vrTarget: {fileID: 0}
+    vrTarget: {fileID: 7458052749825336536}
     rigTarget: {fileID: 201936082259651673}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 0, y: 0, z: 0}

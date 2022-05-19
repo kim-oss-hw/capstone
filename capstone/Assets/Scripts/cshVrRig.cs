@@ -60,7 +60,7 @@ public class cshVrRig : MonoBehaviour
     {
         if (PV.IsMine)
         {
-            vrPlayer.SetActive(false);
+            //vrPlayer.SetActive(false);
 
             transform.position = headConstraint.position + headBodyOffset;
             transform.forward = Vector3.Lerp(transform.forward, Vector3.ProjectOnPlane(-1 * headConstraint.up, Vector3.up).normalized,

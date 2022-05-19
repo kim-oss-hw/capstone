@@ -21,6 +21,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
         StartCoroutine(this.CreatePlayer());
 
     }
+
     IEnumerator CreatePlayer ()
     {
         if (NetworkManager.PlayerID % 2 == 1)
