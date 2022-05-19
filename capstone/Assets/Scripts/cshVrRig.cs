@@ -35,7 +35,7 @@ public class cshVrRig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //if (PV.IsMine)
+        if (PV.IsMine)
         {
             headBodyOffset = transform.position - headConstraint.position;
 
@@ -48,7 +48,7 @@ public class cshVrRig : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //if (PV.IsMine)
+        if (PV.IsMine)
         {
             //vrPlayer.SetActive(false);
 
