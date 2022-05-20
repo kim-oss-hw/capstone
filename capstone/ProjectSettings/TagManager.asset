@@ -8,6 +8,9 @@ TagManager:
   - Door
   - Weapon
   - Button
+  - Broadsword
+  - Shortsword
+  - Falchion
   layers:
   - Default
   - TransparentFX

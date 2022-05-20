@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 2645888097243528849}
   - component: {fileID: 2645888097243528859}
   - component: {fileID: 2679261212192238047}
-  - component: {fileID: 2645888097616656778}
+  - component: {fileID: 8319584519063424102}
   m_Layer: 0
   m_Name: OVRPlayerCamera
   m_TagString: Untagged
@@ -424,7 +424,7 @@ MonoBehaviour:
   resetHmdPoseByMiddleMouseButton: 1
   activateKeys: 3201000031010000
   pitchKeys: 3401000033010000
---- !u!114 &2645888097616656778
+--- !u!114 &8319584519063424102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -433,11 +433,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2645888097233800063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622e5d26e59c96c458b151b57df9fe99, type: 3}
+  m_Script: {fileID: 11500000, guid: ab497f00452ad744a9064cf6455d3881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 2645888097233967235}
   speedForward: 1
   speedSide: 1
+  speedRota: 60
+  rightHand: {fileID: 0}
+  leftHand: {fileID: 0}
+  swordOneHand: {fileID: 0}
 --- !u!1 &2645888097233807143
 GameObject:
   m_ObjectHideFlags: 0
