@@ -214,7 +214,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            SceneManager.LoadScene("Map1");
+            PhotonNetwork.LoadLevel("Map1");
         }
     }
 }
