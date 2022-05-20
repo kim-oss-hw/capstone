@@ -16,43 +16,47 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.ConnectUsingSettings();
         StartCoroutine(this.CreatePlayer());
     }
 
     IEnumerator CreatePlayer()
     {
+        Debug.Log(NetworkManager.PlayerID);
         if (NetworkManager.PlayerID % 2 == 1)
         {
+            OVRplayer = GameObject.Find("OVRPlayerCamera");
+            OVRplayer.transform.position = SpawnPoint1.transform.position;
+            OVRplayer.transform.rotation = SpawnPoint1.transform.rotation;
+
             VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint1.transform.position, SpawnPoint1.transform.rotation);
             VRplayerPrefab.name = "Player1";
 
-            OVRplayer = GameObject.Find("OVRPlayerController");
-            OVRplayer.transform.position = SpawnPoint1.transform.position;
-            OVRplayer.transform.rotation = SpawnPoint1.transform.rotation;
         }
         else if (NetworkManager.PlayerID % 2 == 0)
         {
-            VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
-            VRplayerPrefab.name = "Player2";
-
-            OVRplayer = GameObject.Find("OVRPlayerController");
+            OVRplayer = GameObject.Find("OVRPlayerCamera");
             OVRplayer.transform.position = SpawnPoint2.transform.position;
             OVRplayer.transform.rotation = SpawnPoint2.transform.rotation;
+
+            VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
+            VRplayerPrefab.name = "Player2";
         }
         else
         {
+            OVRplayer = GameObject.Find("OVRPlayerCamera");
+            OVRplayer.transform.position = SpawnPoint2.transform.position;
+            OVRplayer.transform.rotation = SpawnPoint2.transform.rotation;
+
             Instantiate(VRplayerPrefab, SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
         }
         yield return null;
     }
+
     public override void OnLeftRoom()
     {
         base.OnLeftRoom();
         PhotonNetwork.Destroy(VRplayerPrefab);
     }
-
-    
-
 
 }
