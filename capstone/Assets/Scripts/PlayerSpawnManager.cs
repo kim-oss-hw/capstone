@@ -30,7 +30,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             OVRplayer.transform.rotation = SpawnPoint1.transform.rotation;
 
             VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint1.transform.position, SpawnPoint1.transform.rotation);
-            VRplayerPrefab.name = "Player1";
+            VRplayerPrefab.name = "MyPlayer";
 
         }
         else if (NetworkManager.PlayerID % 2 == 0)
@@ -40,15 +40,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             OVRplayer.transform.rotation = SpawnPoint2.transform.rotation;
 
             VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
-            VRplayerPrefab.name = "Player2";
-        }
-        else
-        {
-            OVRplayer = GameObject.Find("OVRPlayerCamera");
-            OVRplayer.transform.position = SpawnPoint2.transform.position;
-            OVRplayer.transform.rotation = SpawnPoint2.transform.rotation;
-
-            PhotonNetwork.Instantiate("Player", SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
+            VRplayerPrefab.name = "MyPlayer";
         }
         yield return null;
     }
