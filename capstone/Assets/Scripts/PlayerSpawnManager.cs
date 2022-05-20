@@ -48,15 +48,15 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             OVRplayer.transform.position = SpawnPoint2.transform.position;
             OVRplayer.transform.rotation = SpawnPoint2.transform.rotation;
 
-            Instantiate(VRplayerPrefab, SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
+            PhotonNetwork.Instantiate(VRplayerPrefab, SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
         }
         yield return null;
     }
 
-    public override void OnLeftRoom()
+    /*public override void OnLeftRoom()
     {
         base.OnLeftRoom();
         PhotonNetwork.Destroy(VRplayerPrefab);
-    }
+    }*/
 
 }
