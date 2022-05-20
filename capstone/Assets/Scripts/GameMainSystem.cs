@@ -7,40 +7,40 @@ using Photon.Realtime;
 public class GameMainSystem : MonoBehaviourPunCallbacks
 {
 
-    public GameObject Player_1;
-    public GameObject Player_2;
+    public GameObject My_Player;
+    public GameObject Enermy_Player;
 
-    public HitJudgment P1_HitJudgment;
-    public HitJudgment P2_HitJudgment;
+    public HitJudgment My_HitJudgment;
+    public HitJudgment Enermy_HitJudgment;
 
-    public float P1_HP;
-    public float P2_HP;
+    public float My_HP;
+    public float Enermy_HP;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player_1 = GameObject.Find("Name");
-        Player_2 = GameObject.Find("Name");
+        My_Player = GameObject.Find("MyPlayer");
+        Enermy_Player = GameObject.Find("Player(clone)");
 
-        P1_HitJudgment = Player_1.GetComponent<HitJudgment>();
-        P2_HitJudgment = Player_2.GetComponent<HitJudgment>();
+        My_HitJudgment = My_Player.GetComponent<HitJudgment>();
+        Enermy_HitJudgment = Enermy_Player.GetComponent<HitJudgment>();
 
-        P1_HP = P1_HitJudgment.HP;
-        P2_HP = P2_HitJudgment.HP;
+        My_HP = My_HitJudgment.HP;
+        Enermy_HP = Enermy_HitJudgment.HP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        P1_HP = P1_HitJudgment.HP;
-        P2_HP = P2_HitJudgment.HP;
+        My_HP = My_HitJudgment.HP;
+        Enermy_HP = Enermy_HitJudgment.HP;
 
-        if (P1_HP <= 0.0f)
+        if (My_HP <= 0.0f)
         {
 
         }
 
-        else if (P2_HP <= 0.0f)
+        else if (Enermy_HP <= 0.0f)
         {
 
         }
