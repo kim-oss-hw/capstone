@@ -35,14 +35,11 @@ public class cshVrRig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PV.IsMine)
-        {
-            headBodyOffset = transform.position - headConstraint.position;
+        headBodyOffset = transform.position - headConstraint.position;
 
-            head.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/CenterEyeAnchor");
-            leftHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/LeftHandAnchor");
-            rightHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/RightHandAnchor");
-        }
+        head.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/CenterEyeAnchor");
+        leftHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/LeftHandAnchor");
+        rightHand.vrTarget = GameObject.Find("OVRPlayerCamera").transform.Find("TrackingSpace/RightHandAnchor");
     }
 
     // Update is called once per frame

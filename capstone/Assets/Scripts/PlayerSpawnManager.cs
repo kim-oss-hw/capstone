@@ -53,10 +53,10 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
         yield return null;
     }
 
-    /*public override void OnLeftRoom()
+    public override void OnLeftRoom()
     {
         base.OnLeftRoom();
         PhotonNetwork.Destroy(VRplayerPrefab);
-    }*/
+    }
 
 }
