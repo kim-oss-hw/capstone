@@ -116,36 +116,36 @@ public class cshVrHeadMove : MonoBehaviour
             case 0: // Broadsword
                 if (isRight)
                 {
-                    curSword = rightHand.transform.Find("BroadswordEquip").gameObject;
+                    curSword = rightHand.transform.GetChild(5).gameObject;
                     curSword.SetActive(true);
                 }
                 else
                 {
-                    curSword = leftHand.transform.Find("BroadswordEquip").gameObject;
+                    curSword = leftHand.transform.GetChild(5).gameObject;
                     curSword.SetActive(true);
                 }
                 break;
             case 1: // Shortsword
                 if (isRight)
                 {
-                    curSword = rightHand.transform.Find("ShortswordEquip").gameObject;
+                    curSword = rightHand.transform.GetChild(6).gameObject;
                     curSword.SetActive(true);
                 }
                 else
                 {
-                    curSword = leftHand.transform.Find("ShortswordEquip").gameObject;
+                    curSword = leftHand.transform.GetChild(6).gameObject;
                     curSword.SetActive(true);
                 }
                 break;
             case 2: // Falchion
                 if (isRight)
                 {
-                    curSword = rightHand.transform.Find("FalchionEquip").gameObject;
+                    curSword = rightHand.transform.GetChild(7).gameObject;
                     curSword.SetActive(true);
                 }
                 else
                 {
-                    curSword = leftHand.transform.Find("FalchionEquip").gameObject;
+                    curSword = leftHand.transform.GetChild(7).gameObject;
                     curSword.SetActive(true);
                 }
                 break;
