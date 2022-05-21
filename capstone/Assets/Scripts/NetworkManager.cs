@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 
 
@@ -36,6 +36,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public PhotonView PV;
     public Text StartFailedText;
     public Button ChangeBtn;
+    string MapSelect;
 
     List<RoomInfo> myList = new List<RoomInfo>();
     int currentPage = 1, maxPage, multiple;
@@ -107,7 +108,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         LobbyPanel.SetActive(true);
-        RoomPanel.SetActive(false);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
         if(NickNameInput.text.Length == 0)
         {
@@ -140,6 +140,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        LobbyPanel.SetActive(false);
         RoomPanel.SetActive(true);
         RoomRenewal();
         ChatInput.text = "";
@@ -168,6 +169,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (PlayerID == 1)
         {
             ChangeBtn.gameObject.SetActive(true);
+        }else
+        {
+            GameObject.Find("MapBtnCtrl").SetActive(false);
         }
         ListText.text = "";
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
@@ -206,15 +210,47 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #endregion
     public void NextSceneWithString()
     {
-        if (PhotonNetwork.PlayerList.Length < 0)
+        if (PhotonNetwork.PlayerList.Length < 2)
         {
-            StartFailedText.text = "인원이 \n부족합니다!!!";
+            StartFailedText.text = "인원이\n부족합니다!!!";
+            StartFailedText.gameObject.SetActive(true);
+            Destroy(StartFailedText, 3.0f);
+        }
+        else if(MapSelect == null)
+        {
+            StartFailedText.text = "맵을 선택해주세요\n▼▼▼▼▼";
             StartFailedText.gameObject.SetActive(true);
             Destroy(StartFailedText, 3.0f);
         }
         else
         {
-            PhotonNetwork.LoadLevel("Map1");
+            PhotonNetwork.LoadLevel(MapSelect);
+        }
+    }
+
+    public void MapPick()
+    {
+        switch (EventSystem.current.currentSelectedGameObject.name)
+        {
+            case "Map1Btn":
+                {
+                    MapSelect = "Map1";
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
+
+                    break;
+                }
+            case "Map2Btn":
+                {
+                    MapSelect = "Map2";
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
+                    break;
+                }
+            case "Map3Btn":
+                {
+                    MapSelect = "Map3";
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
+                    break;
+                }
         }
     }
 }
