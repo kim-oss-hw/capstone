@@ -16,7 +16,6 @@ public class cshVrAnimatorController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         vrRig = GetComponent<cshVrRig>();
-        previousPos = vrRig.head.vrTarget.position;
     }
 
     // Update is called once per frame
