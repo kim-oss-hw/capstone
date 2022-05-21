@@ -175,10 +175,11 @@ Material:
     - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.13867462, g: 0.46099997, b: 0.27734932, a: 0}
-    - _Color2: {r: 0.1597293, g: 0.44339612, b: 0.044339478, a: 0}
+    - _Color1: {r: 0.31181028, g: 0.46226418, b: 0.40442818, a: 0}
+    - _Color2: {r: 0.5426884, g: 0.6698113, b: 0.48972055, a: 0}
     - _Color3: {r: 0, g: 0, b: 0, a: 0}
     - _CoverageColor: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SnowColor: {r: 0.51693714, g: 0.5647059, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
