@@ -20,7 +20,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     void Start()
     {
         My_Player = GameObject.Find("MyPlayer");
-        Enermy_Player = GameObject.Find("Player(clone)");
+        Enermy_Player = GameObject.Find("Player(Clone)");
 
         My_HitJudgment = My_Player.GetComponent<HitJudgment>();
         Enermy_HitJudgment = Enermy_Player.GetComponent<HitJudgment>();

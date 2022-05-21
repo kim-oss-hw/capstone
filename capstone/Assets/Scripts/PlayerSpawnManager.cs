@@ -22,7 +22,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
     IEnumerator CreatePlayer()
     {
-        Debug.Log(NetworkManager.PlayerID);
+
         if (NetworkManager.PlayerID % 2 == 1)
         {
             OVRplayer = GameObject.Find("OVRPlayerCamera");

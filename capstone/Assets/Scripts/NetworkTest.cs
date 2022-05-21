@@ -17,7 +17,7 @@ public class NetworkTest : MonoBehaviour
     void Update()
     {
         My_Player = GameObject.Find("MyPlayer");
-        Enermy_Player = GameObject.Find("Player(clone)");
+        Enermy_Player = GameObject.Find("Player(Clone)");
 
         Debug.Log("My Player : " + My_Player.transform.position);
         Debug.Log("Enermy Player : " + Enermy_Player.transform.position);
