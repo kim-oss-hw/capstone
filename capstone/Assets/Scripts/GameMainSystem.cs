@@ -16,6 +16,9 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     public float My_HP;
     public float Enermy_HP;
 
+    public GameObject My_HPbar;
+    public GameObject Enermy_HPbar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,15 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     {
         My_HP = My_HitJudgment.HP;
         Enermy_HP = Enermy_HitJudgment.HP;
+
+        RectTransform My_HPbar_rect = My_HPbar.GetComponent<RectTransform>();
+        RectTransform Enermy_HPbar_rect = Enermy_HPbar.GetComponent<RectTransform>();
+
+        My_HPbar_rect.offsetMin = new Vector2(537.0f, 1068.0f + (10.0f * My_HP));
+        My_HPbar_rect.offsetMax = new Vector2(2137.0f, 668.0f);
+
+        Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 1068.0f + (10.0f * Enermy_HP));
+        Enermy_HPbar_rect.offsetMax = new Vector2(537.0f, 668.0f);
 
         if (My_HP <= 0.0f)
         {
