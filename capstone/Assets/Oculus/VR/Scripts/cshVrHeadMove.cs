@@ -11,6 +11,14 @@ public class cshVrHeadMove : MonoBehaviour
     public float speedRota = 1;
     public float equipDistance = 6;
 
+    public float RimitX_po = 1;
+    public float RimitX_ne = 1;
+    public float RimitY_po = 1;
+    public float RimitY_ne = 1;
+    public float RimitZ_po = 1;
+    public float RimitZ_ne = 1;
+
+
     private GameObject rightHand;
     private GameObject leftHand;
     private GameObject playerCharacter;
@@ -102,6 +110,8 @@ public class cshVrHeadMove : MonoBehaviour
 
         transform.Translate(moveDir * Time.deltaTime);
         transform.Rotate(rotaDir * Time.deltaTime);
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, RimitX_ne, RimitX_po), Mathf.Clamp(transform.position.y, RimitY_ne, RimitY_po), Mathf.Clamp(transform.position.z, RimitZ_ne, RimitZ_po));
     }
 
     void equipSword(int swordIndex, bool isRight)

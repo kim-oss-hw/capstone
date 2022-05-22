@@ -7,9 +7,15 @@ public class cshVrHeadMove : MonoBehaviour
     public float speedForward = 1;
     public float speedSide = 1;
 
+    public float RimitX_po = 1;
+    public float RimitX_ne = 1;
+    public float RimitZ_po = 1;
+    public float RimitZ_ne = 1;
+
     private Transform tr;
     private float dirX = 0;
     private float dirZ = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +34,10 @@ public class cshVrHeadMove : MonoBehaviour
         Vector3 moveDir = new Vector3(coord.x * speedSide, 0, coord.y * speedForward);
 
         transform.Translate(moveDir * Time.deltaTime);
+
+        transform.Translate(new Vector3(Mathf.Clamp(transform.position.x, RimitX_ne, RimitX_po), transform.position.y, Mathf.Clamp(transform.position.z, RimitZ_po, RimitZ_po)));
+
+        //Rigidbody PlayerRigidbody = gameObject.GetComponent<Rigidbody>();
+        //PlayerRigidbody.velocity = Vector3.zero;
     }
 }

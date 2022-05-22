@@ -323,6 +323,12 @@ MonoBehaviour:
   speedSide: 1
   speedRota: 60
   equipDistance: 6
+  RimitX_po: 1
+  RimitX_ne: -1
+  RimitY_po: 10
+  RimitY_ne: -1
+  RimitZ_po: 1
+  RimitZ_ne: -1
 --- !u!1 &4754554915384537848
 GameObject:
   m_ObjectHideFlags: 0

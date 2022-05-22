@@ -39,7 +39,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _CoverageAlbedo:
         m_Texture: {fileID: 2800000, guid: a42cd62f3c2eebb47b0132c8c661b27e, type: 3}
-        m_Scale: {x: 6, y: 6}
+        m_Scale: {x: 12, y: 6}
         m_Offset: {x: 0, y: 0}
     - _CoverageMask:
         m_Texture: {fileID: 2800000, guid: 6256982f10c8bb141ac4d83ddbea3bf2, type: 3}
@@ -47,7 +47,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _CoverageNormal:
         m_Texture: {fileID: 2800000, guid: 57ef960ad9ca8b94bad434e31c0b2c7e, type: 3}
-        m_Scale: {x: 6, y: 6}
+        m_Scale: {x: 12, y: 6}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
@@ -127,9 +127,9 @@ Material:
     - _BottomCoverage: 1
     - _BumpScale: 1
     - _COVERAGE: 1
-    - _CoverageContrast: 0.08
-    - _CoverageFade: -0.25
-    - _CoverageLevel: -1.1
+    - _CoverageContrast: 0.03
+    - _CoverageFade: 0.01
+    - _CoverageLevel: 10
     - _CoverageOverlayType: 1
     - _CoverageSmoothness: 0.15
     - _CoverageThickness: 1
@@ -171,3 +171,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _SurfaceColor: {r: 0.44, g: 0.37448633, b: 0.33176, a: 0}
+  m_BuildTextureStacks: []
