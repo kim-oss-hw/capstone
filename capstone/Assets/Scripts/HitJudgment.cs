@@ -12,6 +12,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks
     public GameObject AnimationObject;
     WeaponSystem WeaponSystem;
 
+    public bool GameStart = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Weapon")
+        if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
