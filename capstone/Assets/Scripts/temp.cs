@@ -11,12 +11,21 @@ public class cshVrHeadMove : MonoBehaviour
     public float speedRota = 1;
     public float equipDistance = 6;
 
+    public float RimitX_po = 1;
+    public float RimitX_ne = 1;
+    public float RimitY_po = 1;
+    public float RimitY_ne = 1;
+    public float RimitZ_po = 1;
+    public float RimitZ_ne = 1;
+
+
     public GameObject rightHand;
     public GameObject leftHand;
     public GameObject playerCharacter;
     private Transform tr;
-    private GameObject curSword = null;
-    public Animator animator;
+    public GameObject curSword = null;
+    private Animator animator;
+    private bool isSetting = true;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +40,10 @@ public class cshVrHeadMove : MonoBehaviour
 
         if (!playerCharacter) // playerCharacter = null ¿œ∂ß
         {
-            if (GameObject.Find("MyPlayer"))
+            if (GameObject.Find("MyPlayer") || GameObject.Find("Player"))
             {
-                playerCharacter = GameObject.Find("MyPlayer");
+                if(GameObject.Find("MyPlayer")) playerCharacter = GameObject.Find("MyPlayer");
+                else playerCharacter = GameObject.Find("Player");
                 playerCharacter = playerCharacter.transform.Find("PlayerCharacter").gameObject;
                 rightHand = playerCharacter.transform.
                     Find("root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r").gameObject;
@@ -46,48 +56,64 @@ public class cshVrHeadMove : MonoBehaviour
         MovePlayer();
         if (OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger))
         {
-            if (curSword)
-            {
-                unequipSword();
-            }
-            else
+            if (isSetting)
             {
                 Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, equipDistance);
-                if (hit.transform.tag == "Broadsword")
+                if (curSword)
                 {
-                    equipSword(0, true);
+                    if (hit.transform.tag == "SetWeapon")
+                    {
+                        isSetting = false;
+                        Destroy(hit.transform.parent.gameObject);
+                    }
+                    else unequipSword();
                 }
-                else if (hit.transform.tag == "Shortsword")
+                else
                 {
-                    equipSword(1, true);
-                }
-                else if (hit.transform.tag == "Falchion")
-                {
-                    equipSword(2, true);
+                    if (hit.transform.tag == "Broadsword")
+                    {
+                        equipSword(0, true);
+                    }
+                    else if (hit.transform.tag == "Shortsword")
+                    {
+                        equipSword(1, true);
+                    }
+                    else if (hit.transform.tag == "Falchion")
+                    {
+                        equipSword(2, true);
+                    }
                 }
             }
         }
         if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger))
         {
-            if (curSword)
-            {
-                unequipSword();
-            }
-            else
+            if (isSetting)
             {
                 Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, equipDistance);
-                print(hit.transform.name);
-                if (hit.transform.tag == "Broadsword")
+                if (curSword)
                 {
-                    equipSword(0, false);
+                    if (hit.transform.tag == "SetWeapon")
+                    {
+                        isSetting = false;
+                        Destroy(hit.transform.parent.gameObject);
+                    }
+                    else unequipSword();
                 }
-                else if (hit.transform.tag == "Shortsword")
+                else
                 {
-                    equipSword(1, false);
-                }
-                else if (hit.transform.tag == "Falchion")
-                {
-                    equipSword(2, false);
+                    print(hit.transform.name);
+                    if (hit.transform.tag == "Broadsword")
+                    {
+                        equipSword(0, false);
+                    }
+                    else if (hit.transform.tag == "Shortsword")
+                    {
+                        equipSword(1, false);
+                    }
+                    else if (hit.transform.tag == "Falchion")
+                    {
+                        equipSword(2, false);
+                    }
                 }
             }
         }
@@ -100,8 +126,13 @@ public class cshVrHeadMove : MonoBehaviour
         Vector3 moveDir = new Vector3(coordMove.x * speedSide, 0, coordMove.y * speedForward);
         Vector3 rotaDir = new Vector3(0f, coordRota.x * speedRota, 0f);
 
-        transform.Translate(moveDir * Time.deltaTime);
+        if (!isSetting)
+        {
+            transform.Translate(moveDir * Time.deltaTime);
+        }
+
         transform.Rotate(rotaDir * Time.deltaTime);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, RimitX_ne, RimitX_po), Mathf.Clamp(transform.position.y, RimitY_ne, RimitY_po), Mathf.Clamp(transform.position.z, RimitZ_ne, RimitZ_po));
     }
 
     void equipSword(int swordIndex, bool isRight)
