@@ -54,6 +54,8 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -1513166723264988740}
+  - {fileID: 3856579378216723660}
+  - {fileID: 0}
   - {fileID: 7030738763429246118}
   - {fileID: 482478127822627995}
   - {fileID: 5901401353249470105}
@@ -108,6 +110,8 @@ MonoBehaviour:
   curSword: {fileID: 0}
   animator: {fileID: 0}
   PV: {fileID: 0}
+  ActivateWeapon: 0
+  DeactivateWeapon: 0
 --- !u!1 &4416096357626006363
 GameObject:
   m_ObjectHideFlags: 0

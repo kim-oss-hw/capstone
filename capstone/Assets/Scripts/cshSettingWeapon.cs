@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class cshSettingWeapon : MonoBehaviour
+public class cshSettingWeapon : MonoBehaviour, IPunObservable
 {
     public bool[,] weapons = new bool[2, 3] { { false, false, false }, { false, false, false } };
     public GameObject rightHand;
@@ -12,6 +12,24 @@ public class cshSettingWeapon : MonoBehaviour
     public GameObject curSword;
     public Animator animator;
     public PhotonView PV;
+
+    public bool ActivateWeapon;
+    public bool DeactivateWeapon;
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(ActivateWeapon);
+            stream.SendNext(DeactivateWeapon);
+        }
+        else
+        {
+            this.ActivateWeapon = (bool)stream.ReceiveNext();
+            this.DeactivateWeapon = (bool)stream.ReceiveNext();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
