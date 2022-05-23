@@ -13,20 +13,19 @@ public class cshSettingWeapon : MonoBehaviour
     public Animator animator;
     public PhotonView PV;
 
-
     // Start is called before the first frame update
     void Start()
     {
         rightHand = transform.Find("PlayerCharacter/root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r").gameObject;
         leftHand = transform.Find("PlayerCharacter/root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l").gameObject;
         animator = transform.Find("PlayerCharacter").gameObject.GetComponent<Animator>();
-        PV = GetComponent<PhotonView>();
+        PV = gameObject.GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //PV.RPC("DeactivateWeapon", RpcTarget.All, 1, true);
     }
 
     public void unequipSword()
@@ -79,7 +78,8 @@ public class cshSettingWeapon : MonoBehaviour
         else return false;
     }
 
-    protected virtual void ActiveWeapon(int weaponIndex, bool isRight)
+    [PunRPC]
+    void ActiveWeapon(int weaponIndex, bool isRight)
     {
         if (isRight)
         {
@@ -93,7 +93,8 @@ public class cshSettingWeapon : MonoBehaviour
         }
     }
 
-    protected virtual void DeactiveWeapon(int weaponIndex, bool isRight)
+    [PunRPC]
+    void DeactiveWeapon(int weaponIndex, bool isRight)
     {
         if (isRight)
         {
@@ -105,17 +106,5 @@ public class cshSettingWeapon : MonoBehaviour
         }
         animator.SetBool("rightGrabing", false);
         animator.SetBool("leftGrabing", false);
-    }
-
-    [PunRPC]
-    void ActiveWeapon(int weaponIndex, bool isRight)
-    {
-        base.ActiveWeapon(weaponIndex, isRight);
-    }
-
-    [PunRPC]
-    void DeactiveWeapon(int weaponIndex, bool isRight)
-    {
-        base.DeactiveWeapon(weaponIndex, isRight);
     }
 }
