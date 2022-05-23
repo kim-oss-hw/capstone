@@ -25,7 +25,7 @@ public class cshSettingWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //PV.RPC("DeactivateWeapon", RpcTarget.All, 1, true);
+        PV.RPC("ActiveWeapon", RpcTarget.All, 1, false);
     }
 
     public void unequipSword()
@@ -37,8 +37,8 @@ public class cshSettingWeapon : MonoBehaviour
             {
                 if (weapons[i, j])
                 {
-                    if (i == 0) PV.RPC("DeactivateWeapon", RpcTarget.All, j, true);
-                    else PV.RPC("DeactivateWeapon", RpcTarget.All, j, false);
+                    if (i == 0) PV.RPC("DeActiveWeapon", RpcTarget.All, j, true);
+                    else PV.RPC("DeActiveWeapon", RpcTarget.All, j, false);
                     weapons[i, j] = false;
                 }
             }
@@ -58,7 +58,7 @@ public class cshSettingWeapon : MonoBehaviour
         {
             curSword = rightHand.transform.GetChild(swordIndex + 5).gameObject;
             //curSword.SetActive(true);
-            PV.RPC("ActivateWeapon", RpcTarget.All, swordIndex, true);
+            PV.RPC("ActiveWeapon", RpcTarget.All, swordIndex, true);
             weapons[0, swordIndex] = true;
             //animator.SetBool("rightGrabing", true);
         }
@@ -66,7 +66,7 @@ public class cshSettingWeapon : MonoBehaviour
         {
             curSword = leftHand.transform.GetChild(swordIndex + 5).gameObject;
             //curSword.SetActive(true);
-            PV.RPC("ActivateWeapon", RpcTarget.All, swordIndex, false);
+            PV.RPC("ActiveWeapon", RpcTarget.All, swordIndex, false);
             weapons[1, swordIndex] = true;
             //animator.SetBool("leftGrabing", true);
         }
@@ -81,6 +81,7 @@ public class cshSettingWeapon : MonoBehaviour
     [PunRPC]
     void ActiveWeapon(int weaponIndex, bool isRight)
     {
+        Debug.Log(isRight);
         if (isRight)
         {
             rightHand.transform.GetChild(weaponIndex + 5).gameObject.SetActive(true);
