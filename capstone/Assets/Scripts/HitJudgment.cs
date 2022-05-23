@@ -5,7 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 
-public class HitJudgment : MonoBehaviourPunCallbacks
+public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 {
     public float HP = 100.0f;
     public GameObject HPbar_top;
@@ -13,6 +13,18 @@ public class HitJudgment : MonoBehaviourPunCallbacks
     WeaponSystem WeaponSystem;
 
     public bool GameStart = false;
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(HP);
+        }
+        else
+        {
+            this.HP = (float)stream.ReceiveNext();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

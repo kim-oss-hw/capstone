@@ -1,15 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
+using UnityEngine.UI;
 
-public class WeaponSystem : MonoBehaviour
+public class WeaponSystem : MonoBehaviour, IPunObservable
 {
     public float Damage = 10.0f;
     public bool Attackable = true;
     public bool CoolTimeStart = false;
-    public float CoolTime = 3.0f;
+    public float CoolTime = 0.5f;
 
     public GameObject castbar;
+    private bool Weaponbool = false;
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(Damage);
+            stream.SendNext(Weaponbool);
+        }
+        else
+        {
+            this.Damage = (float)stream.ReceiveNext();
+            this.Weaponbool = (bool)stream.ReceiveNext();
+        }
+    }
 
     IEnumerator CoolTimeLoad()
     {
@@ -37,13 +55,23 @@ public class WeaponSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+    }
+
+    void OnEnable()
+    {
+        Weaponbool = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(CoolTimeStart == true)
+        if(Weaponbool == true)
+        {
+            gameObject.SetActive(true);
+        }
+
+        if (CoolTimeStart == true)
         {
             StartCoroutine("CoolTimeLoad");
         }
