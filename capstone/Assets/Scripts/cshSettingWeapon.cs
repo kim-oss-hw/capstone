@@ -25,7 +25,7 @@ public class cshSettingWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PV.RPC("ActiveWeapon", RpcTarget.All, 1, false);
+        //PV.RPC("ActiveWeapon", RpcTarget.All, 1, false);
     }
 
     public void unequipSword()
