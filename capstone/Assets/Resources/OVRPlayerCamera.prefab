@@ -190,9 +190,9 @@ GameObject:
   - component: {fileID: 1591020925495725166}
   - component: {fileID: 3568661492273304993}
   - component: {fileID: 1133199876990452589}
-  - component: {fileID: 4465610995996880457}
   - component: {fileID: 1043688488649556410}
   - component: {fileID: 1043688488649556411}
+  - component: {fileID: 5545691581073904456}
   m_Layer: 11
   m_Name: OVRPlayerCamera
   m_TagString: Untagged
@@ -308,29 +308,6 @@ MonoBehaviour:
   resetHmdPoseByMiddleMouseButton: 1
   activateKeys: 3201000031010000
   pitchKeys: 3401000033010000
---- !u!114 &4465610995996880457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3626032273951210860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab497f00452ad744a9064cf6455d3881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 7478309176758110288}
-  speedForward: 3
-  speedSide: 3
-  speedRota: 60
-  equipDistance: 10
-  RimitX_po: 1
-  RimitX_ne: -1
-  RimitY_po: 10
-  RimitY_ne: -1
-  RimitZ_po: 12
-  RimitZ_ne: -13
 --- !u!54 &1043688488649556410
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -361,6 +338,29 @@ CapsuleCollider:
   m_Height: 2.35
   m_Direction: 1
   m_Center: {x: 0, y: -0.6, z: -0.3}
+--- !u!114 &5545691581073904456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626032273951210860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f4ef87bc3208944b99401d65e28e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  speedForward: 3
+  speedSide: 3
+  speedRota: 60
+  equipDistance: 10
+  RimitX_po: 1
+  RimitX_ne: -1
+  RimitY_po: 10
+  RimitY_ne: -1
+  RimitZ_po: 12
+  RimitZ_ne: -13
 --- !u!1 &4754554915384537848
 GameObject:
   m_ObjectHideFlags: 0
