@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class cshSettingWeapon : MonoBehaviour, IPunObservable
+public class cshSettingWeapon : MonoBehaviour
 {
     public bool[,] weapons = new bool[2, 3] { { false, false, false }, { false, false, false } };
     public GameObject rightHand;
@@ -13,22 +13,6 @@ public class cshSettingWeapon : MonoBehaviour, IPunObservable
     public Animator animator;
     public PhotonView PV;
 
-    public bool ActivateWeapon;
-    public bool DeactivateWeapon;
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-        {
-            stream.SendNext(ActivateWeapon);
-            stream.SendNext(DeactivateWeapon);
-        }
-        else
-        {
-            this.ActivateWeapon = (bool)stream.ReceiveNext();
-            this.DeactivateWeapon = (bool)stream.ReceiveNext();
-        }
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -95,8 +79,7 @@ public class cshSettingWeapon : MonoBehaviour, IPunObservable
         else return false;
     }
 
-    [PunRPC]
-    void ActiveWeapon(int weaponIndex, bool isRight)
+    protected virtual void ActiveWeapon(int weaponIndex, bool isRight)
     {
         if (isRight)
         {
@@ -110,8 +93,7 @@ public class cshSettingWeapon : MonoBehaviour, IPunObservable
         }
     }
 
-    [PunRPC]
-    void DeactiveWeapon(int weaponIndex, bool isRight)
+    protected virtual void DeactiveWeapon(int weaponIndex, bool isRight)
     {
         if (isRight)
         {
@@ -123,5 +105,17 @@ public class cshSettingWeapon : MonoBehaviour, IPunObservable
         }
         animator.SetBool("rightGrabing", false);
         animator.SetBool("leftGrabing", false);
+    }
+
+    [PunRPC]
+    void ActiveWeapon(int weaponIndex, bool isRight)
+    {
+        base.ActiveWeapon(weaponIndex, isRight);
+    }
+
+    [PunRPC]
+    void DeactiveWeapon(int weaponIndex, bool isRight)
+    {
+        base.DeactiveWeapon(weaponIndex, isRight);
     }
 }
