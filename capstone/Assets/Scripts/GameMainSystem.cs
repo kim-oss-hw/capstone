@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class GameMainSystem : MonoBehaviourPunCallbacks
 {
@@ -27,48 +28,56 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     public GameObject Enermy_HPbar;
 
     public GameObject CountDownUI;
+    public GameObject GameTimeUI;
     private bool GameStartBool = false;
 
     IEnumerator StartCountDown()
     {
-        //CountDownUI = GameObject.Find("countdown");
-        //RectTransform CountDownUItext = CountDownUI.GetComponent<Text>();
+        CountDownUI = GameObject.Find("countdown");
+        Text CountDownUItext = CountDownUI.GetComponent<Text>();
 
         int i = 0;
 
         while (i < 3)
         {
             i += 1;
-            //CountDownUItext.text = (4 - i).ToString();
+            CountDownUItext.text = (4 - i).ToString();
             yield return new WaitForSeconds(1.0f);
         }
 
+        CountDownUItext.text = "";
         GameStartBool = true;
-        //MyPlayer_HitJud.GameStart = true;
-        //Enermy_HitJud.GameStart = true;
+        MyPlayer_HitJud.GameStart = true;
+        Enermy_HitJud.GameStart = true;
+
     }
 
     IEnumerator GameCountDown()
     {
-        //CountDownUI = GameObject.Find("countdown");
-        //RectTransform CountDownUItext = CountDownUI.GetComponent<Text>();
+        GameTimeUI = GameObject.Find("gametime");
+        Text GameTimeUItext = GameTimeUI.GetComponent<Text>();
 
         int i = 0;
 
         while (i < 100)
         {
             i += 1;
-            //CountDownUItext.text = (100 - i).ToString();
+            if(i > 90)
+                GameTimeUItext.text = "0"+(100 - i).ToString();
+            else
+                GameTimeUItext.text = (100 - i).ToString();
             yield return new WaitForSeconds(1.0f);
         }
 
-        //MyPlayer_HitJud.GameStart = false;
-        //Enermy_HitJud.GameStart = false;
+        MyPlayer_HitJud.GameStart = false;
+        Enermy_HitJud.GameStart = false;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine("GameCountDown");
+
         My_Player = GameObject.Find("MyPlayer");
         Enermy_Player = GameObject.Find("Player(Clone)");
 
@@ -96,12 +105,20 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
 
         if (My_HP <= 0.0f)
         {
+            CountDownUI = GameObject.Find("countdown");
+            Text CountDownUItext = CountDownUI.GetComponent<Text>();
+            CountDownUItext.text = "LOSE";
 
+            //나가는 코드
         }
 
         else if (Enermy_HP <= 0.0f)
         {
+            CountDownUI = GameObject.Find("countdown");
+            Text CountDownUItext = CountDownUI.GetComponent<Text>();
+            CountDownUItext.text = "WIN";
 
+            //나가는 코드
         }
     }
 

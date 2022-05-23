@@ -13,12 +13,13 @@ public class WeaponSystem : MonoBehaviour, IPunObservable
     public float CoolTime = 0.5f;
 
     public GameObject castbar;
-    private bool Weaponbool = false;
+    public bool Weaponbool = false;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
         {
+            Debug.Log("나 : " + Weaponbool);
             stream.SendNext(Damage);
             stream.SendNext(Weaponbool);
         }
@@ -26,6 +27,8 @@ public class WeaponSystem : MonoBehaviour, IPunObservable
         {
             this.Damage = (float)stream.ReceiveNext();
             this.Weaponbool = (bool)stream.ReceiveNext();
+
+            Debug.Log("상대방 : " + Weaponbool);
         }
     }
 
