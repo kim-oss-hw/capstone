@@ -19,11 +19,11 @@ public class cshVrHeadMove : MonoBehaviour
     public float RimitZ_ne = 1;
 
 
-    public GameObject rightHand;
-    public GameObject leftHand;
-    public GameObject playerCharacter;
+    private GameObject rightHand;
+    private GameObject leftHand;
+    private GameObject playerCharacter;
     private Transform tr;
-    public GameObject curSword = null;
+    private GameObject curSword = null;
     private Animator animator;
     private bool isSetting = true;
 
