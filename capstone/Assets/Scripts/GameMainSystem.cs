@@ -77,8 +77,6 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("GameCountDown");
-
         My_Player = GameObject.Find("MyPlayer");
         Enermy_Player = GameObject.Find("Player(Clone)");
 
@@ -104,41 +102,33 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
         Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 1068.0f + (10.0f * Enermy_HP));
         Enermy_HPbar_rect.offsetMax = new Vector2(537.0f, 668.0f);
 
-        //if (My_HP <= 0.0f)
-        //{
-        //    //CountDownUI = GameObject.Find("countdown");
-        //    //Text CountDownUItext = CountDownUI.GetComponent<Text>();
-        //    //CountDownUItext.text = "LOSE";
+        if (My_HP <= 0.0f)
+        {
+            GameLose();
+        }
 
-        //    //나가는 코드
-        //}
-
-        //else if (Enermy_HP <= 0.0f)
-        //{
-        //    CountDownUI = GameObject.Find("countdown");
-        //    Text CountDownUItext = CountDownUI.GetComponent<Text>();
-        //    CountDownUItext.text = "WIN";
-
-        //    //나가는 코드
-        //}
+        else if (Enermy_HP <= 0.0f)
+        {
+            GameWin();
+        }
     }
     public void GameLose()
     {
-        //CountDownUI = GameObject.Find("countdown");
-        //Text CountDownUItext = CountDownUI.GetComponent<Text>();
-        //CountDownUItext.text = "LOSE";
-        //CountDownUI.SetActive(true);
-        _gameResult.text = "LOSE";
-        _gameResult.gameObject.SetActive(true);
+        CountDownUI = GameObject.Find("countdown");
+        Text CountDownUItext = CountDownUI.GetComponent<Text>();
+        CountDownUItext.text = "LOSE";
+
+        //_gameResult.text = "LOSE";
+        //_gameResult.gameObject.SetActive(true);
     }
     public void GameWin()
     {
-        //CountDownUI = GameObject.Find("countdown");
-        //Text CountDownUItext = CountDownUI.GetComponent<Text>();
-        //CountDownUItext.text = "WIN";
-        //CountDownUI.SetActive(true);
-        _gameResult.text = "WIN";
-        _gameResult.gameObject.SetActive(true);
+        CountDownUI = GameObject.Find("countdown");
+        Text CountDownUItext = CountDownUI.GetComponent<Text>();
+        CountDownUItext.text = "WIN";
+
+        //_gameResult.text = "WIN";
+        //_gameResult.gameObject.SetActive(true);
     }
 
 }

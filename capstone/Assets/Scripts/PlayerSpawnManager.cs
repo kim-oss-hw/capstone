@@ -10,7 +10,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
     public Transform SpawnPoint1; //플레이어1 스폰지역
     public Transform SpawnPoint2; //플레이어2 스폰지역
 
-    GameMainSystem _gameMainSys;
+    GameMainSystem GameMainSys;
 
 
 
@@ -23,7 +23,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        _gameMainSys = GameObject.Find("OVRPlayerCamera").GetComponent<GameMainSystem>();
+        GameMainSys = GameObject.Find("OVRPlayerCamera").GetComponent<GameMainSystem>();
         CreatePlayer();
     }
 
@@ -38,12 +38,12 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.PlayerList.Length < 2)
         {
-            _gameMainSys.GameWin();
+            GameMainSys.GameWin();
             Invoke("BackToRoom", 5);
         }
-        else if (_gameMainSys.My_HP <= 0.0f)
+        else if (GameMainSys.My_HP <= 0.0f)
         {
-            _gameMainSys.GameLose();
+            GameMainSys.GameWin();
             Invoke("BackToRoom", 5);
         }
 

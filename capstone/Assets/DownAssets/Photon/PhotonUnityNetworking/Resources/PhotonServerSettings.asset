@@ -42,6 +42,7 @@ MonoBehaviour:
   - RespawnSpaceship
   - ActiveWeapon
   - DeactiveWeapon
+  - testrpc
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
