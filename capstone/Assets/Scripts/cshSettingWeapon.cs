@@ -48,7 +48,7 @@ public class cshSettingWeapon : MonoBehaviour
 
     public void equipSword(int swordIndex, bool isRight)
     {
-        if (swordIndex > 2)
+        if (swordIndex > 2 || curSword)
         {
             unequipSword();
             return;

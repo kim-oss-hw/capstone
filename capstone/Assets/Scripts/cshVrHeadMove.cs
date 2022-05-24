@@ -59,7 +59,7 @@ public class cshVrHeadMove : MonoBehaviour
                 {
                     if (settingWeapon.isEquiped())
                     {
-                        settingWeapon.equipSword(3, true);
+                        settingWeapon.unequipSword();
                     }
                 }
                 else
@@ -70,6 +70,9 @@ public class cshVrHeadMove : MonoBehaviour
                         {
                             isSetting = false;
                             Destroy(hit.transform.parent.gameObject);
+                        } else
+                        {
+                            settingWeapon.unequipSword();
                         }
                     }
                     else if (hit.transform.tag == "Broadsword")
@@ -95,7 +98,7 @@ public class cshVrHeadMove : MonoBehaviour
                 {
                     if (settingWeapon.isEquiped())
                     {
-                        settingWeapon.equipSword(3, false);
+                        settingWeapon.unequipSword();
                     }
                 }
                 else
@@ -106,6 +109,9 @@ public class cshVrHeadMove : MonoBehaviour
                         {
                             isSetting = false;
                             Destroy(hit.transform.parent.gameObject);
+                        } else
+                        {
+                            settingWeapon.unequipSword();
                         }
                     }
                     else if (hit.transform.tag == "Broadsword")
