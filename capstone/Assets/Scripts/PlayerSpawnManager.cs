@@ -36,7 +36,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
         //    SceneManager.LoadScene("MainMenu2");
         //}
 
-        if (PhotonNetwork.PlayerList.Length < 2)
+        if (PhotonNetwork.PlayerList.Length < 2 || GameMainSys.Enermy_HP <= 0.0f)
         {
             GameMainSys.GameWin();
             Invoke("BackToRoom", 5);

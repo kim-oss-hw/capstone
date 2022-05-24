@@ -21,8 +21,8 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     private RectTransform Enermy_HPbar_rect;
 
 
-    public float My_HP;
-    public float Enermy_HP;
+    public float My_HP = 100.0f;
+    public float Enermy_HP = 100.0f;
 
     public GameObject My_HPbar;
     public GameObject Enermy_HPbar;
@@ -102,33 +102,18 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
         Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 1068.0f + (10.0f * Enermy_HP));
         Enermy_HPbar_rect.offsetMax = new Vector2(537.0f, 668.0f);
 
-        if (My_HP <= 0.0f)
-        {
-            GameLose();
-        }
-
-        else if (Enermy_HP <= 0.0f)
-        {
-            GameWin();
-        }
     }
     public void GameLose()
     {
         CountDownUI = GameObject.Find("countdown");
         Text CountDownUItext = CountDownUI.GetComponent<Text>();
         CountDownUItext.text = "LOSE";
-
-        //_gameResult.text = "LOSE";
-        //_gameResult.gameObject.SetActive(true);
     }
     public void GameWin()
     {
         CountDownUI = GameObject.Find("countdown");
         Text CountDownUItext = CountDownUI.GetComponent<Text>();
         CountDownUItext.text = "WIN";
-
-        //_gameResult.text = "WIN";
-        //_gameResult.gameObject.SetActive(true);
     }
 
 }
