@@ -37,8 +37,8 @@ public class cshSettingWeapon : MonoBehaviour
             {
                 if (weapons[i, j])
                 {
-                    if (i == 0) PV.RPC("DeActiveWeapon", RpcTarget.All, j, true);
-                    else PV.RPC("DeActiveWeapon", RpcTarget.All, j, false);
+                    if (i == 0) PV.RPC("DeactiveWeapon", RpcTarget.All, j, true);
+                    else PV.RPC("DeactiveWeapon", RpcTarget.All, j, false);
                     weapons[i, j] = false;
                 }
             }

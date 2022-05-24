@@ -378,8 +378,8 @@ MonoBehaviour:
   Enermy_Player: {fileID: 0}
   My_HitJudgment: {fileID: 0}
   Enermy_HitJudgment: {fileID: 0}
-  My_HP: 0
-  Enermy_HP: 0
+  My_HP: 100
+  Enermy_HP: 100
   My_HPbar: {fileID: 4517129290676252904}
   Enermy_HPbar: {fileID: 4517129291230752254}
   _gameResult: {fileID: 8050881193130752178}
