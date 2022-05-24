@@ -99,11 +99,11 @@ public class cshSettingWeapon : MonoBehaviour
     {
         if (isRight)
         {
-            rightHand.transform.GetChild(weaponIndex).gameObject.SetActive(false);
+            rightHand.transform.GetChild(weaponIndex + 5).gameObject.SetActive(false);
         }
         else
         {
-            leftHand.transform.GetChild(weaponIndex).gameObject.SetActive(false);
+            leftHand.transform.GetChild(weaponIndex + 5).gameObject.SetActive(false);
         }
         animator.SetBool("rightGrabing", false);
         animator.SetBool("leftGrabing", false);
