@@ -1399,17 +1399,6 @@ Transform:
   m_Father: {fileID: 554763275}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1094414674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8050881193130752178, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-  m_PrefabInstance: {fileID: 4335185244516367573}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1145348334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3011,29 +3000,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
   m_PrefabInstance: {fileID: 4335185244516367573}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1043688488649556417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043688488649556409}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533b6ec4b4122de4fbe1ee5b251b1b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  My_Player: {fileID: 0}
-  Enermy_Player: {fileID: 0}
-  My_HitJudgment: {fileID: 0}
-  Enermy_HitJudgment: {fileID: 0}
-  My_HP: 0
-  Enermy_HP: 0
-  My_HPbar: {fileID: 0}
-  Enermy_HPbar: {fileID: 0}
-  _gameResult: {fileID: 1094414674}
-  CountDownUI: {fileID: 0}
-  GameTimeUI: {fileID: 0}
 --- !u!23 &1268976397970854440
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5589,49 +5555,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 331733661697189028, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_Name
       value: OVRPlayerCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248259783739214496, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517129290676252905, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -800
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517129290852622282, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -700
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517129291241967776, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -800
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517129291570237899, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -700
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050881193130752178, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050881193130752178, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050881193130752178, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 8050881193130752178, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8799380353205532697, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_RootOrder
