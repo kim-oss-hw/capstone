@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 
@@ -30,12 +29,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Text RoomInfoText;
     public Text[] ChatText;
     public InputField ChatInput;
+    public Button ChangeBtn;
+    public GameObject MapPickBtn;
 
     [Header("ETC")]
     public Text StatusText;
     public PhotonView PV;
     public Text StartFailedText;
-    public Button ChangeBtn;
+
     string MapSelect;
 
     List<RoomInfo> myList = new List<RoomInfo>();
@@ -94,6 +95,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Screen.SetResolution(960, 540, false);
         PhotonNetwork.AutomaticallySyncScene = true;
+        if (PlayerID == 1)
+        {
+            ChangeBtn.gameObject.SetActive(true);
+            MapPickBtn.SetActive(true);
+        }
     }
     void Update()
     {
@@ -109,10 +115,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         LobbyPanel.SetActive(true);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
-        if(NickNameInput.text.Length == 0)
+        if (NickNameInput.text.Length == 0)
         {
             UserNickName = "None";
-        }else UserNickName = NickNameInput.text;
+        }
+        else UserNickName = NickNameInput.text;
 
         WelcomeText.text = PhotonNetwork.LocalPlayer.NickName + "님 환영합니다";
         myList.Clear();
@@ -127,19 +134,22 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     #endregion
 
-   
+
     #region 방
     public void CreateRoom() => PhotonNetwork.CreateRoom(RoomInput.text == "" ? "Room" + Random.Range(0, 100) : RoomInput.text, new RoomOptions { MaxPlayers = 2 });
 
     public void JoinRandomRoom() => PhotonNetwork.JoinRandomRoom();
 
-    public void LeaveRoom() {
-        ChangeBtn.gameObject.SetActive(false);
+    public void LeaveRoom()
+    {
+        PlayerID = 2;
+        RoomPanel.SetActive(false);
         PhotonNetwork.LeaveRoom();
     }
 
     public override void OnJoinedRoom()
     {
+        PlayerID = 2;
         LobbyPanel.SetActive(false);
         RoomPanel.SetActive(true);
         RoomRenewal();
@@ -153,33 +163,34 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        PlayerID = 1;
         RoomRenewal();
         ChatRPC("<color=yellow>" + newPlayer.NickName + "님이 참가하셨습니다</color>");
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
+        PlayerID = 1;
         RoomRenewal();
         ChatRPC("<color=yellow>" + otherPlayer.NickName + "님이 퇴장하셨습니다</color>");
     }
 
     void RoomRenewal()
     {
-        PlayerID = PhotonNetwork.LocalPlayer.ActorNumber;
         if (PlayerID == 1)
         {
             ChangeBtn.gameObject.SetActive(true);
-        }else
-        {
-            GameObject.Find("MapBtnCtrl").SetActive(false);
+            MapPickBtn.SetActive(true);
         }
-        ListText.text = "";
+        else {
+            ChangeBtn.gameObject.SetActive(false);
+            MapPickBtn.SetActive(false);
+        }
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
             ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : ", ");
         }
         RoomInfoText.text = PhotonNetwork.CurrentRoom.Name + " / " + PhotonNetwork.CurrentRoom.PlayerCount + "명 / " + PhotonNetwork.CurrentRoom.MaxPlayers + "최대";
-        
     }
     #endregion
 
@@ -216,7 +227,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             StartFailedText.gameObject.SetActive(true);
             Destroy(StartFailedText, 3.0f);
         }
-        else if(MapSelect == null)
+        else if (MapSelect == null)
         {
             StartFailedText.text = "맵을 선택해주세요\n▼▼▼▼▼";
             StartFailedText.gameObject.SetActive(true);
@@ -224,6 +235,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         else
         {
+            //로딩씬 추가 후 대기 했다가 모든 인원 map에 접속 시 씬 이동
             PhotonNetwork.LoadLevel(MapSelect);
         }
     }
@@ -248,6 +260,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             case "Map3Btn":
                 {
                     MapSelect = "Map3";
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
+                    break;
+                }
+            case "Map4Btn":
+                {
+                    MapSelect = "Map4";
                     EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
                     break;
                 }
