@@ -64,10 +64,13 @@ public class cshVrHeadMove : MonoBehaviour
                 }
                 else
                 {
-                    if (hit.transform.tag == "SetWeapon" && settingWeapon.isEquiped())
+                    if (settingWeapon.isEquiped())
                     {
-                        isSetting = false;
-                        Destroy(hit.transform.parent.gameObject);
+                        if(hit.transform.tag == "SetWeapon")
+                        {
+                            isSetting = false;
+                            Destroy(hit.transform.parent.gameObject);
+                        }
                     }
                     else if (hit.transform.tag == "Broadsword")
                     {
@@ -97,10 +100,13 @@ public class cshVrHeadMove : MonoBehaviour
                 }
                 else
                 {
-                    if (hit.transform.tag == "SetWeapon" && settingWeapon.isEquiped())
+                    if (settingWeapon.isEquiped())
                     {
-                        isSetting = false;
-                        Destroy(hit.transform.parent.gameObject);
+                        if (hit.transform.tag == "SetWeapon")
+                        {
+                            isSetting = false;
+                            Destroy(hit.transform.parent.gameObject);
+                        }
                     }
                     else if (hit.transform.tag == "Broadsword")
                     {

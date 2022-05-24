@@ -77,31 +77,37 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        My_Player = GameObject.Find("MyPlayer");
-        Enermy_Player = GameObject.Find("Player(Clone)");
-
-        My_HitJudgment = My_Player.GetComponent<HitJudgment>();
-        Enermy_HitJudgment = Enermy_Player.GetComponent<HitJudgment>();
-
-        MyPlayer_HitJud = My_Player.GetComponent<HitJudgment>();
-        Enermy_HitJud = Enermy_Player.GetComponent<HitJudgment>();
-
-        My_HPbar_rect = My_HPbar.GetComponent<RectTransform>();
-        Enermy_HPbar_rect = Enermy_HPbar.GetComponent<RectTransform>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        My_HP = My_HitJudgment.HP;
-        Enermy_HP = Enermy_HitJudgment.HP;
+        if(!My_Player || !Enermy_Player)
+        {
+            My_Player = GameObject.Find("MyPlayer");
+            Enermy_Player = GameObject.Find("Player(Clone)");
 
-        My_HPbar_rect.offsetMin = new Vector2(537.0f, 1068.0f + (10.0f * My_HP));
-        My_HPbar_rect.offsetMax = new Vector2(2137.0f, 668.0f);
+            My_HitJudgment = My_Player.GetComponent<HitJudgment>();
+            Enermy_HitJudgment = Enermy_Player.GetComponent<HitJudgment>();
 
-        Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 1068.0f + (10.0f * Enermy_HP));
-        Enermy_HPbar_rect.offsetMax = new Vector2(537.0f, 668.0f);
+            MyPlayer_HitJud = My_Player.GetComponent<HitJudgment>();
+            Enermy_HitJud = Enermy_Player.GetComponent<HitJudgment>();
 
+            My_HPbar_rect = My_HPbar.GetComponent<RectTransform>();
+            Enermy_HPbar_rect = Enermy_HPbar.GetComponent<RectTransform>();
+        }
+        else
+        {
+            My_HP = My_HitJudgment.HP;
+            Enermy_HP = Enermy_HitJudgment.HP;
+
+            My_HPbar_rect.offsetMin = new Vector2(537.0f, 1068.0f + (10.0f * My_HP));
+            My_HPbar_rect.offsetMax = new Vector2(2137.0f, 668.0f);
+
+            Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 1068.0f + (10.0f * Enermy_HP));
+            Enermy_HPbar_rect.offsetMax = new Vector2(537.0f, 668.0f);
+        }
     }
     public void GameLose()
     {
