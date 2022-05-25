@@ -13,6 +13,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public static int PlayerID;
     [Header("DisconnectPanel")]
     public InputField NickNameInput;
+    public Image NickError;
 
     [Header("LobbyPanel")]
     public GameObject LobbyPanel;
@@ -107,6 +108,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         LobbyInfoText.text = (PhotonNetwork.CountOfPlayers - PhotonNetwork.CountOfPlayersInRooms) + "로비 / " + PhotonNetwork.CountOfPlayers + "접속";
     }
 
+    
     public void Connect() => PhotonNetwork.ConnectUsingSettings();
 
     public override void OnConnectedToMaster() => PhotonNetwork.JoinLobby();
@@ -115,12 +117,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         LobbyPanel.SetActive(true);
         PhotonNetwork.LocalPlayer.NickName = NickNameInput.text;
-        if (NickNameInput.text.Length == 0)
-        {
-            UserNickName = "None";
-        }
-        else UserNickName = NickNameInput.text;
-
+        UserNickName = NickNameInput.text;
         WelcomeText.text = PhotonNetwork.LocalPlayer.NickName + "님 환영합니다";
         myList.Clear();
     }
@@ -182,7 +179,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             ChangeBtn.gameObject.SetActive(true);
             MapPickBtn.SetActive(true);
         }
-        else {
+        else
+        {
             ChangeBtn.gameObject.SetActive(false);
             MapPickBtn.SetActive(false);
         }
@@ -269,6 +267,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
                     break;
                 }
+        }
+    }
+    public void NickNameSelect()
+    {
+        NickError.gameObject.SetActive(true);
+    }
+    public void StartClick()
+    {
+        if (NickNameInput.text.Length == 0 || NickNameInput.text == null) 
+        {
+            Invoke("NickNameSelect", 2);
+        }
+        else
+        {
+            Connect();
+            GameObject.Find("DisconnectPanel").SetActive(false);
+            GameObject.Find("MainPanel").SetActive(true);
         }
     }
 }

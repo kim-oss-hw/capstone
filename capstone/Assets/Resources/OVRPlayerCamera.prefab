@@ -352,7 +352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingWeaponTool: {fileID: 3384640709005488524, guid: 8ebe7f286661ede45a7c42d208a5d7fa, type: 3}
-  camera: {fileID: 0}
   speedForward: 3
   speedSide: 3
   speedRota: 60
@@ -706,6 +705,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8799380353205532697}
     m_Modifications:
+    - target: {fileID: 572816137864949068, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -700.00006
+      objectReference: {fileID: 0}
     - target: {fileID: 572816137879137538, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -797,6 +800,18 @@ PrefabInstance:
     - target: {fileID: 572816137879137790, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 572816138207898663, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -800.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 572816138590430029, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -700.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 572816138766273646, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -800.00006
       objectReference: {fileID: 0}
     - target: {fileID: 4456753935990085667, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_Text
