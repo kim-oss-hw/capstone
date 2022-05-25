@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class cshVrHeadMove : MonoBehaviour
 {
-    public Camera camera;
+    public GameObject settingWeaponTool;
+    
     public float speedForward = 1;
     public float speedSide = 1;
     public float speedRota = 1;
@@ -18,6 +19,7 @@ public class cshVrHeadMove : MonoBehaviour
     public float RimitZ_po = 1;
     public float RimitZ_ne = 1;
 
+    private Camera camera;
     private cshSettingWeapon settingWeapon;
     private GameObject player;
     private Transform tr;
@@ -28,6 +30,13 @@ public class cshVrHeadMove : MonoBehaviour
     {
         tr = GetComponent<Transform>();
         camera = transform.Find("TrackingSpace/CenterEyeAnchor").gameObject.GetComponent<Camera>();
+
+        // ¹«±â setting spawn
+        Vector3 pos = new Vector3(0f, 0f, 1f);
+        Vector3 rot = new Vector3(0f, 90f, 0f);
+        GameObject temp = Instantiate(settingWeaponTool, transform.position, transform.rotation);
+        temp.transform.Translate(pos);
+        temp.transform.Rotate(rot);
     }
 
     // Update is called once per frame
@@ -70,6 +79,7 @@ public class cshVrHeadMove : MonoBehaviour
                         {
                             isSetting = false;
                             Destroy(hit.transform.parent.gameObject);
+                            settingWeapon.isReady = true;
                         } else
                         {
                             settingWeapon.unequipSword();
@@ -109,6 +119,7 @@ public class cshVrHeadMove : MonoBehaviour
                         {
                             isSetting = false;
                             Destroy(hit.transform.parent.gameObject);
+                            settingWeapon.isReady = true;
                         } else
                         {
                             settingWeapon.unequipSword();

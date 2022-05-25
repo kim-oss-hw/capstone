@@ -6,12 +6,14 @@ using Photon.Realtime;
 
 public class cshSettingWeapon : MonoBehaviour
 {
-    public bool[,] weapons = new bool[2, 3] { { false, false, false }, { false, false, false } };
-    public GameObject rightHand;
-    public GameObject leftHand;
-    public GameObject curSword;
-    public Animator animator;
+    private bool[,] weapons = new bool[2, 3] { { false, false, false }, { false, false, false } };
+
+    private GameObject rightHand;
+    private GameObject leftHand;
+    private GameObject curSword;
+    private Animator animator;
     public PhotonView PV;
+    public bool isReady = false;
 
     // Start is called before the first frame update
     void Start()
