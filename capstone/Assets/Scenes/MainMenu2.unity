@@ -7130,6 +7130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NickNameInput: {fileID: 1636303973}
   NickError: {fileID: 1124524239}
+  MainPanel: {fileID: 1143748584}
   LobbyPanel: {fileID: 1318472404}
   RoomInput: {fileID: 943385801}
   WelcomeText: {fileID: 2053043418}

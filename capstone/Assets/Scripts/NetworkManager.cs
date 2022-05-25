@@ -1,5 +1,6 @@
 using Photon.Pun;
 using Photon.Realtime;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +15,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [Header("DisconnectPanel")]
     public InputField NickNameInput;
     public Image NickError;
+
+    public GameObject MainPanel;
 
     [Header("LobbyPanel")]
     public GameObject LobbyPanel;
@@ -184,6 +187,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             ChangeBtn.gameObject.SetActive(false);
             MapPickBtn.SetActive(false);
         }
+        ListText.text = "";
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
             ListText.text += PhotonNetwork.PlayerList[i].NickName + ((i + 1 == PhotonNetwork.PlayerList.Length) ? "" : ", ");
@@ -269,21 +273,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 }
         }
     }
-    public void NickNameSelect()
+    IEnumerator NickNameSelect()
     {
         NickError.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        NickError.gameObject.SetActive(false);
     }
+   
     public void StartClick()
     {
         if (NickNameInput.text.Length == 0 || NickNameInput.text == null) 
         {
-            Invoke("NickNameSelect", 2);
+            StartCoroutine(NickNameSelect());
         }
         else
         {
-            Connect();
             GameObject.Find("DisconnectPanel").SetActive(false);
-            GameObject.Find("MainPanel").SetActive(true);
+            MainPanel.SetActive(true);
         }
     }
 }
