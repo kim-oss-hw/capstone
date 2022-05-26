@@ -103,11 +103,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4213c00536594e042b99676683956e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHand: {fileID: 0}
-  leftHand: {fileID: 0}
-  curSword: {fileID: 0}
-  animator: {fileID: 0}
   PV: {fileID: 2763257536183134067}
+  isReady: 0
+  rightButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  leftButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  selectButton: {fileID: 0}
 --- !u!1 &4416096357626006363
 GameObject:
   m_ObjectHideFlags: 0

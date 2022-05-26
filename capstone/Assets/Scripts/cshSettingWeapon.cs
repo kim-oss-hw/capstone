@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class cshSettingWeapon : MonoBehaviour
 {
     private bool[,] weapons = new bool[2, 3] { { false, false, false }, { false, false, false } };
-
     private GameObject rightHand;
     private GameObject leftHand;
     private GameObject curSword;
     private Animator animator;
+    private GameObject ovrCamera;
     public PhotonView PV;
     public bool isReady = false;
+    public Button[] rightButtons = new Button[3];
+    public Button[] leftButtons = new Button[3];
+    public Button selectButton;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +26,7 @@ public class cshSettingWeapon : MonoBehaviour
         leftHand = transform.Find("PlayerCharacter/root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l").gameObject;
         animator = transform.Find("PlayerCharacter").gameObject.GetComponent<Animator>();
         PV = gameObject.GetComponent<PhotonView>();
+        ovrCamera = GameObject.Find("OVRPlayerCamera").gameObject;
     }
 
     // Update is called once per frame
@@ -109,5 +114,23 @@ public class cshSettingWeapon : MonoBehaviour
         }
         animator.SetBool("rightGrabing", false);
         animator.SetBool("leftGrabing", false);
+    }
+
+    public void SynchroButton()
+    {
+        rightButtons[0].onClick.AddListener(() => equipSword(0, true));
+        rightButtons[1].onClick.AddListener(() => equipSword(1, true));
+        rightButtons[2].onClick.AddListener(() => equipSword(2, true));
+
+        leftButtons[0].onClick.AddListener(() => equipSword(0, false));
+        leftButtons[1].onClick.AddListener(() => equipSword(1, false));
+        leftButtons[2].onClick.AddListener(() => equipSword(2, false));
+
+        selectButton.onClick.AddListener(CompleteSetting);
+    }
+
+    void CompleteSetting()
+    {
+        ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
     }
 }

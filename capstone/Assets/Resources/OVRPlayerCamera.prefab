@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f4ef87bc3208944b99401d65e28e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingWeaponTool: {fileID: 3384640709005488524, guid: 8ebe7f286661ede45a7c42d208a5d7fa, type: 3}
+  settingWeaponTool: {fileID: 754856320443010210, guid: f2249bffd1971544296fefc7623b3664, type: 3}
   speedForward: 3
   speedSide: 3
   speedRota: 60
@@ -362,6 +362,7 @@ MonoBehaviour:
   RimitY_ne: -1
   RimitZ_po: 12
   RimitZ_ne: -13
+  isSetting: 1
 --- !u!114 &1043688488649556417
 MonoBehaviour:
   m_ObjectHideFlags: 0

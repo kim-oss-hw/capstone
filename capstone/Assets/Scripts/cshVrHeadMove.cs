@@ -6,7 +6,6 @@ using UnityEngine;
 public class cshVrHeadMove : MonoBehaviour
 {
     public GameObject settingWeaponTool;
-    
     public float speedForward = 1;
     public float speedSide = 1;
     public float speedRota = 1;
@@ -23,20 +22,13 @@ public class cshVrHeadMove : MonoBehaviour
     private cshSettingWeapon settingWeapon;
     private GameObject player;
     private Transform tr;
-    private bool isSetting = true;
+    public bool isSetting = true;
 
     // Start is called before the first frame update
     void Start()
     {
         tr = GetComponent<Transform>();
         camera = transform.Find("TrackingSpace/CenterEyeAnchor").gameObject.GetComponent<Camera>();
-
-        // 무기 setting spawn
-        Vector3 pos = new Vector3(0f, 0f, 1f);
-        Vector3 rot = new Vector3(0f, 90f, 0f);
-        GameObject temp = Instantiate(settingWeaponTool, transform.position, transform.rotation);
-        temp.transform.Translate(pos);
-        temp.transform.Rotate(rot);
     }
 
     // Update is called once per frame
@@ -156,6 +148,16 @@ public class cshVrHeadMove : MonoBehaviour
 
         transform.Rotate(rotaDir * Time.deltaTime);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, RimitX_ne, RimitX_po), Mathf.Clamp(transform.position.y, RimitY_ne, RimitY_po), Mathf.Clamp(transform.position.z, RimitZ_ne, RimitZ_po));
+    }
+
+    public void spawnSetTool()
+    {
+        // 무기 setting spawn
+        Vector3 pos = new Vector3(0f, 2f, 7f);
+        Vector3 rot = new Vector3(0f, 0f, 0f);
+        GameObject temp = Instantiate(settingWeaponTool, transform.position, transform.rotation);
+        temp.transform.Translate(pos);
+        temp.transform.Rotate(rot);
     }
 }
 //*/

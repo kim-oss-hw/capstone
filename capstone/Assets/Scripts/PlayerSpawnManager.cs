@@ -57,6 +57,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
             VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint1.transform.position, SpawnPoint1.transform.rotation);
             VRplayerPrefab.name = "MyPlayer";
+            OVRplayer.GetComponent<cshVrHeadMove>().spawnSetTool();
 
         }
         else if (NetworkManager.PlayerID == 2)
@@ -67,6 +68,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
             VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
             VRplayerPrefab.name = "MyPlayer";
+            OVRplayer.GetComponent<cshVrHeadMove>().spawnSetTool();
         }
     }
 
