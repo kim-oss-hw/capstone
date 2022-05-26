@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6526223050054999908}
   - component: {fileID: 5229350808713778192}
   - component: {fileID: 940917160520718476}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 391038018912975049}
   - component: {fileID: 3102735852946503881}
   - component: {fileID: 2355380070684465415}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 754856318631256380}
   - component: {fileID: 754856318631256371}
   - component: {fileID: 754856318631256370}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FalchionButton(right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 754856318788788234}
   - component: {fileID: 754856318788788276}
   - component: {fileID: 754856318788788235}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 754856318795047035}
   - component: {fileID: 754856318795047034}
   - component: {fileID: 754856318795047033}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ShortswordButton(right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 754856318904448596}
   - component: {fileID: 754856318904448598}
   - component: {fileID: 754856318904448597}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 754856319144020163}
   - component: {fileID: 754856319144020173}
   - component: {fileID: 754856319144020172}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 754856319218710746}
   - component: {fileID: 754856319218710724}
   - component: {fileID: 754856319218710747}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 754856319302068013}
   - component: {fileID: 754856319302068012}
   - component: {fileID: 754856319302068003}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SelectButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 754856319416331323}
   - component: {fileID: 754856319416331301}
   - component: {fileID: 754856319416331300}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 754856319937818368}
   - component: {fileID: 754856319937818375}
   - component: {fileID: 754856319937818374}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BroadswordButton(right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 754856320308322061}
   - component: {fileID: 754856320308322063}
   - component: {fileID: 754856320308322062}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 754856320443010220}
   - component: {fileID: 754856320443010211}
   - component: {fileID: 3144898545231431911}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: WeaponCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1177,7 +1177,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754856320443010210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.0600622}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 754856319218710746}
@@ -1186,7 +1186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.080322266, y: 2.5799866}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 640, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &754856320443010222
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 20
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &754856320443010220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,7 +1302,7 @@ GameObject:
   - component: {fileID: 3065477971756674726}
   - component: {fileID: 5626294594841471739}
   - component: {fileID: 7906237335403763042}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1382,7 +1382,7 @@ GameObject:
   - component: {fileID: 6680704535773528327}
   - component: {fileID: 4421222021888715684}
   - component: {fileID: 608915640185966118}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FalchionButton(left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 4178318660577137371}
   - component: {fileID: 4178318660577137369}
   - component: {fileID: 4178318660577137368}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Ssword imge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1577,7 +1577,7 @@ GameObject:
   - component: {fileID: 4178318660712241311}
   - component: {fileID: 4178318660712241309}
   - component: {fileID: 4178318660712241308}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 'Bsword imge '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,7 +1652,7 @@ GameObject:
   - component: {fileID: 4178318661606549955}
   - component: {fileID: 4178318661606549953}
   - component: {fileID: 4178318661606549952}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Falchion imge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1728,7 +1728,7 @@ GameObject:
   - component: {fileID: 3303295937954638220}
   - component: {fileID: 7754071018945992099}
   - component: {fileID: 2383453009231168031}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ToggleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1861,7 +1861,7 @@ GameObject:
   - component: {fileID: 2508800722226689989}
   - component: {fileID: 7927249300520339338}
   - component: {fileID: 6309117251720653767}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ShortswordButton(left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 3462818960483791609}
   - component: {fileID: 2561183183433217218}
   - component: {fileID: 2928445439230600913}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BroadswordButton(left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2114,7 +2114,7 @@ GameObject:
   - component: {fileID: 5604636439537100703}
   - component: {fileID: 3852005692298795821}
   - component: {fileID: 3802833425548126296}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
