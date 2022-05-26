@@ -38,7 +38,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.PlayerList.Length < 2)
         {
             GameMainSys.GameWin();
-            Invoke("BackToRoom", 5);
+            //Invoke("BackToRoom", 5);
         }
         else if (GameMainSys.My_HP <= 0.0f)
         {
