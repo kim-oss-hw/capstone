@@ -8,14 +8,20 @@ public class cshWeaponCanvasManager : MonoBehaviour
     public GameObject[] rightButtons = new GameObject[3];
     public GameObject[] leftButtons = new GameObject[3];
     public Button toggleButton;
+    public Button selectButton;
     public Text toggleButtonText;
     private bool isRight = true;
+    public GameObject ovrCamera;
 
     // Start is called before the first frame update
     void Start()
     {
+        ovrCamera = GameObject.Find("OVRPlayerCamera").gameObject;
         transform.GetComponent<OVRRaycaster>().pointer = GameObject.Find("UIHelpers").transform.GetChild(0).gameObject;
         toggleButton.onClick.AddListener(ToggleHand);
+        selectButton.onClick.AddListener(CompleteSetting);
+        
+
         GameObject player = GameObject.Find("MyPlayer").gameObject;
         if (!player) player =  GameObject.Find("Player").gameObject;
         player.GetComponent<cshSettingWeapon>().rightButtons = ReturnRightButtons();
@@ -63,6 +69,7 @@ public class cshWeaponCanvasManager : MonoBehaviour
             leftButtons[1].SetActive(true);
             leftButtons[2].SetActive(true);
 
+            isRight = false;
             toggleButtonText.text = "현재\n왼손잡이\n(변경버튼)";
         } else
         {
@@ -73,7 +80,14 @@ public class cshWeaponCanvasManager : MonoBehaviour
             rightButtons[1].SetActive(true);
             rightButtons[2].SetActive(true);
 
+            isRight = true;
             toggleButtonText.text = "현재\n오른손잡이\n(변경버튼)";
         }
+    }
+
+    void CompleteSetting()
+    {
+        ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
+        Destroy(transform.gameObject);
     }
 }

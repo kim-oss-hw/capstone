@@ -12,7 +12,7 @@ public class cshSettingWeapon : MonoBehaviour
     private GameObject leftHand;
     private GameObject curSword;
     private Animator animator;
-    private GameObject ovrCamera;
+    //private GameObject ovrCamera;
     public PhotonView PV;
     public bool isReady = false;
     public Button[] rightButtons = new Button[3];
@@ -26,7 +26,7 @@ public class cshSettingWeapon : MonoBehaviour
         leftHand = transform.Find("PlayerCharacter/root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/hand_l").gameObject;
         animator = transform.Find("PlayerCharacter").gameObject.GetComponent<Animator>();
         PV = gameObject.GetComponent<PhotonView>();
-        ovrCamera = GameObject.Find("OVRPlayerCamera").gameObject;
+        //ovrCamera = GameObject.Find("OVRPlayerCamera").gameObject;
     }
 
     // Update is called once per frame
@@ -126,11 +126,11 @@ public class cshSettingWeapon : MonoBehaviour
         leftButtons[1].onClick.AddListener(() => equipSword(1, false));
         leftButtons[2].onClick.AddListener(() => equipSword(2, false));
 
-        selectButton.onClick.AddListener(CompleteSetting);
+        //selectButton.onClick.AddListener(CompleteSetting);
     }
 
     void CompleteSetting()
     {
-        ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
+        //ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
     }
 }

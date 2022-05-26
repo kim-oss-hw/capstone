@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 20
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &754856320443010220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1290,9 @@ MonoBehaviour:
   - {fileID: 5482530440208883970}
   - {fileID: 3626077009909436301}
   toggleButton: {fileID: 2383453009231168031}
+  selectButton: {fileID: 754856319302068003}
   toggleButtonText: {fileID: 940917160520718476}
+  ovrCamera: {fileID: 0}
 --- !u!1 &1908652505939418015
 GameObject:
   m_ObjectHideFlags: 0
