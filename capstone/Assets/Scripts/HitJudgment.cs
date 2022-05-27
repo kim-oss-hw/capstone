@@ -14,6 +14,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public bool GameStart = false;
     public bool WeaponSelect = false;
 
+    //public PhotonView PV;
+
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -44,6 +46,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
+
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
             if (EnemyWeapon.Attackable == true) {
