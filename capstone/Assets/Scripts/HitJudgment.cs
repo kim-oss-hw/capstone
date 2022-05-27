@@ -40,7 +40,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     }
 
-    private void OnTriggerEnter(Collider collider)
+    public void HitCalculation(Collider collider)
     {
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
