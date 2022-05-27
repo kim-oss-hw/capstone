@@ -14,7 +14,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public bool GameStart = false;
     public bool WeaponSelect = false;
 
-    //public PhotonView PV;
+    public PhotonView PV;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -44,7 +44,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     public void HitCalculation(Collider collider)
     {
-        if (collider.gameObject.tag == "Weapon" && GameStart == true)
+        if (collider.gameObject.tag == "Weapon" && GameStart == true && PV.IsMine)
         {
 
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
