@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 7826728486216659811}
-  m_IndirectSpecularColor: {r: 0.4954099, g: 0.80780864, b: 1.06969, a: 1}
+  m_IndirectSpecularColor: {r: 0.49549735, g: 0.80786216, b: 1.0696845, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1765,6 +1765,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+--- !u!1 &1476120200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1732808951507650, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+  m_PrefabInstance: {fileID: 1476120199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1518765664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5498,25 +5503,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1043688488649556417, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
+      propertyPath: UIHelpers
+      value: 
+      objectReference: {fileID: 1476120200}
     - target: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_Name
       value: OVRPlayerCamera
       objectReference: {fileID: 0}
     - target: {fileID: 4517129290676252905, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -800.0001
+      value: -800.00006
       objectReference: {fileID: 0}
     - target: {fileID: 4517129290852622282, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -700.0001
+      value: -700.00006
       objectReference: {fileID: 0}
     - target: {fileID: 4517129291241967776, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -800.0001
+      value: -800.00006
       objectReference: {fileID: 0}
     - target: {fileID: 4517129291570237899, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -700.0001
+      value: -700.00006
       objectReference: {fileID: 0}
     - target: {fileID: 8799380353205532697, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_RootOrder

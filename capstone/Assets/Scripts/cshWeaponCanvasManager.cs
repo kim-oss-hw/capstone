@@ -88,11 +88,6 @@ public class cshWeaponCanvasManager : MonoBehaviour
 
     void CompleteSetting()
     {
-        GameObject UICanvas = GameObject.Find("UICanvas").gameObject;
-        UICanvas.SetActive(true);
-        GameObject UIHelpers = GameObject.Find("UIHelpers").gameObject;
-        UIHelpers.SetActive(false);
-
         ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
         ovrmyplayer = GameObject.Find("MyPlayer");
         ovrmyplayer.GetComponent<HitJudgment>().WeaponSelect = true;

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameMainSystem : MonoBehaviourPunCallbacks
 {
+    public GameObject UICanvas;
+    public GameObject UIHelpers;
 
     public GameObject My_Player;
     public GameObject Enermy_Player;
@@ -31,6 +33,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     public GameObject GameTimeUI;
 
 
+    public bool SettingFinish = false;
     public bool CountDownBool = true;
     public bool GameStartBool = false;
     public bool GameEndBool = false;
@@ -98,20 +101,28 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
             My_HPbar_rect = My_HPbar.GetComponent<RectTransform>();
             Enermy_HPbar_rect = Enermy_HPbar.GetComponent<RectTransform>();
 
+            UICanvas.SetActive(false);
         }
         else
         {
-            My_HP = MyPlayer_HitJud.HP;
-            Enermy_HP = Enermy_HitJud.HP;
+            if(SettingFinish == true)
+            {
+                My_HP = MyPlayer_HitJud.HP;
+                Enermy_HP = Enermy_HitJud.HP;
 
-            My_HPbar_rect.offsetMin = new Vector2(537.0f, 668.0f);
-            My_HPbar_rect.offsetMax = new Vector2(-2137.0f, -1068.0f - 1000.0f + (10.0f * My_HP));
+                My_HPbar_rect.offsetMin = new Vector2(537.0f, 668.0f);
+                My_HPbar_rect.offsetMax = new Vector2(-2137.0f, -1068.0f - 1000.0f + (10.0f * My_HP));
 
-            Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 668.0f);
-            Enermy_HPbar_rect.offsetMax = new Vector2(-537.0f, -1068.0f - 1000.0f + (10.0f * Enermy_HP));
+                Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 668.0f);
+                Enermy_HPbar_rect.offsetMax = new Vector2(-537.0f, -1068.0f - 1000.0f + (10.0f * Enermy_HP));
+            }
 
             if(MyPlayer_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && Enermy_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && CountDownBool == true)
             {
+                SettingFinish = true;
+                UICanvas.SetActive(true);
+                UIHelpers.SetActive(false);
+
                 CountDownBool = false;
                 StartCoroutine("StartCountDown");
             }
