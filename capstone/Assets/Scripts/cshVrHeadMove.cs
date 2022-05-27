@@ -152,6 +152,8 @@ public class cshVrHeadMove : MonoBehaviour
 
     public void spawnSetTool()
     {
+        GameObject UICanvas = GameObject.Find("UICanvas").gameObject;
+        UICanvas.SetActive(false);
         // ¹«±â setting spawn
         Vector3 pos = new Vector3(0f, 2f, 7f);
         Vector3 rot = new Vector3(0f, 0f, 0f);
