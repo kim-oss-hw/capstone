@@ -35,15 +35,29 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
         //    PhotonNetwork.LeaveRoom();
         //    SceneManager.LoadScene("MainMenu2");
         //}
-        if (PhotonNetwork.PlayerList.Length < 2)
+        if (PhotonNetwork.PlayerList.Length < 2 || GameMainSys.Enermy_HP <= 0.0f)
         {
             GameMainSys.GameWin();
-            //Invoke("BackToRoom", 5);
+            Invoke("BackToRoom", 5);
         }
         else if (GameMainSys.My_HP <= 0.0f)
         {
             GameMainSys.GameLose();
             Invoke("BackToRoom", 5);
+        }
+
+        else if (GameMainSys.GameEndBool == true)
+        {
+            if (GameMainSys.Enermy_HP <= GameMainSys.My_HP)
+            {
+                GameMainSys.GameWin();
+                Invoke("BackToRoom", 5);
+            }
+            else
+            {
+                GameMainSys.GameLose();
+                Invoke("BackToRoom", 5);
+            }
         }
 
     }

@@ -12,6 +12,7 @@ public class cshWeaponCanvasManager : MonoBehaviour
     public Text toggleButtonText;
     private bool isRight = true;
     public GameObject ovrCamera;
+    public GameObject ovrmyplayer;
 
     // Start is called before the first frame update
     void Start()
@@ -88,6 +89,8 @@ public class cshWeaponCanvasManager : MonoBehaviour
     void CompleteSetting()
     {
         ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
+        ovrmyplayer = GameObject.Find("MyPlayer");
+        ovrmyplayer.GetComponent<HitJudgment>().WeaponSelect = true;
         Destroy(transform.gameObject);
     }
 }

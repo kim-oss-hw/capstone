@@ -73,7 +73,7 @@ MonoBehaviour:
   - {fileID: 8974647632183388588}
   - {fileID: 221894767533922137}
   - {fileID: 2839581798108282249}
-  sceneViewId: 1
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &-1513166723264988740
@@ -92,6 +92,7 @@ MonoBehaviour:
   HPbar_top: {fileID: 380517372786212100}
   AnimationObject: {fileID: 0}
   GameStart: 0
+  WeaponSelect: 0
 --- !u!114 &3856579378216723660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +503,7 @@ MonoBehaviour:
   HPbar_top: {fileID: 380517372786212100}
   AnimationObject: {fileID: 0}
   GameStart: 0
+  WeaponSelect: 0
 --- !u!114 &5901401353249470105
 MonoBehaviour:
   m_ObjectHideFlags: 0

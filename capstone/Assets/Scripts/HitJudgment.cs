@@ -10,19 +10,21 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public float HP = 100.0f;
     public GameObject HPbar_top;
     public GameObject AnimationObject;
-    WeaponSystem WeaponSystem;
 
     public bool GameStart = false;
+    public bool WeaponSelect = false;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
         {
             stream.SendNext(HP);
+            stream.SendNext(WeaponSelect);
         }
         else
         {
             this.HP = (float)stream.ReceiveNext();
+            this.WeaponSelect = (bool)stream.ReceiveNext();
         }
     }
 

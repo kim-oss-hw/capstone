@@ -11,8 +11,8 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     public GameObject My_Player;
     public GameObject Enermy_Player;
 
-    public HitJudgment My_HitJudgment;
-    public HitJudgment Enermy_HitJudgment;
+    private HitJudgment My_HitJudgment;
+    private HitJudgment Enermy_HitJudgment;
 
     private HitJudgment MyPlayer_HitJud;
     private HitJudgment Enermy_HitJud;
@@ -27,10 +27,13 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     public GameObject My_HPbar;
     public GameObject Enermy_HPbar;
 
-    public Text _gameResult;
     public GameObject CountDownUI;
     public GameObject GameTimeUI;
-    private bool GameStartBool = false;
+
+
+    public bool CountDownBool = true;
+    public bool GameStartBool = false;
+    public bool GameEndBool = false;
 
     IEnumerator StartCountDown()
     {
@@ -72,6 +75,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
 
         MyPlayer_HitJud.GameStart = false;
         Enermy_HitJud.GameStart = false;
+        GameEndBool = true;
     }
 
     // Start is called before the first frame update
@@ -93,6 +97,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
             
             My_HPbar_rect = My_HPbar.GetComponent<RectTransform>();
             Enermy_HPbar_rect = Enermy_HPbar.GetComponent<RectTransform>();
+
         }
         else
         {
@@ -104,7 +109,20 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
 
             Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 668.0f);
             Enermy_HPbar_rect.offsetMax = new Vector2(-537.0f, -1068.0f - 1000.0f + (10.0f * Enermy_HP));
+
+            if(MyPlayer_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && Enermy_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && CountDownBool == true)
+            {
+                CountDownBool = false;
+                StartCoroutine("StartCountDown");
+            }
+
+            if (GameStartBool == true)
+            {
+                GameStartBool = false;
+                StartCoroutine("GameCountDown");
+            }
         }
+
     }
     public void GameLose()
     {
