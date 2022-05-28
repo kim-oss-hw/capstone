@@ -90,7 +90,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        if(!My_Player || !Enermy_Player)
+        if (!My_Player || !Enermy_Player)
         {
             My_Player = GameObject.Find("MyPlayer");
             Enermy_Player = GameObject.Find("Player(Clone)");
@@ -110,10 +110,10 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
                 My_HP = MyPlayer_HitJud.HP;
                 Enermy_HP = Enermy_HitJud.HP;
 
-                My_HPbar_rect.transform.position = new Vector3(-600.0f, -100.0f - 250.0f + (5.0f * My_HP) / 2, 0.0f);
+                My_HPbar_rect.transform.localPosition = new Vector3(-600.0f, -100.0f - 250.0f + (5.0f * My_HP) / 2, 0.0f);
                 My_HPbar_rect.sizeDelta = new Vector2(20.0f, (5.0f * My_HP));
 
-                Enermy_HPbar_rect.transform.position = new Vector3(600.0f, -100.0f - 250.0f + (5.0f * Enermy_HP) / 2, 0.0f);
+                Enermy_HPbar_rect.transform.localPosition = new Vector3(600.0f, -100.0f - 250.0f + (5.0f * Enermy_HP) / 2, 0.0f);
                 Enermy_HPbar_rect.sizeDelta = new Vector2(20.0f, (5.0f * Enermy_HP));
             }
 
