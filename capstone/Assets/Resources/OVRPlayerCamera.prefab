@@ -285,7 +285,7 @@ MonoBehaviour:
   mrcActivationMode: 0
   isInsightPassthroughEnabled: 0
   _trackingOriginType: 1
-  usePositionTracking: 1
+  usePositionTracking: 0
   useRotationTracking: 1
   useIPDInPositionTracking: 1
   resetTrackerOnLoad: 0
@@ -385,6 +385,7 @@ MonoBehaviour:
   Enermy_HPbar: {fileID: 4517129291230752254}
   CountDownUI: {fileID: 4248259783739214496}
   GameTimeUI: {fileID: 9099462651393711492}
+  SettingFinish: 0
   CountDownBool: 1
   GameStartBool: 0
   GameEndBool: 0
@@ -710,7 +711,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 572816137864949068, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -700.00006
+      value: -700.0001
       objectReference: {fileID: 0}
     - target: {fileID: 572816137879137538, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_Pivot.x
@@ -806,15 +807,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 572816138207898663, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -800.00006
+      value: -800.0001
       objectReference: {fileID: 0}
     - target: {fileID: 572816138590430029, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -700.00006
+      value: -700.0001
       objectReference: {fileID: 0}
     - target: {fileID: 572816138766273646, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -800.00006
+      value: -800.0001
       objectReference: {fileID: 0}
     - target: {fileID: 4456753935990085667, guid: 8c270682fbeab52408a647823b96ee6a, type: 3}
       propertyPath: m_Text
