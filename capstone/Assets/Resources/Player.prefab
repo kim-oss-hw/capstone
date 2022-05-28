@@ -92,6 +92,7 @@ MonoBehaviour:
   AnimationObject: {fileID: 0}
   GameStart: 0
   WeaponSelect: 0
+  PV: {fileID: 0}
 --- !u!114 &3856579378216723660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +526,7 @@ MonoBehaviour:
   AnimationObject: {fileID: 0}
   GameStart: 0
   WeaponSelect: 0
+  PV: {fileID: 0}
 --- !u!114 &945488077892155326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,10 +603,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 2
   Attackable: 1
   CoolTimeStart: 0
-  CoolTime: 1
+  CoolTime: 1.5
   castbar: {fileID: 0}
   Weaponbool: 0
 --- !u!114 &1417616281442092413
@@ -619,10 +621,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 7
+  Damage: 1
   Attackable: 1
   CoolTimeStart: 0
-  CoolTime: 1.5
+  CoolTime: 2
   castbar: {fileID: 0}
   Weaponbool: 0
 --- !u!114 &8821793041134739274
@@ -666,10 +668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 15
+  Damage: 3
   Attackable: 1
   CoolTimeStart: 0
-  CoolTime: 0.75
+  CoolTime: 1
   castbar: {fileID: 0}
   Weaponbool: 0
 --- !u!114 &5317714469794480556
@@ -761,10 +763,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 15
+  Damage: 3
   Attackable: 1
   CoolTimeStart: 0
-  CoolTime: 0.5
+  CoolTime: 1
   castbar: {fileID: 0}
   Weaponbool: 0
 --- !u!114 &8974647632183388588
@@ -795,10 +797,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 7
+  Damage: 1
   Attackable: 1
   CoolTimeStart: 0
-  CoolTime: 1.5
+  CoolTime: 2
   castbar: {fileID: 0}
   Weaponbool: 0
 --- !u!114 &2839581798108282249
@@ -845,9 +847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 2
   Attackable: 1
   CoolTimeStart: 0
-  CoolTime: 1
+  CoolTime: 1.5
   castbar: {fileID: 0}
   Weaponbool: 0
