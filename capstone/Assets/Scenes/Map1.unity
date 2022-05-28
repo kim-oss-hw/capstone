@@ -5706,11 +5706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4517129290676252905, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -599.99994
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 4517129290676252905, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.99997
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 4517129290794481182, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_AnchorMax.x
