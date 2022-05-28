@@ -45,10 +45,9 @@ public class WeaponSystem : MonoBehaviour, IPunObservable
             i += 1;
             float f = i * 1.0f;
 
-            castbarXY.offsetMin = new Vector2(637.0f, 668.0f);
-            castbarXY.offsetMax = new Vector2(-2037.0f, -1668.0f - 500.0f + (i * 25.0f));
+            castbarXY.transform.position = new Vector3(-500.0f, -150.0f - 150.0f + (i * 15.0f)/2, 0.0f);
+            castbarXY.sizeDelta = new Vector2(20.0f, i * 15.0f);
 
-            //castbarXY.sizeDelta = new Vector2(i * 10.0f, f);
             yield return new WaitForSeconds(CoolTime / 20.0f);
         }
 

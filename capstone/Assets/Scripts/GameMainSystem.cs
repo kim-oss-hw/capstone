@@ -110,11 +110,11 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
                 My_HP = MyPlayer_HitJud.HP;
                 Enermy_HP = Enermy_HitJud.HP;
 
-                My_HPbar_rect.offsetMin = new Vector2(537.0f, 668.0f);
-                My_HPbar_rect.offsetMax = new Vector2(-2137.0f, -1068.0f - 1000.0f + (10.0f * My_HP));
+                My_HPbar_rect.transform.position = new Vector3(-600.0f, -100.0f - 250.0f + (5.0f * My_HP) / 2, 0.0f);
+                My_HPbar_rect.sizeDelta = new Vector2(20.0f, (5.0f * My_HP));
 
-                Enermy_HPbar_rect.offsetMin = new Vector2(2137.0f, 668.0f);
-                Enermy_HPbar_rect.offsetMax = new Vector2(-537.0f, -1068.0f - 1000.0f + (10.0f * Enermy_HP));
+                Enermy_HPbar_rect.transform.position = new Vector3(600.0f, -100.0f - 250.0f + (5.0f * Enermy_HP) / 2, 0.0f);
+                Enermy_HPbar_rect.sizeDelta = new Vector2(20.0f, (5.0f * Enermy_HP));
             }
 
             if(MyPlayer_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && Enermy_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && CountDownBool == true)
