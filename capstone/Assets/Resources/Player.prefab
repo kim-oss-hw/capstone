@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 2
+  Damage: 4
   Attackable: 1
   CoolTimeStart: 0
   CoolTime: 1.5
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 1
+  Damage: 2
   Attackable: 1
   CoolTimeStart: 0
   CoolTime: 2
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 3
+  Damage: 6
   Attackable: 1
   CoolTimeStart: 0
   CoolTime: 1
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 3
+  Damage: 6
   Attackable: 1
   CoolTimeStart: 0
   CoolTime: 1
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 1
+  Damage: 2
   Attackable: 1
   CoolTimeStart: 0
   CoolTime: 2
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dee4d6ec6bf0754ca81dcfaa54e20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 2
+  Damage: 4
   Attackable: 1
   CoolTimeStart: 0
   CoolTime: 1.5
