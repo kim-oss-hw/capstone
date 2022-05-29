@@ -248,7 +248,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             case "Map1Btn":
                 {
-                    MapSelect = "Map1";
+                    MapSelect = "Map1U";
                     EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject.SetActive(true);
 
                     break;
