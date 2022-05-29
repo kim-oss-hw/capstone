@@ -89,13 +89,11 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
         Destroy(MakeEffort, 1.0f);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         UIHelpers = GameObject.Find("UIHelpers");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!My_Player || !Enermy_Player)
