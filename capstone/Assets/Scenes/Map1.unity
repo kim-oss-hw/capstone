@@ -3075,6 +3075,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
   m_PrefabInstance: {fileID: 4335185244516367573}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1043688488649556418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043688488649556409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67eb37064563cfc45aa3a61176809a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addforce: 1
+  rd: {fileID: 0}
 --- !u!23 &1268976397970854440
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5634,6 +5648,10 @@ PrefabInstance:
       propertyPath: UIHelpers
       value: 
       objectReference: {fileID: 1476120200}
+    - target: {fileID: 1043688488649556419, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_Name
       value: OVRPlayerCamera
@@ -5648,7 +5666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8799380353205532697, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8799380353205532697, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_LocalPosition.z
