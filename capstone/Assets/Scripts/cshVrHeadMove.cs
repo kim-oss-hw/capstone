@@ -1,10 +1,10 @@
 ///*
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class cshVrHeadMove : MonoBehaviour
 {
+    public GameObject _UIHelpers;
+    public GameObject EscUi;
     public GameObject settingWeaponTool;
     public float speedForward = 1;
     public float speedSide = 1;
@@ -34,6 +34,11 @@ public class cshVrHeadMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (OVRInput.GetDown(OVRInput.Button.Four))
+        {
+            spawnEscUi();
+        }
+
         RaycastHit hit;
 
         if (!player) // player = null ¿œ∂ß
@@ -67,12 +72,13 @@ public class cshVrHeadMove : MonoBehaviour
                 {
                     if (settingWeapon.isEquiped())
                     {
-                        if(hit.transform.tag == "SetWeapon")
+                        if (hit.transform.tag == "SetWeapon")
                         {
                             isSetting = false;
                             Destroy(hit.transform.parent.gameObject);
                             settingWeapon.isReady = true;
-                        } else
+                        }
+                        else
                         {
                             settingWeapon.unequipSword();
                         }
@@ -112,7 +118,8 @@ public class cshVrHeadMove : MonoBehaviour
                             isSetting = false;
                             Destroy(hit.transform.parent.gameObject);
                             settingWeapon.isReady = true;
-                        } else
+                        }
+                        else
                         {
                             settingWeapon.unequipSword();
                         }
@@ -156,6 +163,16 @@ public class cshVrHeadMove : MonoBehaviour
         Vector3 pos = new Vector3(0f, 2f, 7f);
         Vector3 rot = new Vector3(0f, 0f, 0f);
         GameObject temp = Instantiate(settingWeaponTool, transform.position, transform.rotation);
+        temp.transform.Translate(pos);
+        temp.transform.Rotate(rot);
+    }
+
+    public void spawnEscUi()
+    {
+        _UIHelpers.SetActive(true);
+        Vector3 pos = new Vector3(0f, 1.5f, 4.5f);
+        Vector3 rot = new Vector3(0f, 0f, 0f);
+        GameObject temp = Instantiate(EscUi, transform.position, transform.rotation);
         temp.transform.Translate(pos);
         temp.transform.Rotate(rot);
     }
