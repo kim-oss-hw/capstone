@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.60128856, g: 0.6191237, b: 0.65355796, a: 1}
+  m_IndirectSpecularColor: {r: 0.6013942, g: 0.61912346, b: 0.6536484, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -457,7 +457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113601874}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -10, y: 1, z: 0}
+  m_LocalPosition: {x: -10, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1977000572}
@@ -2583,42 +2583,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1043688488649556417, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: UIHelpers
-      value: 
-      objectReference: {fileID: 1204048975}
     - target: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_Name
       value: OVRPlayerCamera
       objectReference: {fileID: 0}
-    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: EscUi
-      value: 
-      objectReference: {fileID: 9136774745204745291, guid: 6f2276ba7a91c20428ab71436a180498, type: 3}
-    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: RimitX_ne
-      value: -13
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: RimitX_po
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: RimitY_ne
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: RimitY_po
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: RimitZ_po
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
-      propertyPath: _UIHelpers
-      value: 
-      objectReference: {fileID: 1204048975}
     - target: {fileID: 8799380353205532697, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4856,11 +4824,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
---- !u!1 &1204048975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1732808951507650, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
-  m_PrefabInstance: {fileID: 1204048974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1212415211
 GameObject:
   m_ObjectHideFlags: 0
@@ -7459,7 +7422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705996662}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 1, z: 0}
+  m_LocalPosition: {x: 10, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1977000572}

@@ -248,32 +248,43 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             case "Map1Btn":
                 {
-                    MapSelect = "Map1U";
-                    EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject.SetActive(true);
+                    MapSelect = "Map1";
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
 
                     break;
                 }
             case "Map2Btn":
                 {
                     MapSelect = "Map2";
-                    EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject.SetActive(true);
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
                     break;
                 }
             case "Map3Btn":
                 {
+                    MapSelect = "Map3";
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
+                    break;
+                }
+            case "Map4Btn":
+                {
                     MapSelect = "Map4";
-                    EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject.SetActive(true);
+                    EventSystem.current.currentSelectedGameObject.transform.GetChild(1).gameObject.SetActive(true);
                     break;
                 }
         }
     }
-  
+    IEnumerator NickNameSelect()
+    {
+        NickError.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        NickError.gameObject.SetActive(false);
+    }
    
     public void StartClick()
     {
         if (NickNameInput.text.Length == 0 || NickNameInput.text == null) 
         {
-            NickError.gameObject.SetActive(true);
+            StartCoroutine(NickNameSelect());
         }
         else
         {
