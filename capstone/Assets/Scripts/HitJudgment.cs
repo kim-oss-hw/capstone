@@ -14,7 +14,9 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public bool GameStart = false;
     public bool WeaponSelect = false;
 
-    public PhotonView PV;
+    public GameObject SwordS;
+    public GameObject SwordE;
+    public GameObject Player_Character;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
@@ -33,13 +35,21 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void MakeHitSound()
+    {
+        GameObject SwordSound = Instantiate(SwordS);
+        GameObject SwordEffect = Instantiate(SwordE, Player_Character.transform.position, Player_Character.transform.rotation);
+        Destroy(SwordSound, 0.8f);
+        Destroy(SwordEffect, 1.0f);
     }
 
     public void HitCalculation(Collider collider)
@@ -50,6 +60,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
             if (EnemyWeapon.Attackable == true) {
+                MakeHitSound();
+
                 HP -= EnemyWeapon.Damage;
 
                 EnemyWeapon.Attackable = false;

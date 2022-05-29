@@ -33,6 +33,8 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     public GameObject GameTimeUI;
 
 
+    public GameObject Effort;
+
     public bool SettingFinish = false;
     public bool CountDownBool = true;
     public bool GameStartBool = false;
@@ -81,10 +83,16 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
         GameEndBool = true;
     }
 
+    void MakeEffortSound()
+    {
+        GameObject MakeEffort = Instantiate(Effort);
+        Destroy(MakeEffort, 1.0f);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -107,6 +115,11 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
         {
             if(SettingFinish == true)
             {
+                if(My_HP > MyPlayer_HitJud.HP)
+                {
+                    MakeEffortSound();
+                }
+
                 My_HP = MyPlayer_HitJud.HP;
                 Enermy_HP = Enermy_HitJud.HP;
 

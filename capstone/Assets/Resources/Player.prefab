@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1394187538363920465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2526651784150245267}
+  m_Layer: 0
+  m_Name: SwordEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2526651784150245267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394187538363920465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 176317470695537639}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2763257536183134068
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +122,9 @@ MonoBehaviour:
   AnimationObject: {fileID: 0}
   GameStart: 0
   WeaponSelect: 0
-  PV: {fileID: 0}
+  SwordS: {fileID: 6789864577929587548, guid: 9299149538b11464c93d809110ecd230, type: 3}
+  SwordE: {fileID: 1610259402245616, guid: 09a2baab97fbf474f9499bf610686e4d, type: 3}
+  Player_Character: {fileID: 1394187538363920465}
 --- !u!114 &3856579378216723660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HpCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 589712773334231663, guid: 2ed5be498c2f95d4f976e04e659054ee, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed5be498c2f95d4f976e04e659054ee, type: 3}
 --- !u!1 &380517372786212100 stripped
@@ -334,6 +370,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 492061073797005280, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 823284464869177077, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 945255128603648497, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
@@ -360,6 +400,10 @@ PrefabInstance:
       propertyPath: PV
       value: 
       objectReference: {fileID: 2763257536183134067}
+    - target: {fileID: 3894172924957647144, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4244027118633904464, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -440,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6708509343775185283, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3616824746413294728, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
@@ -459,14 +507,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7030738764031515954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3616824747148487955, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+  m_PrefabInstance: {fileID: 6026864505739964449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8005290530150323112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4376153056298066825, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
-  m_PrefabInstance: {fileID: 6026864505739964449}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7030738764503079339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3616824747486882186, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
   m_PrefabInstance: {fileID: 6026864505739964449}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7030738762874895334 stripped
@@ -477,11 +525,6 @@ GameObject:
 --- !u!1 &8575952057448126100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2639214537151325877, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
-  m_PrefabInstance: {fileID: 6026864505739964449}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7030738764031515954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3616824747148487955, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
   m_PrefabInstance: {fileID: 6026864505739964449}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6826755400990396880 stripped
@@ -509,6 +552,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4551834753323198113, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
   m_PrefabInstance: {fileID: 6026864505739964449}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7030738764503079339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3616824747486882186, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+  m_PrefabInstance: {fileID: 6026864505739964449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &482478127822627995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +574,9 @@ MonoBehaviour:
   AnimationObject: {fileID: 0}
   GameStart: 0
   WeaponSelect: 0
-  PV: {fileID: 0}
+  SwordS: {fileID: 0}
+  SwordE: {fileID: 0}
+  Player_Character: {fileID: 0}
 --- !u!114 &945488077892155326
 MonoBehaviour:
   m_ObjectHideFlags: 0
