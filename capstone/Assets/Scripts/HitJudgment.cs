@@ -41,7 +41,9 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     // Update is called once per frame
     void Update()
     {
-
+        RectTransform HPbar_rect = HPbar_top.GetComponent<RectTransform>();
+        HPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
+        HPbar_rect.offsetMax = new Vector2(-1000.0f + HP * 10.0f, -235.0f);
     }
 
     void MakeHitSound()
@@ -66,10 +68,6 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
                 EnemyWeapon.Attackable = false;
                 EnemyWeapon.CoolTimeStart = true;
-
-                RectTransform HPbar_rect = HPbar_top.GetComponent<RectTransform>();
-                HPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
-                HPbar_rect.offsetMax = new Vector2(-1000.0f + HP * 10.0f, -235.0f);
 
                 //피격자 경직 애니메이션 부분
                 //Animator animator = AnimationObject.GetComponent<Animator>();
