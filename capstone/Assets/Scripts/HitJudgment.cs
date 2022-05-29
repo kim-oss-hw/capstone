@@ -74,6 +74,15 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
                 //피격자 경직 애니메이션 부분
                 //Animator animator = AnimationObject.GetComponent<Animator>();
                 //animator.SetTrigger("Hit");
+
+                GameObject EnemyPlayer = GameObject.Find("Player(Clone)").gameObject;
+                GameObject MyPlayer = GameObject.Find("MyPlayer").gameObject;
+                GameObject MyCamera = GameObject.Find("OVRPlayerCamera").gameObject;
+                
+                Vector3 hitVec = -((EnemyPlayer.transform.position - MyPlayer.transform.position).normalized);
+                MyCamera.GetComponent<Rigidbody>().AddForce(hitVec * 200.0f);
+                MyCamera.GetComponent<Rigidbody>().AddForce(transform.up * 100.0f);
+
             }
         }
     }
