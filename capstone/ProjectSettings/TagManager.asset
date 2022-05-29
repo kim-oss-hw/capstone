@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Item
-  - Door
-  - Weapon
-  - Button
-  - Broadsword
-  - Shortsword
-  - Falchion
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Hand
-  - Interactive
-  - Typing Hands
-  - Keyboard
-  - Terrain
-  - Camera
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
