@@ -29,7 +29,6 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-
         //if (OVRInput.GetDown(OVRInput.Button.One))
         //{
         //    PhotonNetwork.LeaveRoom();
@@ -63,6 +62,14 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
     }
     void CreatePlayer()
     {
+        OVRplayer = GameObject.Find("OVRPlayerCamera");
+        OVRplayer.transform.position = SpawnPoint1.transform.position;
+        OVRplayer.transform.rotation = SpawnPoint1.transform.rotation;
+
+        VRplayerPrefab = Instantiate(OVRplayer, SpawnPoint1.transform.position, SpawnPoint1.transform.rotation);
+        VRplayerPrefab.name = "MyPlayer";
+        OVRplayer.GetComponent<cshVrHeadMove>().spawnSetTool();
+
         if (NetworkManager.PlayerID == 1)
         {
             OVRplayer = GameObject.Find("OVRPlayerCamera");
@@ -84,6 +91,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             VRplayerPrefab.name = "MyPlayer";
             OVRplayer.GetComponent<cshVrHeadMove>().spawnSetTool();
         }
+
     }
 
     //IEnumerator CreatePlayer()

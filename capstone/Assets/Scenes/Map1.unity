@@ -3087,10 +3087,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.1
-  Damping: 0.3
-  BackAndSideDampen: 0.5
-  JumpForce: 0.3
+  Acceleration: 0
+  Damping: 0
+  BackAndSideDampen: 0
+  JumpForce: 0
   RotationAmount: 0
   RotationRatchet: 0
   SnapRotation: 0
@@ -3115,7 +3115,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
