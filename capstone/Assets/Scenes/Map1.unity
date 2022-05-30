@@ -5624,6 +5624,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3568661492273304993, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
+      propertyPath: usePositionTracking
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_Name
       value: OVRPlayerCamera
