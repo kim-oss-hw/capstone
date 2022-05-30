@@ -2587,6 +2587,10 @@ PrefabInstance:
       propertyPath: UIHelpers
       value: 
       objectReference: {fileID: 1204048975}
+    - target: {fileID: 3568661492273304993, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
+      propertyPath: _trackingOriginType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3626032273951210860, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: m_Name
       value: OVRPlayerCamera
@@ -2609,7 +2613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: RimitY_po
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: RimitZ_po
