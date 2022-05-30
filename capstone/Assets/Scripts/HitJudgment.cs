@@ -10,7 +10,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public float HP = 100.0f;
     public GameObject HPbar_top;
     public GameObject AnimationObject;
-    public RectTransform HPbar_rect;
+
     public bool GameStart = false;
     public bool WeaponSelect = false;
 
@@ -35,14 +35,12 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
-        HPbar_rect = HPbar_top.GetComponent<RectTransform>();
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
-        HPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
-        HPbar_rect.offsetMax = new Vector2(-1000.0f + HP * 10.0f, -235.0f);
+
     }
 
     void MakeHitSound()
@@ -60,7 +58,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
-            if (EnemyWeapon.Attackable == true) {
+            if (EnemyWeapon.Attackable == true)
+            {
                 MakeHitSound();
 
                 HP -= EnemyWeapon.Damage;
@@ -68,6 +67,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
                 EnemyWeapon.Attackable = false;
                 EnemyWeapon.CoolTimeStart = true;
 
+                RectTransform HPbar_rect = HPbar_top.GetComponent<RectTransform>();
                 HPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
                 HPbar_rect.offsetMax = new Vector2(-1000.0f + HP * 10.0f, -235.0f);
 
@@ -78,7 +78,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
                 GameObject EnemyPlayer = GameObject.Find("Player(Clone)").gameObject;
                 GameObject MyPlayer = GameObject.Find("MyPlayer").gameObject;
                 GameObject MyCamera = GameObject.Find("OVRPlayerCamera").gameObject;
-                
+
                 Vector3 hitVec = -((EnemyPlayer.transform.position - MyPlayer.transform.position).normalized);
                 MyCamera.GetComponent<Rigidbody>().AddForce(hitVec * 200.0f);
                 MyCamera.GetComponent<Rigidbody>().AddForce(transform.up * 100.0f);
