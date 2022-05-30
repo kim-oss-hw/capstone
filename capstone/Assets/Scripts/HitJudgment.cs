@@ -10,7 +10,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public float HP = 100.0f;
     public GameObject HPbar_top;
     public GameObject AnimationObject;
-
+    public RectTransform HPbar_rect;
     public bool GameStart = false;
     public bool WeaponSelect = false;
 
@@ -35,13 +35,12 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
-
+        HPbar_rect = HPbar_top.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        RectTransform HPbar_rect = HPbar_top.GetComponent<RectTransform>();
         HPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
         HPbar_rect.offsetMax = new Vector2(-1000.0f + HP * 10.0f, -235.0f);
     }
@@ -68,6 +67,9 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
                 EnemyWeapon.Attackable = false;
                 EnemyWeapon.CoolTimeStart = true;
+
+                HPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
+                HPbar_rect.offsetMax = new Vector2(-1000.0f + HP * 10.0f, -235.0f);
 
                 //피격자 경직 애니메이션 부분
                 //Animator animator = AnimationObject.GetComponent<Animator>();
