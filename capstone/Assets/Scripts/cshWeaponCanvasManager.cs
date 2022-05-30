@@ -91,7 +91,7 @@ public class cshWeaponCanvasManager : MonoBehaviour
     {
         if(player.GetComponent<cshSettingWeapon>().isEquiped())
         {
-            ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
+            //ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
             ovrmyplayer = GameObject.Find("MyPlayer");
             ovrmyplayer.GetComponent<HitJudgment>().WeaponSelect = true;
             Destroy(transform.gameObject);

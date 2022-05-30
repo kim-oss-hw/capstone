@@ -45,6 +45,10 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
         CountDownUI = GameObject.Find("countdown");
         Text CountDownUItext = CountDownUI.GetComponent<Text>();
 
+        // 카운트다운 시작과 함께 이동 제한 해제
+        GameObject ovrPlayerCamera = GameObject.Find("OVRPlayerCamera").gameObject;
+        ovrPlayerCamera.GetComponent<cshVrHeadMove>().isSetting = false;
+
         int i = 0;
 
         while (i < 3)

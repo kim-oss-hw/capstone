@@ -285,7 +285,7 @@ MonoBehaviour:
   mrcActivationMode: 0
   isInsightPassthroughEnabled: 0
   _trackingOriginType: 0
-  usePositionTracking: 1
+  usePositionTracking: 0
   useRotationTracking: 1
   useIPDInPositionTracking: 1
   resetTrackerOnLoad: 0

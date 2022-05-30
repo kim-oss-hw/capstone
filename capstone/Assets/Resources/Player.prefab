@@ -120,6 +120,7 @@ MonoBehaviour:
   HP: 100
   HPbar_top: {fileID: 380517372786212100}
   AnimationObject: {fileID: 0}
+  HPbar_rect: {fileID: 0}
   GameStart: 0
   WeaponSelect: 0
   SwordS: {fileID: 6789864577929587548, guid: 9299149538b11464c93d809110ecd230, type: 3}
@@ -576,6 +577,7 @@ MonoBehaviour:
   HP: 100
   HPbar_top: {fileID: 380517372786212100}
   AnimationObject: {fileID: 0}
+  HPbar_rect: {fileID: 0}
   GameStart: 0
   WeaponSelect: 0
   SwordS: {fileID: 0}
