@@ -13,6 +13,7 @@ public class cshWeaponCanvasManager : MonoBehaviour
     private bool isRight = true;
     public GameObject ovrCamera;
     public GameObject ovrmyplayer;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class cshWeaponCanvasManager : MonoBehaviour
         selectButton.onClick.AddListener(CompleteSetting);
         
 
-        GameObject player = GameObject.Find("MyPlayer").gameObject;
+        player = GameObject.Find("MyPlayer").gameObject;
         if (!player) player =  GameObject.Find("Player").gameObject;
         player.GetComponent<cshSettingWeapon>().rightButtons = ReturnRightButtons();
         player.GetComponent<cshSettingWeapon>().leftButtons = ReturnLeftButtons();
@@ -88,9 +89,12 @@ public class cshWeaponCanvasManager : MonoBehaviour
 
     void CompleteSetting()
     {
-        ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
-        ovrmyplayer = GameObject.Find("MyPlayer");
-        ovrmyplayer.GetComponent<HitJudgment>().WeaponSelect = true;
-        Destroy(transform.gameObject);
+        if(player.GetComponent<cshSettingWeapon>().isEquiped())
+        {
+            ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
+            ovrmyplayer = GameObject.Find("MyPlayer");
+            ovrmyplayer.GetComponent<HitJudgment>().WeaponSelect = true;
+            Destroy(transform.gameObject);
+        }
     }
 }

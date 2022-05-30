@@ -106,7 +106,7 @@ public class OVRCameraRig : MonoBehaviour
 	protected Camera _leftEyeCamera;
 	protected Camera _rightEyeCamera;
 
-#region Unity Messages
+	#region Unity Messages
 	protected virtual void Awake()
 	{
 		_skipUpdate = true;
@@ -137,7 +137,7 @@ public class OVRCameraRig : MonoBehaviour
 	{
 		Application.onBeforeRender -= OnBeforeRenderCallback;
 	}
-#endregion
+	#endregion
 
 	protected virtual void UpdateAnchors(bool updateEyeAnchors, bool updateHandAnchors)
 	{
@@ -282,7 +282,7 @@ public class OVRCameraRig : MonoBehaviour
 
 	protected virtual void OnBeforeRenderCallback()
 	{
-		if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)			//Restrict late-update to only Oculus devices
+		if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)            //Restrict late-update to only Oculus devices
 		{
 			bool controllersNeedUpdate = OVRManager.instance.LateControllerUpdate;
 #if USING_XR_SDK

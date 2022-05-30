@@ -8767,7 +8767,7 @@ MonoBehaviour:
   head:
     vrTarget: {fileID: 0}
     rigTarget: {fileID: 3616824745924774848}
-    trackingPositionOffset: {x: 0, y: -0.075, z: -0.35}
+    trackingPositionOffset: {x: 0, y: 0, z: -0.35}
     trackingRotationOffset: {x: 0, y: 90, z: -90}
   leftHand:
     vrTarget: {fileID: 0}
@@ -8815,6 +8815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedTrashold: 0.1
   smoothing: 1
+  PV: {fileID: 0}
 --- !u!114 &3616824746413294727
 MonoBehaviour:
   m_ObjectHideFlags: 0
