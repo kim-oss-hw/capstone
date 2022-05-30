@@ -69,7 +69,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             OVRplayer.transform.position = SpawnPoint1.transform.position;
             OVRplayer.transform.rotation = SpawnPoint1.transform.rotation;
 
-            VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint1.transform.position, SpawnPoint1.transform.rotation);
+            VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint1.transform.localPosition, SpawnPoint1.transform.rotation);
             VRplayerPrefab.name = "MyPlayer";
             OVRplayer.GetComponent<cshVrHeadMove>().spawnSetTool();
 
@@ -80,7 +80,7 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             OVRplayer.transform.position = SpawnPoint2.transform.position;
             OVRplayer.transform.rotation = SpawnPoint2.transform.rotation;
 
-            VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint2.transform.position, SpawnPoint2.transform.rotation);
+            VRplayerPrefab = PhotonNetwork.Instantiate("Player", SpawnPoint2.transform.localPosition, SpawnPoint2.transform.rotation);
             VRplayerPrefab.name = "MyPlayer";
             OVRplayer.GetComponent<cshVrHeadMove>().spawnSetTool();
         }

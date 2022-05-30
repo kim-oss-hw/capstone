@@ -154,7 +154,7 @@ public class cshVrHeadMove : MonoBehaviour
         }
 
         transform.Rotate(rotaDir * Time.deltaTime);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, RimitX_ne, RimitX_po), Mathf.Clamp(transform.position.y, RimitY_ne, RimitY_po), Mathf.Clamp(transform.position.z, RimitZ_ne, RimitZ_po));
+        transform.position = new Vector3(Mathf.Clamp(transform.localPosition.x, RimitX_ne, RimitX_po), Mathf.Clamp(transform.localPosition.y, RimitY_ne, RimitY_po), Mathf.Clamp(transform.localPosition.z, RimitZ_ne, RimitZ_po));
     }
 
     public void spawnSetTool()
