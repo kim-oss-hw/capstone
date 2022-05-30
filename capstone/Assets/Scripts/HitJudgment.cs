@@ -85,7 +85,9 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         GameObject MyPlayer = GameObject.Find("MyPlayer").gameObject;
         GameObject MyCamera = GameObject.Find("OVRPlayerCamera").gameObject;
 
-        Vector3 hitVec = -((EnemyPlayer.transform.position - MyPlayer.transform.position).normalized);
+        Vector3 hitVec = EnemyPlayer.transform.position - MyPlayer.transform.position;
+        hitVec.y = 0;
+        hitVec = -(hitVec.normalized);
         MyCamera.GetComponent<Rigidbody>().AddForce(hitVec * 200.0f);
         MyCamera.GetComponent<Rigidbody>().AddForce(transform.up * 100.0f);
     }
