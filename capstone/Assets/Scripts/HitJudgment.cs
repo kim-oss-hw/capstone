@@ -50,7 +50,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     void Update()
     {
 
-        if (FinishMove >= 0.0f)
+        if (FinishMove >= 100.0f)
         {
             FinishMove = 100.0f;
 
