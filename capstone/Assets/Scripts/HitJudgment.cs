@@ -10,7 +10,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public PhotonView PV;
 
     public float HP = 100.0f;
-    public float FinishMove = 100.0f;
+    public float FinishMove = 0.0f;
     public GameObject HPbar_top;
     public GameObject AnimationObject;
 
@@ -49,12 +49,14 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        
-        if (GameStart == true)
+
+        if (FinishMove >= 0.0f)
         {
-            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) > 0.2f || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.2f)
+            FinishMove = 100.0f;
+
+            if (GameStart == true)
             {
-                if (FinishMove >= 100.0f)
+                if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) > 0.2f || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.2f)
                 {
                     GameObject E_Player = GameObject.Find("Player(Clone)").gameObject;
                     GameObject EnemyPlayer = E_Player.transform.GetChild(0).gameObject;
