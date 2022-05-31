@@ -120,9 +120,6 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
                 EnemyWeapon.Attackable = false;
                 EnemyWeapon.CoolTimeStart = true;
 
-                //피격자 경직 애니메이션 부분
-                //Animator animator = AnimationObject.GetComponent<Animator>();
-                //animator.SetTrigger("Hit");
                 Spark();
             }
         }
@@ -137,17 +134,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
             if (EnemyWeapon.Attackable == true)
             {
-                MakeHitSound2();
-
-                FinishMove += (EnemyWeapon.Damage) * 5.0f;
-
-                EnemyWeapon.Attackable = false;
-                EnemyWeapon.CoolTimeStart = true;
-
-                //피격자 경직 애니메이션 부분
-                //Animator animator = AnimationObject.GetComponent<Animator>();
-                //animator.SetTrigger("Hit");
-                Spark();
+                PV.RPC("WeaponCalculation", RpcTarget.All);
             }
         };
     }
@@ -167,6 +154,20 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
         HitJudgment My_HitJud = M_Player.GetComponent<HitJudgment>();
         My_HitJud.HP -= 30.0f;
+    }
+
+    void WeaponCalculation(Collider collider)
+    {
+        WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
+
+        MakeHitSound2();
+
+        FinishMove += (EnemyWeapon.Damage) * 5.0f;
+
+        EnemyWeapon.Attackable = false;
+        EnemyWeapon.CoolTimeStart = true;
+
+        Spark();
     }
 
 }
