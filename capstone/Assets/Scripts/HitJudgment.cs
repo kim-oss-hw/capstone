@@ -134,7 +134,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
             if (EnemyWeapon.Attackable == true)
             {
-                PV.RPC("WeaponCalculation", RpcTarget.All);
+                PV.RPC("WeaponCalculation", RpcTarget.All, collider);
             }
         };
     }
