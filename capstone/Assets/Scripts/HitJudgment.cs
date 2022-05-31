@@ -139,7 +139,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
             {
                 MakeHitSound2();
 
-                FinishMove += (EnemyWeapon.Damage) * 15.0f;
+                FinishMove += (EnemyWeapon.Damage) * 5.0f;
 
                 EnemyWeapon.Attackable = false;
                 EnemyWeapon.CoolTimeStart = true;
