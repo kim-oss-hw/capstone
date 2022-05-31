@@ -137,7 +137,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SurfaceSmoothness: 0.2
-    - _Tiling: 1
+    - _Tiling: 15
     - _TranslucencyInt: 0
     - _TranslucencyOffset: -0.5
     - _UVBigWavesScale: 0.25
