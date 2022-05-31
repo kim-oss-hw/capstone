@@ -16,13 +16,14 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.ConnectUsingSettings();
         //StartCoroutine(this.CreatePlayer());
 
     }
 
     void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         GameMainSys = GameObject.Find("OVRPlayerCamera").GetComponent<GameMainSystem>();
         CreatePlayer();
     }
@@ -34,29 +35,33 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
         //    PhotonNetwork.LeaveRoom();
         //    SceneManager.LoadScene("MainMenu2");
         //}
-        if (PhotonNetwork.PlayerList.Length < 2 || GameMainSys.Enermy_HP <= 0.0f)
+        if (GameMainSys.Enermy_HP <= 0.0f)
         {
             GameMainSys.GameWin();
-            Invoke("BackToRoom", 5);
+            Invoke("AllBackToRoom", 5);
         }
         else if (GameMainSys.My_HP <= 0.0f)
         {
             GameMainSys.GameLose();
-            Invoke("BackToRoom", 5);
+            Invoke("AllBackToRoom", 5);
         }
-
         else if (GameMainSys.GameEndBool == true)
         {
             if (GameMainSys.Enermy_HP <= GameMainSys.My_HP)
             {
                 GameMainSys.GameWin();
-                Invoke("BackToRoom", 5);
+                Invoke("AllBackToRoom", 5);
             }
             else
             {
                 GameMainSys.GameLose();
-                Invoke("BackToRoom", 5);
+                Invoke("AllBackToRoom", 5);
             }
+        }
+        else if (PhotonNetwork.PlayerList.Length < 2)
+        {
+            GameMainSys.GameWin();
+            Invoke("BackToRoom", 5);
         }
 
     }
@@ -117,8 +122,18 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
         base.OnLeftRoom();
         PhotonNetwork.Destroy(VRplayerPrefab);
     }
+
+    public void AllBackToRoom()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.LoadLevel("BackToMainMenu");
+            SceneManager.LoadScene("BackToMainMenu");
+        }
+    }
     public void BackToRoom()
     {
+        PhotonNetwork.Destroy(VRplayerPrefab);
         SceneManager.LoadScene("BackToMainMenu");
     }
 }

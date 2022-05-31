@@ -54,7 +54,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
         CountDownUI = GameObject.Find("countdown");
         Text CountDownUItext = CountDownUI.GetComponent<Text>();
 
-        // Ä«¿îÆ®´Ù¿î ½ÃÀÛ°ú ÇÔ²² ÀÌµ¿ Á¦ÇÑ ÇØÁ¦
+        // Ä«ï¿½ï¿½Æ®ï¿½Ù¿ï¿½ ï¿½ï¿½ï¿½Û°ï¿½ ï¿½Ô²ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         GameObject ovrPlayerCamera = GameObject.Find("OVRPlayerCamera").gameObject;
         ovrPlayerCamera.GetComponent<cshVrHeadMove>().isSetting = false;
 
@@ -121,8 +121,8 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
             My_HPbar_rect = My_HPbar.GetComponent<RectTransform>();
             Enermy_HPbar_rect = Enermy_HPbar.GetComponent<RectTransform>();
 
-            MyHPbar_top = ((My_Player.transform.GetChild(0).gameObject).transform.FindChild("HpCanvas").gameObject).transform.FindChild("Hp").gameObject;
-            EnermyHPbar_top = ((Enermy_Player.transform.GetChild(0).gameObject).transform.FindChild("HpCanvas").gameObject).transform.FindChild("Hp").gameObject;
+            MyHPbar_top = ((My_Player.transform.GetChild(0).gameObject).transform.Find("HpCanvas").gameObject).transform.Find("Hp").gameObject;
+            EnermyHPbar_top = ((Enermy_Player.transform.GetChild(0).gameObject).transform.Find("HpCanvas").gameObject).transform.Find("Hp").gameObject;
 
             UICanvas.SetActive(false);
         }
