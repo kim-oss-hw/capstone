@@ -85,7 +85,6 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: -1513166723264988740}
   - {fileID: 7030738763429246118}
-  - {fileID: 482478127822627995}
   - {fileID: 5901401353249470105}
   - {fileID: 8489065356923545547}
   - {fileID: 920383237868039731}
@@ -117,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d481090c3da93d749bef6acf30ff26d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PV: {fileID: 0}
   HP: 100
   FinishMove: 0
   HPbar_top: {fileID: 380517372786212100}
@@ -127,6 +127,8 @@ MonoBehaviour:
   SwordE: {fileID: 1610259402245616, guid: 09a2baab97fbf474f9499bf610686e4d, type: 3}
   SwordS_2: {fileID: 7649480823355037709, guid: 88c624850d590c54d9fa3732af520f97, type: 3}
   SwordE_2: {fileID: 1200950891393156, guid: 52a726355873f9443b626e837ef94008, type: 3}
+  SwordLS: {fileID: 8505202718340588998, guid: 339e0155a3a97f14d952e712e2492a2c, type: 3}
+  SwordLE: {fileID: 1644958980890870, guid: 5e841c48be9318145af9204a7658cc2e, type: 3}
   Player_Character: {fileID: 1394187538363920465}
 --- !u!114 &3856579378216723660
 MonoBehaviour:
@@ -526,11 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &176317470695537639 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5895738132267715526, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
-  m_PrefabInstance: {fileID: 6026864505739964449}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7820752272556627584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4551834753323198113, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
@@ -576,29 +573,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5680482146242058025, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
   m_PrefabInstance: {fileID: 6026864505739964449}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &482478127822627995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &176317470695537639 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5895738132267715526, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+  m_PrefabInstance: {fileID: 6026864505739964449}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664764054403866973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d481090c3da93d749bef6acf30ff26d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
-  FinishMove: 0
-  HPbar_top: {fileID: 380517372786212100}
-  AnimationObject: {fileID: 0}
-  GameStart: 0
-  WeaponSelect: 0
-  SwordS: {fileID: 0}
-  SwordE: {fileID: 0}
-  SwordS_2: {fileID: 0}
-  SwordE_2: {fileID: 0}
-  Player_Character: {fileID: 0}
 --- !u!114 &945488077892155326
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -110,7 +110,6 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     void Update()
     {
 
-
         if (!My_Player || !Enermy_Player)
         {
             My_Player = GameObject.Find("MyPlayer");
@@ -156,7 +155,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
                 EnermyHPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
                 EnermyHPbar_rect.offsetMax = new Vector2(-1000.0f + Enermy_HP * 10.0f, -235.0f);
 
-                FinalUI.transform.localPosition = new Vector3((500.0f - (My_Final * 5.0f)) / 2, 350.0f);
+                FinalUI.transform.localPosition = new Vector3((-500.0f + (My_Final * 5.0f)) / 2, 350.0f);
                 FinalUI.sizeDelta = new Vector2((My_Final * 5.0f), 20.0f);
 
             }
