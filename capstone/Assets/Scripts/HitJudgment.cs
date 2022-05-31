@@ -165,7 +165,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         Destroy(LastSound, 0.8f);
         Destroy(LastEffect, 3.0f);
 
-        HitJudgment My_HitJud = MyPlayer.GetComponent<HitJudgment>();
+        HitJudgment My_HitJud = M_Player.GetComponent<HitJudgment>();
         My_HitJud.HP -= 30.0f;
     }
 
