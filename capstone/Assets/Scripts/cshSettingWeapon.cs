@@ -133,4 +133,9 @@ public class cshSettingWeapon : MonoBehaviour
     {
         //ovrCamera.GetComponent<cshVrHeadMove>().isSetting = false;
     }
+
+    public GameObject getWeapon()
+    {
+        return curSword.gameObject;
+    }
 }

@@ -25,8 +25,6 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public GameObject SwordLS;
     public GameObject SwordLE;
 
-    public GameObject Player_Character;
-
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -130,11 +128,11 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
 
-            WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
+            WeaponSystem EnemyWeapon = collider.gameObjecst.GetComponent<WeaponSystem>();
 
             if (EnemyWeapon.Attackable == true)
             {
-                PV.RPC("WeaponCalculation", RpcTarget.All, collider);
+                PV.RPC("WeaponCalculation", RpcTarget.All);
             }
         };
     }
