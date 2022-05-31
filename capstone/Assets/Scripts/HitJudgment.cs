@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 {
     public float HP = 100.0f;
+    public float FinishMove = 0.0f;
     public GameObject HPbar_top;
     public GameObject AnimationObject;
 
@@ -16,6 +17,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     public GameObject SwordS;
     public GameObject SwordE;
+    public GameObject SwordS_2;
+    public GameObject SwordE_2;
     public GameObject Player_Character;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -51,6 +54,27 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         Destroy(SwordEffect, 1.0f);
     }
 
+    void MakeHitSound2()
+    {
+        GameObject SwordSound = Instantiate(SwordS_2);
+        GameObject SwordEffect = Instantiate(SwordE_2, Player_Character.transform.position, Player_Character.transform.rotation);
+        Destroy(SwordSound, 0.8f);
+        Destroy(SwordEffect, 1.0f);
+    }
+
+    public void Spark() // 서로 튕기는 함수
+    {
+        GameObject EnemyPlayer = GameObject.Find("Player(Clone)").gameObject;
+        GameObject MyPlayer = GameObject.Find("MyPlayer").gameObject;
+        GameObject MyCamera = GameObject.Find("OVRPlayerCamera").gameObject;
+
+        Vector3 hitVec = EnemyPlayer.transform.position - MyPlayer.transform.position;
+        hitVec.y = 0;
+        hitVec = -(hitVec.normalized);
+        MyCamera.GetComponent<Rigidbody>().AddForce(hitVec * 200.0f);
+        MyCamera.GetComponent<Rigidbody>().AddForce(transform.up * 100.0f);
+    }
+
     public void HitCalculation(Collider collider)
     {
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
@@ -67,10 +91,6 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
                 EnemyWeapon.Attackable = false;
                 EnemyWeapon.CoolTimeStart = true;
 
-                RectTransform HPbar_rect = HPbar_top.GetComponent<RectTransform>();
-                HPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
-                HPbar_rect.offsetMax = new Vector2(-1000.0f + HP * 10.0f, -235.0f);
-
                 //피격자 경직 애니메이션 부분
                 //Animator animator = AnimationObject.GetComponent<Animator>();
                 //animator.SetTrigger("Hit");
@@ -79,16 +99,27 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
-    public void Spark() // 서로 튕기는 함수
+    public void WeaponHitCalculation(Collider collider)
     {
-        GameObject EnemyPlayer = GameObject.Find("Player(Clone)").gameObject;
-        GameObject MyPlayer = GameObject.Find("MyPlayer").gameObject;
-        GameObject MyCamera = GameObject.Find("OVRPlayerCamera").gameObject;
+        if (collider.gameObject.tag == "Weapon" && GameStart == true)
+        {
 
-        Vector3 hitVec = EnemyPlayer.transform.position - MyPlayer.transform.position;
-        hitVec.y = 0;
-        hitVec = -(hitVec.normalized);
-        MyCamera.GetComponent<Rigidbody>().AddForce(hitVec * 200.0f);
-        MyCamera.GetComponent<Rigidbody>().AddForce(transform.up * 100.0f);
+            WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
+
+            if (EnemyWeapon.Attackable == true)
+            {
+                MakeHitSound2();
+
+                FinishMove += EnemyWeapon.Damage;
+
+                EnemyWeapon.Attackable = false;
+                EnemyWeapon.CoolTimeStart = true;
+
+                //피격자 경직 애니메이션 부분
+                //Animator animator = AnimationObject.GetComponent<Animator>();
+                //animator.SetTrigger("Hit");
+                Spark();
+            }
+        }
     }
 }

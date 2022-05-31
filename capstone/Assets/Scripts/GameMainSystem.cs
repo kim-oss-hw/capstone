@@ -25,6 +25,7 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
 
     public float My_HP = 100.0f;
     public float Enermy_HP = 100.0f;
+    public float My_Final = 0.0f;
 
     public GameObject My_HPbar;
     public GameObject Enermy_HPbar;
@@ -39,6 +40,14 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
     public bool CountDownBool = true;
     public bool GameStartBool = false;
     public bool GameEndBool = false;
+
+    public GameObject MyHPbar_top;
+    public GameObject EnermyHPbar_top;
+
+    public RectTransform MyHPbar_rect;
+    public RectTransform EnermyHPbar_rect;
+
+    public RectTransform FinalUI;
 
     IEnumerator StartCountDown()
     {
@@ -100,6 +109,8 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
 
     void Update()
     {
+
+
         if (!My_Player || !Enermy_Player)
         {
             My_Player = GameObject.Find("MyPlayer");
@@ -111,10 +122,16 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
             My_HPbar_rect = My_HPbar.GetComponent<RectTransform>();
             Enermy_HPbar_rect = Enermy_HPbar.GetComponent<RectTransform>();
 
+            MyHPbar_top = ((My_Player.transform.GetChild(0).gameObject).transform.FindChild("HpCanvas").gameObject).transform.FindChild("Hp").gameObject;
+            EnermyHPbar_top = ((Enermy_Player.transform.GetChild(0).gameObject).transform.FindChild("HpCanvas").gameObject).transform.FindChild("Hp").gameObject;
+
             UICanvas.SetActive(false);
         }
+
+
         else
         {
+
             if(SettingFinish == true)
             {
                 if(My_HP > MyPlayer_HitJud.HP)
@@ -124,15 +141,27 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
 
                 My_HP = MyPlayer_HitJud.HP;
                 Enermy_HP = Enermy_HitJud.HP;
+                My_Final = MyPlayer_HitJud.FinishMove;
 
                 My_HPbar_rect.transform.localPosition = new Vector3(-600.0f, -100.0f - 250.0f + (5.0f * My_HP) / 2, 0.0f);
                 My_HPbar_rect.sizeDelta = new Vector2(20.0f, (5.0f * My_HP));
 
                 Enermy_HPbar_rect.transform.localPosition = new Vector3(600.0f, -100.0f - 250.0f + (5.0f * Enermy_HP) / 2, 0.0f);
                 Enermy_HPbar_rect.sizeDelta = new Vector2(20.0f, (5.0f * Enermy_HP));
+
+                MyHPbar_rect = MyHPbar_top.GetComponent<RectTransform>();
+                EnermyHPbar_rect = EnermyHPbar_top.GetComponent<RectTransform>();
+                MyHPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
+                MyHPbar_rect.offsetMax = new Vector2(-1000.0f + My_HP * 10.0f, -235.0f);
+                EnermyHPbar_rect.offsetMin = new Vector2(0.0f, 235.0f);
+                EnermyHPbar_rect.offsetMax = new Vector2(-1000.0f + Enermy_HP * 10.0f, -235.0f);
+
+                FinalUI.transform.localPosition = new Vector3((500.0f - (My_Final * 5.0f)) / 2, 350.0f);
+                FinalUI.sizeDelta = new Vector2((My_Final * 5.0f), 20.0f);
+
             }
 
-            if(MyPlayer_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && Enermy_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && CountDownBool == true)
+            if (MyPlayer_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && Enermy_HitJud.GetComponent<HitJudgment>().WeaponSelect == true && CountDownBool == true)
             {
                 SettingFinish = true;
                 UICanvas.SetActive(true);
