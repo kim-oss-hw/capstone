@@ -10,7 +10,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public PhotonView PV;
 
     public float HP = 100.0f;
-    public float FinishMove = 0.0f;
+    public float FinishMove = 100.0f;
     public GameObject HPbar_top;
     public GameObject AnimationObject;
 
@@ -49,22 +49,28 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) > 0.2f || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.2f)
+        
+        if (GameStart == true)
         {
-            if (FinishMove >= 0.0f)
+            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) > 0.2f || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.2f)
             {
-                GameObject EnemyPlayer = GameObject.Find("Player(Clone)").gameObject;
+                if (FinishMove >= 100.0f)
+                {
+                    GameObject E_Player = GameObject.Find("Player(Clone)").gameObject;
+                    GameObject EnemyPlayer = E_Player.transform.GetChild(0).gameObject;
 
-                GameObject LastSound = Instantiate(SwordLS);
-                GameObject LastEffect = Instantiate(SwordLE, EnemyPlayer.transform.position, EnemyPlayer.transform.rotation);
+                    GameObject LastSound = Instantiate(SwordLS);
+                    GameObject LastEffect = Instantiate(SwordLE, EnemyPlayer.transform.position, EnemyPlayer.transform.rotation);
 
-                Destroy(LastSound, 0.8f);
-                Destroy(LastEffect, 3.0f);
+                    Destroy(LastSound, 0.8f);
+                    Destroy(LastEffect, 3.0f);
 
-                PV.RPC("LastAttack", RpcTarget.Others);
-                FinishMove = 0.0f;
+                    PV.RPC("LastAttack", RpcTarget.Others);
+                    FinishMove = 0.0f;
+                }
             }
         }
+        
     }
 
     void MakeHitSound()
@@ -141,15 +147,15 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
                 //animator.SetTrigger("Hit");
                 Spark();
             }
-        }
-        PV.RPC("LastAttack", RpcTarget.Others);
+        };
     }
 
     
     [PunRPC]
     void LastAttack()
     {
-        GameObject MyPlayer = GameObject.Find("MyPlayer").gameObject;
+        GameObject M_Player = GameObject.Find("MyPlayer").gameObject;
+        GameObject MyPlayer = M_Player.transform.GetChild(0).gameObject;
 
         GameObject LastSound = Instantiate(SwordLS);
         GameObject LastEffect = Instantiate(SwordLE, MyPlayer.transform.position, MyPlayer.transform.rotation);

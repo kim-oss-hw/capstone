@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d481090c3da93d749bef6acf30ff26d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PV: {fileID: 0}
+  PV: {fileID: 2763257536183134067}
   HP: 100
   FinishMove: 0
   HPbar_top: {fileID: 380517372786212100}
