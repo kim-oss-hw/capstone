@@ -57,6 +57,7 @@ public class cshVrHeadMove : MonoBehaviour
         }
 
         MovePlayer();
+        /*
         if (OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger))
         {
             if (isSetting)
@@ -139,6 +140,7 @@ public class cshVrHeadMove : MonoBehaviour
                 }
             }
         }
+        */
     }
 
     void MovePlayer()
