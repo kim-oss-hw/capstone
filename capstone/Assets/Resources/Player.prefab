@@ -389,6 +389,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 1614963220232809975, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1975776086299856055, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -400,6 +404,18 @@ PrefabInstance:
     - target: {fileID: 2663361043804350512, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943543524450638228, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260533334577250265, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283938743741736698, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3616824745760927912, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_Radius
@@ -413,6 +429,10 @@ PrefabInstance:
       propertyPath: PV
       value: 
       objectReference: {fileID: 2763257536183134067}
+    - target: {fileID: 3725780657754553100, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3894172924957647144, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -437,6 +457,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 4746051981802435500, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004648520268466771, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5657461262466226604, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -448,6 +476,10 @@ PrefabInstance:
     - target: {fileID: 5680482146242058025, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822996946378052466, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5895738132267715526, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_RootOrder
@@ -493,6 +525,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6367990529249694346, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6528546229485998460, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
@@ -504,6 +540,14 @@ PrefabInstance:
     - target: {fileID: 6708509343775185283, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394664212938327486, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338925465852760612, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8931299834347439618, guid: 7e7cb59ab759fe042ac48d2bbdcea6eb, type: 3}
       propertyPath: m_IsActive

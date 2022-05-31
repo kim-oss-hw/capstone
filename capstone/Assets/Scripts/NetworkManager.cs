@@ -46,7 +46,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     List<RoomInfo> myList = new List<RoomInfo>();
     int currentPage = 1, maxPage, multiple;
 
-
+    private string gameVersion = "1";
 
     #region 방리스트 갱신
     // ◀버튼 -2 , ▶버튼 -1 , 셀 숫자
@@ -98,13 +98,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Awake()
     {
         Screen.SetResolution(960, 540, false);
-        PhotonNetwork.AutomaticallySyncScene = true;
         if (PlayerID == 1)
         {
             ChangeBtn.gameObject.SetActive(true);
             MapPickBtn.SetActive(true);
         }
     }
+    void Start()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.GameVersion = gameVersion;
+    }
+
     void Update()
     {
         StatusText.text = PhotonNetwork.NetworkClientState.ToString();
@@ -177,6 +182,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void RoomRenewal()
     {
+        PhotonNetwork.IsMessageQueueRunning = true;
         if (PlayerID == 1)
         {
             ChangeBtn.gameObject.SetActive(true);
@@ -248,7 +254,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             case "Map1Btn":
                 {
-                    MapSelect = "Map1U";
+                    MapSelect = "Map1";
                     EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject.SetActive(true);
 
                     break;

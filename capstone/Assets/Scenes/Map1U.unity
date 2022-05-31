@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4022159, g: 0.34778917, b: 0.28113616, a: 1}
+  m_IndirectSpecularColor: {r: 0.40220907, g: 0.34778407, b: 0.2811342, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -229,7 +229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 120006741097097638, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
@@ -695,6 +695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
+      propertyPath: EscUi
+      value: 
+      objectReference: {fileID: 4948324807384429437, guid: 58622b27d947a0b4b9564d1973b1372f, type: 3}
     - target: {fileID: 5545691581073904456, guid: 4942caf6cd23d124aa3889524358b42e, type: 3}
       propertyPath: RimitX_ne
       value: 44.4
