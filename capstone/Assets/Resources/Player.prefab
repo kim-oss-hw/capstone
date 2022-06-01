@@ -117,6 +117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PV: {fileID: 2763257536183134067}
+  Player_Character: {fileID: 1394187538363920465}
+  Player_SettingWeapon: {fileID: 0}
   HP: 100
   FinishMove: 0
   HPbar_top: {fileID: 380517372786212100}
@@ -129,7 +131,6 @@ MonoBehaviour:
   SwordE_2: {fileID: 1200950891393156, guid: 52a726355873f9443b626e837ef94008, type: 3}
   SwordLS: {fileID: 8505202718340588998, guid: 339e0155a3a97f14d952e712e2492a2c, type: 3}
   SwordLE: {fileID: 1644958980890870, guid: 5e841c48be9318145af9204a7658cc2e, type: 3}
-  Player_Character: {fileID: 1394187538363920465}
 --- !u!114 &3856579378216723660
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -140,13 +140,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
-
-            WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
-
-            if (EnemyWeapon.Attackable == true)
-            {
-                PV.RPC("WeaponCalculation", RpcTarget.All);
-            }
+            Debug.Log("WeaponHitCalculation");
+            PV.RPC("WeaponCalculation", RpcTarget.All);
         };
     }
 
@@ -170,6 +165,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     void WeaponCalculation()
     {
+        Debug.Log("WeaponCalculation");
+
         Player_Character = GameObject.Find("MyPlayer").gameObject;
         Player_SettingWeapon = Player_Character.GetComponent<cshSettingWeapon>();
         GameObject Player_Weapon = Player_SettingWeapon.getWeapon();
@@ -178,9 +175,6 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         MakeHitSound3();
 
         FinishMove += (EnemyWeapon.Damage) * 5.0f;
-
-        EnemyWeapon.Attackable = false;
-        EnemyWeapon.CoolTimeStart = true;
 
         Spark();
     }
