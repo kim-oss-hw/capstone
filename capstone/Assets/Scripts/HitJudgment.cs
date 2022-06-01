@@ -146,7 +146,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     public void HitCalculation(Collider collider)
     {
-        if (collider.gameObject.tag == "Weapon" && GameStart == true)
+        if (collider.gameObject.tag == "Weapon" && GameStart == true && PV.IsMine)
         {
 
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
@@ -206,7 +206,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
         FinishMove += (EnemyWeapon.Damage) * 2.0f;
 
-        Spark2(); 
+        Spark(); 
         StartCoroutine("LimitCountDown");
     }
 
