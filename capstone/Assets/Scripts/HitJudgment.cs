@@ -18,6 +18,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     public bool GameStart = false;
     public bool WeaponSelect = false;
+    public bool FinalBool = true;
 
     public GameObject SwordS;
     public GameObject SwordE;
@@ -122,8 +123,9 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
-            if (EnemyWeapon.Attackable == true)
+            if (EnemyWeapon.Attackable == true && FinalBool == true)
             {
+                FinalBool == false;
                 MakeHitSound();
 
                 HP -= EnemyWeapon.Damage;
@@ -177,6 +179,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         FinishMove += (EnemyWeapon.Damage) * 5.0f;
 
         Spark();
+        FinalBool = true;
     }
 
 }
