@@ -125,7 +125,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
             if (EnemyWeapon.Attackable == true && FinalBool == true)
             {
-                FinalBool == false;
+                FinalBool = false;
                 MakeHitSound();
 
                 HP -= EnemyWeapon.Damage;
