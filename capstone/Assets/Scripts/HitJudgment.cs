@@ -28,6 +28,21 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     public GameObject SwordLS;
     public GameObject SwordLE;
 
+    IEnumerator LimitCountDown()
+    {
+       
+        int i = 0;
+
+        while (i < 1)
+        {
+            i += 1;
+            yield return new WaitForSeconds(1.0f);
+        }
+
+        FinalBool = true;
+
+    }
+
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -178,8 +193,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
         FinishMove += (EnemyWeapon.Damage) * 2.0f;
 
-        Spark();
-        FinalBool = true;
+        Spark(); 
+        StartCoroutine("LimitCountDown");
     }
 
 }
