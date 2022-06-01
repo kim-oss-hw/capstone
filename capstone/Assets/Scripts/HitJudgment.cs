@@ -167,6 +167,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         My_HitJud.HP -= 30.0f;
     }
 
+    [PunRPC]
     void WeaponCalculation()
     {
         Player_Character = GameObject.Find("MyPlayer").gameObject;
