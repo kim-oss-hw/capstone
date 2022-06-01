@@ -176,7 +176,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
         MakeHitSound3();
 
-        FinishMove += (EnemyWeapon.Damage) * 5.0f;
+        FinishMove += (EnemyWeapon.Damage) * 2.0f;
 
         Spark();
         FinalBool = true;
