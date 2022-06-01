@@ -131,6 +131,19 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         MyCamera.GetComponent<Rigidbody>().AddForce(transform.up * 100.0f);
     }
 
+    public void Spark2() // 서로 튕기는 함수
+    {
+        GameObject EnemyPlayer = GameObject.Find("Player(Clone)").gameObject;
+        GameObject MyPlayer = GameObject.Find("MyPlayer").gameObject;
+        GameObject MyCamera = GameObject.Find("OVRPlayerCamera").gameObject;
+
+        Vector3 hitVec = EnemyPlayer.transform.position - MyPlayer.transform.position;
+        hitVec.y = 0;
+        hitVec = -(hitVec.normalized);
+        MyCamera.GetComponent<Rigidbody>().AddForce(hitVec * 100.0f);
+        MyCamera.GetComponent<Rigidbody>().AddForce(transform.up * 50.0f);
+    }
+
     public void HitCalculation(Collider collider)
     {
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
@@ -193,7 +206,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
         FinishMove += (EnemyWeapon.Damage) * 2.0f;
 
-        Spark(); 
+        Spark2(); 
         StartCoroutine("LimitCountDown");
     }
 
