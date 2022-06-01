@@ -9,7 +9,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 {
     public PhotonView PV;
     public GameObject Player_Character;
-    public PlayerSpawnManager Player_SpawnManager;
+    public cshSettingWeapon Player_SettingWeapon;
 
     public float HP = 100.0f;
     public float FinishMove = 0.0f;
@@ -170,8 +170,8 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     void WeaponCalculation()
     {
         Player_Character = GameObject.Find("MyPlayer").gameObject;
-        Player_SpawnManager = Player_Character.GetComponent<PlayerSpawnManager>();
-        GameObject Player_Weapon = Player_SpawnManager.getWeapon();
+        Player_SettingWeapon = Player_Character.GetComponent<cshSettingWeapon>();
+        GameObject Player_Weapon = Player_SettingWeapon.getWeapon();
         WeaponSystem EnemyWeapon = Player_Weapon.GetComponent<WeaponSystem>();
 
         MakeHitSound3();
