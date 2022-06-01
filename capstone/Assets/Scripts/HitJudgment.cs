@@ -141,7 +141,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
 
-            WeaponSystem EnemyWeapon = collider.gameObjecst.GetComponent<WeaponSystem>();
+            WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
             if (EnemyWeapon.Attackable == true)
             {
