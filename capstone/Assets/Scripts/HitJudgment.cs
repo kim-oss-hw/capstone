@@ -77,7 +77,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     void MakeHitSound()
     {
-        Player_Character = GameObject.Find("MyPlayer").gameObject;
+        Player_Character = (GameObject.Find("MyPlayer").gameObject).transform.GetChild(0).gameObject;
         GameObject SwordSound = Instantiate(SwordS);
         GameObject SwordEffect = Instantiate(SwordE, Player_Character.transform.position, Player_Character.transform.rotation);
         Destroy(SwordSound, 0.8f);
@@ -86,7 +86,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     void MakeHitSound2()
     {
-        Player_Character = GameObject.Find("MyPlayer").gameObject;
+        Player_Character = (GameObject.Find("MyPlayer").gameObject).transform.GetChild(0).gameObject;
         GameObject SwordSound = Instantiate(SwordS_2);
         GameObject SwordEffect = Instantiate(SwordE_2, Player_Character.transform.position, Player_Character.transform.rotation);
         Destroy(SwordSound, 0.8f);
@@ -95,7 +95,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     void MakeHitSound3()
     {
-        GameObject EnemyPlayer = GameObject.Find("Player(Clone)").gameObject;
+        GameObject EnemyPlayer = (GameObject.Find("Player(Clone)").gameObject).transform.GetChild(0).gameObject;
         GameObject SwordSound = Instantiate(SwordLS);
         GameObject SwordEffect = Instantiate(SwordLS, EnemyPlayer.transform.position, EnemyPlayer.transform.rotation);
         Destroy(SwordSound, 0.8f);
