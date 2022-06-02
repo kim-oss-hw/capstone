@@ -153,12 +153,14 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
             if (EnemyWeapon.Attackable == true)
             {
                 MakeHitSound();
+                if (PV.IsMine)
+                {
+                    HP -= EnemyWeapon.Damage;
 
-                HP -= EnemyWeapon.Damage;
-
-                EnemyWeapon.Attackable = false;
-                EnemyWeapon.CoolTimeStart = true;
-                Spark();
+                    EnemyWeapon.Attackable = false;
+                    EnemyWeapon.CoolTimeStart = true;
+                    Spark();
+                }
             }
         }
     }
