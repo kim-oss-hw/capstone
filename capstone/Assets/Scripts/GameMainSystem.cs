@@ -175,6 +175,13 @@ public class GameMainSystem : MonoBehaviourPunCallbacks
                 GameStartBool = false;
                 StartCoroutine("GameCountDown");
             }
+
+            if(My_HP <= 0.0f || Enermy_HP <= 0.0f)
+            {
+                MyPlayer_HitJud.GameStart = false;
+                Enermy_HitJud.GameStart = false;
+                GameEndBool = true;
+            }
         }
 
     }
