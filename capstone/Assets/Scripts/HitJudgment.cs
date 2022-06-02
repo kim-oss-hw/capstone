@@ -165,7 +165,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     public void WeaponHitCalculation(Collider collider)
     {
-        if (collider.gameObject.tag == "Weapon" && GameStart == true)
+        if (collider.gameObject.tag == "Weapon" && GameStart == true && FinalBool == true)
         {
             FinalBool = false;
             PV.RPC("WeaponCalculation", RpcTarget.All);
