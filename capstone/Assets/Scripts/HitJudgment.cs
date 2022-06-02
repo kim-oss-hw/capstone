@@ -70,7 +70,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
         {
             FinishMove = 100.0f;
 
-            if (GameStart == true)
+            if (GameStart == true && PV.IsMine)
             {
                 if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) > 0.2f || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.2f)
                 {
@@ -148,19 +148,16 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (collider.gameObject.tag == "Weapon" && GameStart == true && PV.IsMine)
         {
-
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
-            if (EnemyWeapon.Attackable == true && FinalBool == true)
+            if (EnemyWeapon.Attackable == true)
             {
-                FinalBool = false;
                 MakeHitSound();
 
                 HP -= EnemyWeapon.Damage;
 
                 EnemyWeapon.Attackable = false;
                 EnemyWeapon.CoolTimeStart = true;
-
                 Spark();
             }
         }
@@ -170,7 +167,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
-            Debug.Log("WeaponHitCalculation");
+            FinalBool = false;
             PV.RPC("WeaponCalculation", RpcTarget.All);
         };
     }
@@ -204,7 +201,7 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
         MakeHitSound3();
 
-        FinishMove += (EnemyWeapon.Damage) * 2.0f;
+        FinishMove += (EnemyWeapon.Damage) * 5.0f;
 
         Spark(); 
         StartCoroutine("LimitCountDown");
