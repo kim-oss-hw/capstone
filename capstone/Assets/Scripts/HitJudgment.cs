@@ -146,13 +146,14 @@ public class HitJudgment : MonoBehaviourPunCallbacks, IPunObservable
 
     public void HitCalculation(Collider collider)
     {
-        if (collider.gameObject.tag == "Weapon" && GameStart == true && PV.IsMine)
+        if (collider.gameObject.tag == "Weapon" && GameStart == true)
         {
             WeaponSystem EnemyWeapon = collider.gameObject.GetComponent<WeaponSystem>();
 
             if (EnemyWeapon.Attackable == true)
             {
                 MakeHitSound();
+
                 if (PV.IsMine)
                 {
                     HP -= EnemyWeapon.Damage;
