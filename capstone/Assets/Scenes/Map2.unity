@@ -6428,7 +6428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ce92326d2b941be45a2540df632064ec, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce92326d2b941be45a2540df632064ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6440,7 +6440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce92326d2b941be45a2540df632064ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.95142
+      value: -14.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce92326d2b941be45a2540df632064ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8888,7 +8888,6 @@ MonoBehaviour:
   OVRplayer: {fileID: 0}
   SpawnPoint1: {fileID: 1705996663}
   SpawnPoint2: {fileID: 113601875}
-  test_: {fileID: 0}
 --- !u!1001 &1982238253
 PrefabInstance:
   m_ObjectHideFlags: 0
