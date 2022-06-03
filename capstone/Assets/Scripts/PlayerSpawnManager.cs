@@ -131,6 +131,11 @@ public class PlayerSpawnManager : MonoBehaviourPunCallbacks
             SceneManager.LoadScene("BackToMainMenu");
         }
     }
+    public void SurrenderGame()
+    {
+        GameMainSys.GameLose();
+        Invoke("AllBackToRoom", 5);
+    }
     public void BackToRoom()
     {
         PhotonNetwork.Destroy(VRplayerPrefab);

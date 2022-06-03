@@ -12,17 +12,12 @@ public class EscUIcontrol : MonoBehaviour
         _gameMainSystem.UIHelpers.SetActive(true);
         transform.GetComponent<OVRRaycaster>().pointer = GameObject.Find("UIHelpers").transform.GetChild(0).gameObject;
     }
-   
-
     
-    public void QuitGame()
+    
+    public void SurrenderGame()
     {
-        _playerSpawnManager.BackToRoom();
+        _playerSpawnManager.SurrenderGame();
     }
-    //public void SurrenderGame()
-    //{
-    //    _playerSpawnManager.SurrenderGame();
-    //}
 
     public void UIRemove()
     {

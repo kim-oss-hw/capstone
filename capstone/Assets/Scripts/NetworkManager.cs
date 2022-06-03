@@ -182,7 +182,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void RoomRenewal()
     {
-        PhotonNetwork.IsMessageQueueRunning = true;
+        //PhotonNetwork.IsMessageQueueRunning = true;
         if (PlayerID == 1)
         {
             ChangeBtn.gameObject.SetActive(true);
@@ -287,4 +287,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             MainPanel.SetActive(true);
         }
     }
+    //public void TrainingIn()
+    //{
+    //    scenema.LoadLevel(MapSelect);
+    //}
 }
